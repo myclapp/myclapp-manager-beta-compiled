@@ -42,6 +42,26 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["app-modules-sponsoring-sponsoring-routing-module"], {
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.html":
+  /*!********************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.html ***!
+    \********************************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppModulesPageLayoutLayoutsStandardModalStandardModalComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<div class=\"modal-header border-0\">\n    <h4>{{title}}</h4>\n    <button (click)=\"ngbActiveModal.dismiss()\" aria-label=\"Close\" class=\"close\" type=\"button\">\n        <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n<div class=\"modal-body border-0\">\n    <div class=\"col-10 m-auto\">\n        <ng-content></ng-content>\n    </div>\n\n</div>\n<div class=\"modal-footer border-0\">\n    <button (click)=\"close();\" class=\"btn btn-{{type}}\" type=\"button\"\n            [disabled]=\"buttonDisabled\">\n        {{closeText}}\n        <span *ngIf=\"(buttonLoadingIndicator |async)?.status == 'pending'\"\n              aria-hidden=\"true\" class=\"spinner-border spinner-border-sm\" role=\"status\"></span>\n        <fa-icon *ngIf=\"(buttonLoadingIndicator |async)?.status == 'success'\" [icon]=\"['fas', 'check']\"\n                 class=\"ml-1\"></fa-icon>\n    </button>\n</div>\n\n";
+    /***/
+  },
+
+  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/page-layout/layouts/view-content-card/view-content-card.component.html":
   /*!**************************************************************************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/modules/page-layout/layouts/view-content-card/view-content-card.component.html ***!
@@ -57,7 +77,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"flex-row ml-1 card bg-secondary mr-1 content-card\"id=\"content-card\">\n    <div class=\"card-body col\">\n        <ng-content></ng-content>\n    </div>\n\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"flex-row ml-1 card bg-secondary mr-1 content-card\" id=\"content-card\">\n    <div class=\"card-body col\">\n        <ng-content></ng-content>\n    </div>\n\n</div>\n";
     /***/
   },
 
@@ -77,7 +97,126 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<sb-layout-dashboard>\n    <sb-dashboard-head\n        title=\"Sponsoren und Partner\"\n        [hideBreadcrumbs]=\"true\"\n    ></sb-dashboard-head>\n    <sb-view-information-card>\n        <div text>\n            Auf dieser Seite können Sie mögliche Partner und Sponsoren eintragen. Damit die Sponsoren in der Smartphone Anwendung korrekt angezeigt werden können,\n            sollten für jeden Sponsor alle Felder gefüllt werden. Wie der Sponsor beschrieben wird und welches Logo angezeigt wird, können Sie frei entscheiden.\n            Des weiteren kann jeder Sponsor mit Ihren Produkten verknüpft werden. Damit werden in der Produktbeschreibung auch mögliche Sponsoren genannt.\n        </div>\n        <div buttons>\n            <a class=\"btn btn-primary\">Ersten Sponsor anlegen</a>\n        </div>\n    </sb-view-information-card>\n    <sb-view-content-card>\n        <div class=\"row h-100\" style=\"padding-left: 1.25rem; padding-right: 1.25rem\">\n            <div class=\"col-4 card shadow\">\n                <div class=\"card-body\" >\n                    <ul style=\"list-style: none; padding: 0\">\n                        <li>\n                            <div class=\"card bg-white\">\n                                <div class=\"card-body\">\n                                    <div class=\"row\">\n                                        <div class=\"custom-list\">\n                                            <span class=\"list-style active\">&#x25CF;</span>\n                                            <span class=\"text\">Brauerei Liebhaus</span>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </li>\n                        <li>\n                            <div class=\"card bg-white\">\n                                <div class=\"card-body\">\n                                    <div class=\"row\">\n                                        <div class=\"custom-list\">\n                                            <span class=\"list-style\">&#x25CF;</span>\n                                            <span class=\"text\">Wirtshaus Enten</span>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </li>\n                        <li>\n                            <div class=\"card bg-white\">\n                                <div class=\"card-body\">\n                                    <div class=\"row\">\n                                        <div class=\"custom-list\">\n                                            <span class=\"list-style\">&#x25CF;</span>\n                                            <span class=\"text\">Trinkgut Musterstadt</span>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </li>\n                        <li>\n                            <div class=\"card bg-white\">\n                                <div class=\"card-body\">\n                                    <div class=\"row\">\n                                        <div class=\"custom-list\">\n                                            <span class=\"list-style add-entry\">&#x25CF;</span>\n                                            <span class=\"text\">Eintrag hinzufügen</span>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </li>\n                    </ul>\n                </div>\n            </div>\n            <div class=\"col-7 card ml-auto shadow\">\n                <div class=\"card-body\">\n                    <div>\n                        <h4><b>Brauerei Liebhaus</b></h4>\n                    </div>\n                    <div class=\"mt-4 row h-75\">\n                        <div class=\"col-8\">\n                            <div>\n                                <p>\n                                    Brauerei Liebhaus ist unser längjahriger Partner wenn es um das flüssige leibliche Wohl geht. Schon seit 2005 ist Liebhaus bei jedem Tunier dabei und sorgt mit fairen Preisen, breitem Angebot und top Team für beste Atmosphäre.\n                                </p>\n                            </div>\n                            <div>\n                                <label class=\"w-100 small\">\n                                    Sponsoren Link\n                                    <input class=\"form-control \" type=\"url\" style=\"background-color: rgba(204,204,204,0.4)\">\n                                </label>\n                            </div>\n                            <div class=\"mt-2 small\">\n                                <label class=\"w-100\">\n                                    Verknüpfte Produkte\n                                    <textarea class=\"form-control\" style=\"background-color: rgba(204,204,204,0.4)\"></textarea>\n                                </label>\n                            </div>\n                        </div>\n                        <div class=\"col-4 text-center\">\n                            <div class=\"text-left\">\n                                <label class=\"text-black-50\">Logo</label>\n                            </div>\n\n                            <img src=\"assets/img/brauereiMockupLogo.png\" class=\"img-fluid h-75\">\n\n\n                        </div>\n\n                    </div>\n                </div>\n            </div>\n        </div>\n    </sb-view-content-card>\n</sb-layout-dashboard>\n";
+    __webpack_exports__["default"] = "<sb-layout-dashboard>\n    <sb-dashboard-head\n        title=\"Sponsoren und Partner\"\n        [hideBreadcrumbs]=\"true\"\n    ></sb-dashboard-head>\n    <sb-view-information-card>\n        <div text>\n            Auf dieser Seite können Sie mögliche Partner und Sponsoren eintragen. Damit die Sponsoren in der Smartphone\n            Anwendung korrekt angezeigt werden können,\n            sollten für jeden Sponsor alle Felder gefüllt werden. Wie der Sponsor beschrieben wird und welches Logo\n            angezeigt wird, können Sie frei entscheiden.\n            Des weiteren kann jeder Sponsor mit Ihren Produkten verknüpft werden. Damit werden in der\n            Produktbeschreibung auch mögliche Sponsoren genannt.\n        </div>\n        <div buttons>\n            <a class=\"btn btn-primary\">Ersten Sponsor anlegen</a>\n        </div>\n    </sb-view-information-card>\n    <sb-view-content-card>\n        <div class=\"row h-100\" style=\"padding-left: 1.25rem; padding-right: 1.25rem\">\n            <div class=\"col-4 card shadow\">\n                <div class=\"card-body\">\n                    <ul style=\"list-style: none; padding: 0\">\n                        <li>\n                            <div class=\"card bg-white\">\n                                <div class=\"card-body\">\n                                    <div class=\"row\">\n                                        <div class=\"custom-list\">\n                                            <span class=\"list-style active\">&#x25CF;</span>\n                                            <span class=\"text\">Brauerei Liebhaus</span>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </li>\n                        <li>\n                            <div class=\"card bg-white\">\n                                <div class=\"card-body\">\n                                    <div class=\"row\">\n                                        <div class=\"custom-list\">\n                                            <span class=\"list-style\">&#x25CF;</span>\n                                            <span class=\"text\">Wirtshaus Enten</span>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </li>\n                        <li>\n                            <div class=\"card bg-white\">\n                                <div class=\"card-body\">\n                                    <div class=\"row\">\n                                        <div class=\"custom-list\">\n                                            <span class=\"list-style\">&#x25CF;</span>\n                                            <span class=\"text\">Trinkgut Musterstadt</span>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </li>\n                        <li>\n                            <div class=\"card bg-white\">\n                                <div class=\"card-body\">\n                                    <div class=\"row\">\n                                        <div class=\"custom-list\">\n                                            <span class=\"list-style add-entry\">&#x25CF;</span>\n                                            <span class=\"text\">Eintrag hinzufügen</span>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </li>\n                    </ul>\n                </div>\n            </div>\n            <div class=\"col-7 card ml-auto shadow\">\n                <div class=\"card-body\">\n                    <div>\n                        <h4><b>Brauerei Liebhaus</b></h4>\n                    </div>\n                    <div class=\"mt-4 row h-75\">\n                        <div class=\"col-8\">\n                            <div>\n                                <p>\n                                    Brauerei Liebhaus ist unser längjahriger Partner wenn es um das flüssige leibliche\n                                    Wohl geht. Schon seit 2005 ist Liebhaus bei jedem Tunier dabei und sorgt mit fairen\n                                    Preisen, breitem Angebot und top Team für beste Atmosphäre.\n                                </p>\n                            </div>\n                            <div>\n                                <label class=\"w-100 small\">\n                                    Sponsoren Link\n                                    <input class=\"form-control \" type=\"url\"\n                                           style=\"background-color: rgba(204,204,204,0.4)\">\n                                </label>\n                            </div>\n                            <div class=\"mt-2 small\">\n                                <label class=\"w-100\">\n                                    Verknüpfte Produkte\n                                    <textarea class=\"form-control\"\n                                              style=\"background-color: rgba(204,204,204,0.4)\"></textarea>\n                                </label>\n                            </div>\n                        </div>\n                        <div class=\"col-4 text-center\">\n                            <div class=\"text-left\">\n                                <label class=\"text-black-50\">Logo</label>\n                            </div>\n\n                            <img alt=\"company-logo\" src=\"assets/img/brauereiMockupLogo.png\" class=\"img-fluid h-75\">\n\n\n                        </div>\n\n                    </div>\n                </div>\n            </div>\n        </div>\n    </sb-view-content-card>\n</sb-layout-dashboard>\n";
+    /***/
+  },
+
+  /***/
+  "./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.scss":
+  /*!******************************************************************************************!*\
+    !*** ./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.scss ***!
+    \******************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppModulesPageLayoutLayoutsStandardModalStandardModalComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy9zdGFuZGFyZC1tb2RhbC9zdGFuZGFyZC1tb2RhbC5jb21wb25lbnQuc2NzcyJ9 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.ts":
+  /*!****************************************************************************************!*\
+    !*** ./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.ts ***!
+    \****************************************************************************************/
+
+  /*! exports provided: StandardModalComponent */
+
+  /***/
+  function srcAppModulesPageLayoutLayoutsStandardModalStandardModalComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "StandardModalComponent", function () {
+      return StandardModalComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @ng-bootstrap/ng-bootstrap */
+    "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+
+    var StandardModalComponent = /*#__PURE__*/function () {
+      //@Input() form!: FormGroup
+      function StandardModalComponent(ngbActiveModal) {
+        _classCallCheck(this, StandardModalComponent);
+
+        this.ngbActiveModal = ngbActiveModal;
+        this.onClose = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.closeText = 'Schließen';
+        this.buttonDisabled = false;
+        this.type = 'primary';
+        this.buttonLoadingIndicator = Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])({
+          status: 'idle'
+        });
+        this.dismissOnClose = true;
+      }
+
+      _createClass(StandardModalComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "close",
+        value: function close() {
+          this.onClose.emit();
+          if (this.dismissOnClose) this.ngbActiveModal.close(true);
+        }
+      }]);
+
+      return StandardModalComponent;
+    }();
+
+    StandardModalComponent.ctorParameters = function () {
+      return [{
+        type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"]
+      }];
+    };
+
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], StandardModalComponent.prototype, "title", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], StandardModalComponent.prototype, "onClose", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], StandardModalComponent.prototype, "closeText", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], StandardModalComponent.prototype, "buttonDisabled", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], StandardModalComponent.prototype, "type", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", rxjs__WEBPACK_IMPORTED_MODULE_3__["Observable"])], StandardModalComponent.prototype, "buttonLoadingIndicator", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], StandardModalComponent.prototype, "dismissOnClose", void 0);
+    StandardModalComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'sb-standard-modal',
+      template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+      /*! raw-loader!./standard-modal.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.html"))["default"],
+      styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+      /*! ./standard-modal.component.scss */
+      "./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.scss"))["default"]]
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"]])], StandardModalComponent);
     /***/
   },
 
@@ -97,7 +236,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".content-card {\n  min-height: 60%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2ZtYXovd29ya3NwYWNlL1dvcmsvTXlDbGFwcC9teS1jbGFwcC1tYW5hZ2VyL3NyYy9hcHAvbW9kdWxlcy9wYWdlLWxheW91dC9sYXlvdXRzL3ZpZXctY29udGVudC1jYXJkL3ZpZXctY29udGVudC1jYXJkLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9tb2R1bGVzL3BhZ2UtbGF5b3V0L2xheW91dHMvdmlldy1jb250ZW50LWNhcmQvdmlldy1jb250ZW50LWNhcmQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxlQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL3BhZ2UtbGF5b3V0L2xheW91dHMvdmlldy1jb250ZW50LWNhcmQvdmlldy1jb250ZW50LWNhcmQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGVudC1jYXJke1xuICAgIG1pbi1oZWlnaHQ6IDYwJTtcbn1cbiIsIi5jb250ZW50LWNhcmQge1xuICBtaW4taGVpZ2h0OiA2MCU7XG59Il19 */";
+    __webpack_exports__["default"] = ".content-card {\n  min-height: 60%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3NzY2hpbGxpbmcvV29ya3NwYWNlL1ZNL215LWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL3BhZ2UtbGF5b3V0L2xheW91dHMvdmlldy1jb250ZW50LWNhcmQvdmlldy1jb250ZW50LWNhcmQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGVBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250ZW50LWNhcmR7XG4gICAgbWluLWhlaWdodDogNjAlO1xufVxuIiwiLmNvbnRlbnQtY2FyZCB7XG4gIG1pbi1oZWlnaHQ6IDYwJTtcbn0iXX0= */";
     /***/
   },
 
@@ -210,9 +349,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @ng-bootstrap/ng-bootstrap */
+    "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+    /* harmony import */
+
+
+    var _layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ./layouts/view-content-card/view-content-card.component */
     "./src/app/modules/page-layout/layouts/view-content-card/view-content-card.component.ts");
+    /* harmony import */
+
+
+    var _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./layouts/standard-modal/standard-modal.component */
+    "./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.ts");
 
     var PageLayoutsModule = function PageLayoutsModule() {
       _classCallCheck(this, PageLayoutsModule);
@@ -220,8 +371,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     PageLayoutsModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_4__["AppCommonModule"]],
-      exports: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_5__["ViewContentCardComponent"]],
-      declarations: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_5__["ViewContentCardComponent"]]
+      exports: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__["StandardModalComponent"]],
+      providers: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbActiveModal"]],
+      declarations: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__["StandardModalComponent"]]
     })], PageLayoutsModule);
     /***/
   },
@@ -284,7 +436,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "@charset \"UTF-8\";\n.custom-list > .list-style.active {\n  color: var(--primary);\n  text-shadow: 0px -1px 1px #000000;\n}\n.custom-list > .list-style {\n  color: #858377;\n  font-size: 2rem;\n  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);\n}\n.custom-list > .text {\n  font-size: 1.5rem;\n  letter-spacing: 1px;\n  font-weight: bold;\n}\n.add-entry {\n  font-size: 3rem !important;\n}\n.custom-list > .list-style::after {\n  content: \"   \";\n}\nli > .card > .card-body {\n  padding: 0.4rem 0.4rem 0.4rem 1.25rem;\n}\n.form-control {\n  border-radius: 0.5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zcG9uc29yaW5nL2NvbnRhaW5lcnMvc3BvbnNvcmluZy9zcG9uc29yaW5nLmNvbXBvbmVudC5zY3NzIiwiL2hvbWUvZm1hei93b3Jrc3BhY2UvV29yay9NeUNsYXBwL215LWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL3Nwb25zb3JpbmcvY29udGFpbmVycy9zcG9uc29yaW5nL3Nwb25zb3JpbmcuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0JBQWdCO0FDQWhCO0VBQ0kscUJBQUE7RUFDQSxpQ0FBQTtBREVKO0FDQUE7RUFDSSxjQUFBO0VBQ0EsZUFBQTtFQUNBLDJDQUFBO0FER0o7QUNEQTtFQUNJLGlCQUFBO0VBQ0EsbUJBQUE7RUFDQSxpQkFBQTtBRElKO0FDRkE7RUFDSSwwQkFBQTtBREtKO0FDSEE7RUFDSSxjQUFBO0FETUo7QUNKQTtFQUNJLHFDQUFBO0FET0o7QUNMQTtFQUNJLHFCQUFBO0FEUUoiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL3Nwb25zb3JpbmcvY29udGFpbmVycy9zcG9uc29yaW5nL3Nwb25zb3JpbmcuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAY2hhcnNldCBcIlVURi04XCI7XG4uY3VzdG9tLWxpc3QgPiAubGlzdC1zdHlsZS5hY3RpdmUge1xuICBjb2xvcjogdmFyKC0tcHJpbWFyeSk7XG4gIHRleHQtc2hhZG93OiAwcHggLTFweCAxcHggIzAwMDAwMDtcbn1cblxuLmN1c3RvbS1saXN0ID4gLmxpc3Qtc3R5bGUge1xuICBjb2xvcjogIzg1ODM3NztcbiAgZm9udC1zaXplOiAycmVtO1xuICB0ZXh0LXNoYWRvdzogMHB4IDNweCAzcHggcmdiYSgwLCAwLCAwLCAwLjUpO1xufVxuXG4uY3VzdG9tLWxpc3QgPiAudGV4dCB7XG4gIGZvbnQtc2l6ZTogMS41cmVtO1xuICBsZXR0ZXItc3BhY2luZzogMXB4O1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuLmFkZC1lbnRyeSB7XG4gIGZvbnQtc2l6ZTogM3JlbSAhaW1wb3J0YW50O1xufVxuXG4uY3VzdG9tLWxpc3QgPiAubGlzdC1zdHlsZTo6YWZ0ZXIge1xuICBjb250ZW50OiBcIsKgwqDCoFwiO1xufVxuXG5saSA+IC5jYXJkID4gLmNhcmQtYm9keSB7XG4gIHBhZGRpbmc6IDAuNHJlbSAwLjRyZW0gMC40cmVtIDEuMjVyZW07XG59XG5cbi5mb3JtLWNvbnRyb2wge1xuICBib3JkZXItcmFkaXVzOiAwLjVyZW07XG59IiwiLmN1c3RvbS1saXN0ID4gLmxpc3Qtc3R5bGUuYWN0aXZle1xuICAgIGNvbG9yOiB2YXIoLS1wcmltYXJ5KTtcbiAgICB0ZXh0LXNoYWRvdzogMHB4IC0xcHggMXB4ICMwMDAwMDA7XG59XG4uY3VzdG9tLWxpc3QgPiAubGlzdC1zdHlsZXtcbiAgICBjb2xvcjogIzg1ODM3NztcbiAgICBmb250LXNpemU6IDJyZW07XG4gICAgdGV4dC1zaGFkb3c6IDBweCAzcHggM3B4IHJnYmEoMCwwLDAsIDAuNSk7XG59XG4uY3VzdG9tLWxpc3QgPiAudGV4dHtcbiAgICBmb250LXNpemU6IDEuNXJlbTtcbiAgICBsZXR0ZXItc3BhY2luZzogMXB4O1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuLmFkZC1lbnRyeXtcbiAgICBmb250LXNpemU6IDNyZW0haW1wb3J0YW50O1xufVxuLmN1c3RvbS1saXN0ID4gLmxpc3Qtc3R5bGU6OmFmdGVye1xuICAgIGNvbnRlbnQ6ICdcXDAwYTBcXDAwYTBcXDAwYTAnO1xufVxubGkgPiAuY2FyZCA+IC5jYXJkLWJvZHkge1xuICAgIHBhZGRpbmc6IDAuNHJlbSAwLjRyZW0gMC40cmVtIDEuMjVyZW07XG59XG4uZm9ybS1jb250cm9se1xuICAgIGJvcmRlci1yYWRpdXM6IDAuNXJlbTtcbn1cbiJdfQ== */";
+    __webpack_exports__["default"] = "@charset \"UTF-8\";\n.custom-list > .list-style.active {\n  color: var(--primary);\n  text-shadow: 0px -1px 1px #000000;\n}\n.custom-list > .list-style {\n  color: #858377;\n  font-size: 2rem;\n  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);\n}\n.custom-list > .text {\n  font-size: 1.5rem;\n  letter-spacing: 1px;\n  font-weight: bold;\n}\n.add-entry {\n  font-size: 3rem !important;\n}\n.custom-list > .list-style::after {\n  content: \"   \";\n}\nli > .card > .card-body {\n  padding: 0.4rem 0.4rem 0.4rem 1.25rem;\n}\n.form-control {\n  border-radius: 0.5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zcG9uc29yaW5nL2NvbnRhaW5lcnMvc3BvbnNvcmluZy9zcG9uc29yaW5nLmNvbXBvbmVudC5zY3NzIiwiL2hvbWUvc3NjaGlsbGluZy9Xb3Jrc3BhY2UvVk0vbXktY2xhcHAtbWFuYWdlci9zcmMvYXBwL21vZHVsZXMvc3BvbnNvcmluZy9jb250YWluZXJzL3Nwb25zb3Jpbmcvc3BvbnNvcmluZy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnQkFBZ0I7QUNBaEI7RUFDSSxxQkFBQTtFQUNBLGlDQUFBO0FERUo7QUNBQTtFQUNJLGNBQUE7RUFDQSxlQUFBO0VBQ0EseUNBQUE7QURHSjtBQ0RBO0VBQ0ksaUJBQUE7RUFDQSxtQkFBQTtFQUNBLGlCQUFBO0FESUo7QUNGQTtFQUNJLDBCQUFBO0FES0o7QUNIQTtFQUNJLGNBQUE7QURNSjtBQ0pBO0VBQ0kscUNBQUE7QURPSjtBQ0xBO0VBQ0kscUJBQUE7QURRSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvc3BvbnNvcmluZy9jb250YWluZXJzL3Nwb25zb3Jpbmcvc3BvbnNvcmluZy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBjaGFyc2V0IFwiVVRGLThcIjtcbi5jdXN0b20tbGlzdCA+IC5saXN0LXN0eWxlLmFjdGl2ZSB7XG4gIGNvbG9yOiB2YXIoLS1wcmltYXJ5KTtcbiAgdGV4dC1zaGFkb3c6IDBweCAtMXB4IDFweCAjMDAwMDAwO1xufVxuXG4uY3VzdG9tLWxpc3QgPiAubGlzdC1zdHlsZSB7XG4gIGNvbG9yOiAjODU4Mzc3O1xuICBmb250LXNpemU6IDJyZW07XG4gIHRleHQtc2hhZG93OiAwIDNweCAzcHggcmdiYSgwLCAwLCAwLCAwLjUpO1xufVxuXG4uY3VzdG9tLWxpc3QgPiAudGV4dCB7XG4gIGZvbnQtc2l6ZTogMS41cmVtO1xuICBsZXR0ZXItc3BhY2luZzogMXB4O1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuLmFkZC1lbnRyeSB7XG4gIGZvbnQtc2l6ZTogM3JlbSAhaW1wb3J0YW50O1xufVxuXG4uY3VzdG9tLWxpc3QgPiAubGlzdC1zdHlsZTo6YWZ0ZXIge1xuICBjb250ZW50OiBcIsKgwqDCoFwiO1xufVxuXG5saSA+IC5jYXJkID4gLmNhcmQtYm9keSB7XG4gIHBhZGRpbmc6IDAuNHJlbSAwLjRyZW0gMC40cmVtIDEuMjVyZW07XG59XG5cbi5mb3JtLWNvbnRyb2wge1xuICBib3JkZXItcmFkaXVzOiAwLjVyZW07XG59IiwiLmN1c3RvbS1saXN0ID4gLmxpc3Qtc3R5bGUuYWN0aXZle1xuICAgIGNvbG9yOiB2YXIoLS1wcmltYXJ5KTtcbiAgICB0ZXh0LXNoYWRvdzogMHB4IC0xcHggMXB4ICMwMDAwMDA7XG59XG4uY3VzdG9tLWxpc3QgPiAubGlzdC1zdHlsZXtcbiAgICBjb2xvcjogIzg1ODM3NztcbiAgICBmb250LXNpemU6IDJyZW07XG4gICAgdGV4dC1zaGFkb3c6IDAgM3B4IDNweCByZ2JhKDAsIDAsIDAsIDAuNSk7XG59XG4uY3VzdG9tLWxpc3QgPiAudGV4dHtcbiAgICBmb250LXNpemU6IDEuNXJlbTtcbiAgICBsZXR0ZXItc3BhY2luZzogMXB4O1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuLmFkZC1lbnRyeXtcbiAgICBmb250LXNpemU6IDNyZW0haW1wb3J0YW50O1xufVxuLmN1c3RvbS1saXN0ID4gLmxpc3Qtc3R5bGU6OmFmdGVye1xuICAgIGNvbnRlbnQ6ICdcXDAwYTBcXDAwYTBcXDAwYTAnO1xufVxubGkgPiAuY2FyZCA+IC5jYXJkLWJvZHkge1xuICAgIHBhZGRpbmc6IDAuNHJlbSAwLjRyZW0gMC40cmVtIDEuMjVyZW07XG59XG4uZm9ybS1jb250cm9se1xuICAgIGJvcmRlci1yYWRpdXM6IDAuNXJlbTtcbn1cbiJdfQ== */";
     /***/
   },
 
@@ -476,7 +628,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     };
 
     SponsoringComponent = SponsoringComponent_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: "sb-clubdata",
+      selector: 'sb-clubdata',
       changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectionStrategy"].OnPush,
       template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
       /*! raw-loader!./sponsoring.component.html */
@@ -743,14 +895,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(SponsoringService, [{
         key: "_getCachedConfig",
         value: function _getCachedConfig() {
-          if (this._cachedConfig == null) {
-            var e = new Error('_cachedConfig is null');
-
-            this._logger.error('Could not return _cachedConfig (null)', e);
-
-            throw e;
-          }
-
           return this._cachedConfig;
         }
       }, {
@@ -783,13 +927,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
             _this4._logger.debug('Inferred sponsor list', returnList);
 
+            _this4._cachedConfig = returnList;
             return returnList;
           }));
         }
       }, {
         key: "get",
         value: function get(refresh) {
-          if (this._cachedConfig == null || refresh) return this._refresh();
+          if (this._cachedConfig == null || refresh) return this._refresh(); // @ts-ignore null check above
+
           return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(this._getCachedConfig());
         }
       }, {

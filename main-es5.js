@@ -750,6 +750,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @app/modules/auth/guards */
+    "./src/app/modules/auth/guards/index.ts");
 
     var routes = [{
       path: '',
@@ -765,7 +771,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         "./src/app/modules/dashboard/dashboard-routing.module.ts")).then(function (m) {
           return m.DashboardRoutingModule;
         });
-      }
+      },
+      canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     }, {
       path: 'account',
       loadChildren: function loadChildren() {
@@ -798,7 +805,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         "./src/app/modules/newscenter/newscenter-routing.module.ts")).then(function (m) {
           return m.NewscenterRoutingModule;
         });
-      }
+      },
+      canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     }, {
       path: 'clubmodel',
       loadChildren: function loadChildren() {
@@ -809,7 +817,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         "./src/app/modules/clubmodel/club-model-routing.module.ts")).then(function (m) {
           return m.ClubModelRoutingModule;
         });
-      }
+      },
+      canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     }, {
       path: 'products',
       loadChildren: function loadChildren() {
@@ -820,18 +829,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         "./src/app/modules/products/products-routing.module.ts")).then(function (m) {
           return m.ProductsRoutingModule;
         });
-      }
+      },
+      canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     }, {
       path: 'stadium',
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | app-modules-corona-distribution-corona-distribution-routing-module */
-        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("app-modules-corona-distribution-corona-distribution-routing-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-corona-distribution-corona-distribution-routing-module")]).then(__webpack_require__.bind(null,
         /*! @app/modules/corona-distribution/corona-distribution-routing.module */
         "./src/app/modules/corona-distribution/corona-distribution-routing.module.ts")).then(function (m) {
           return m.CoronaDistributionRoutingModule;
         });
-      }
+      },
+      canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     }, {
       path: 'push',
       loadChildren: function loadChildren() {
@@ -842,7 +853,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         "./src/app/modules/push/push-routing.module.ts")).then(function (m) {
           return m.PushRoutingModule;
         });
-      }
+      },
+      canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     }, {
       path: 'intro',
       loadChildren: function loadChildren() {
@@ -853,7 +865,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         "./src/app/modules/intro/intro-routing.module.ts")).then(function (m) {
           return m.IntroRoutingModule;
         });
-      }
+      },
+      canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     }, {
       path: 'sponsors',
       loadChildren: function loadChildren() {
@@ -864,7 +877,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         "./src/app/modules/sponsoring/sponsoring-routing.module.ts")).then(function (m) {
           return m.SponsoringRoutingModule;
         });
-      }
+      },
+      canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     }, {
       path: '**',
       pathMatch: 'full',
@@ -906,7 +920,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".form-control {\n  border-radius: 0.5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2ZtYXovd29ya3NwYWNlL1dvcmsvTXlDbGFwcC9teS1jbGFwcC1tYW5hZ2VyL3NyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxxQkFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZvcm0tY29udHJvbHtcbiAgICBib3JkZXItcmFkaXVzOiAwLjVyZW07XG5cbn1cbiIsIi5mb3JtLWNvbnRyb2wge1xuICBib3JkZXItcmFkaXVzOiAwLjVyZW07XG59Il19 */";
+    __webpack_exports__["default"] = ".form-control {\n  border-radius: 0.5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3NzY2hpbGxpbmcvV29ya3NwYWNlL1ZNL215LWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHFCQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZm9ybS1jb250cm9se1xuICAgIGJvcmRlci1yYWRpdXM6IDAuNXJlbTtcblxufVxuIiwiLmZvcm0tY29udHJvbCB7XG4gIGJvcmRlci1yYWRpdXM6IDAuNXJlbTtcbn0iXX0= */";
     /***/
   },
 
@@ -1065,43 +1079,49 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _environments_environment__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var _app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! @app/modules/auth/guards */
+    "./src/app/modules/auth/guards/index.ts");
+    /* harmony import */
+
+
+    var _environments_environment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! @environments/environment */
     "./src/environments/environment.ts");
     /* harmony import */
 
 
-    var _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    var _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! @myclapp/myclapp-server */
     "./node_modules/@myclapp/myclapp-server/fesm2015/myclapp-myclapp-server.js");
     /* harmony import */
 
 
-    var _helpers_error_interceptor__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    var _helpers_error_interceptor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ../helpers/error.interceptor */
     "./src/helpers/error.interceptor.ts");
     /* harmony import */
 
 
-    var _helpers_fake_backend__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _helpers_fake_backend__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ../helpers/fake-backend */
     "./src/helpers/fake-backend.ts");
     /* harmony import */
 
 
-    var _helpers_jwt_interceptor__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _helpers_jwt_interceptor__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
     /*! ../helpers/jwt.interceptor */
     "./src/helpers/jwt.interceptor.ts");
     /* harmony import */
 
 
-    var _app_routing_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    var _app_routing_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! ./app-routing.module */
     "./src/app/app-routing.module.ts");
     /* harmony import */
 
 
-    var _app_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    var _app_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
     /*! ./app.component */
     "./src/app/app.component.ts");
 
@@ -1110,24 +1130,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     };
 
     AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_13__["AppComponent"], _app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_6__["SBSortableHeaderDirective"]],
-      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_12__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_8__["MyClappApiModule"].forRoot(_app_api_config__WEBPACK_IMPORTED_MODULE_5__["apiConfigFactory"])],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_14__["AppComponent"], _app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_6__["SBSortableHeaderDirective"]],
+      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_13__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_9__["MyClappApiModule"].forRoot(_app_api_config__WEBPACK_IMPORTED_MODULE_5__["apiConfigFactory"])],
       providers: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["DecimalPipe"], {
         provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HTTP_INTERCEPTORS"],
-        useClass: _helpers_jwt_interceptor__WEBPACK_IMPORTED_MODULE_11__["JwtInterceptor"],
+        useClass: _helpers_jwt_interceptor__WEBPACK_IMPORTED_MODULE_12__["JwtInterceptor"],
         multi: true
       }, {
         provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HTTP_INTERCEPTORS"],
-        useClass: _helpers_error_interceptor__WEBPACK_IMPORTED_MODULE_9__["ErrorInterceptor"],
+        useClass: _helpers_error_interceptor__WEBPACK_IMPORTED_MODULE_10__["ErrorInterceptor"],
         multi: true
       }, {
-        provide: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_8__["BASE_PATH"],
-        useValue: _environments_environment__WEBPACK_IMPORTED_MODULE_7__["environment"].apiUrl
+        provide: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_9__["BASE_PATH"],
+        useValue: _environments_environment__WEBPACK_IMPORTED_MODULE_8__["environment"].apiUrl
       }, // provider used to create fake backend
-      _helpers_fake_backend__WEBPACK_IMPORTED_MODULE_10__["fakeBackendProvider"]],
-      bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_13__["AppComponent"]]
+      _helpers_fake_backend__WEBPACK_IMPORTED_MODULE_11__["fakeBackendProvider"], _app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_7__["AuthGuard"]],
+      bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_14__["AppComponent"]]
     })], AppModule);
-    console.log(_environments_environment__WEBPACK_IMPORTED_MODULE_7__["environment"].apiUrl);
+    console.log(_environments_environment__WEBPACK_IMPORTED_MODULE_8__["environment"].apiUrl);
     /***/
   },
 
@@ -1210,6 +1230,162 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     SBSortableHeaderDirective = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
       selector: 'th[sbSortable]'
     })], SBSortableHeaderDirective);
+    /***/
+  },
+
+  /***/
+  "./src/app/modules/auth/guards/auth.guard.ts":
+  /*!***************************************************!*\
+    !*** ./src/app/modules/auth/guards/auth.guard.ts ***!
+    \***************************************************/
+
+  /*! exports provided: AuthGuard */
+
+  /***/
+  function srcAppModulesAuthGuardsAuthGuardTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AuthGuard", function () {
+      return AuthGuard;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var _services__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ../../../../services */
+    "./src/services/index.ts");
+    /* harmony import */
+
+
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @upe/logger */
+    "./node_modules/@upe/logger/index.js");
+    /* harmony import */
+
+
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_6__);
+
+    var AuthGuard_1;
+
+    var AuthGuard = AuthGuard_1 = /*#__PURE__*/function () {
+      function AuthGuard(router, userService) {
+        _classCallCheck(this, AuthGuard);
+
+        this.router = router;
+        this.userService = userService;
+        this._logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_6__["Logger"]({
+          name: AuthGuard_1.name,
+          flags: ['component']
+        });
+      }
+
+      _createClass(AuthGuard, [{
+        key: "canActivate",
+        value: function canActivate() {
+          var _this2 = this;
+
+          if (!this.userService.isAuthenticated()) {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(false).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function () {
+              _this2._logger.error('User not authenticated -> redirect to login');
+
+              _this2.router.navigate(['/account/login']);
+
+              return false;
+            }));
+          }
+
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(true);
+        }
+      }]);
+
+      return AuthGuard;
+    }();
+
+    AuthGuard.ctorParameters = function () {
+      return [{
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
+      }, {
+        type: _services__WEBPACK_IMPORTED_MODULE_5__["UserService"]
+      }];
+    };
+
+    AuthGuard = AuthGuard_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _services__WEBPACK_IMPORTED_MODULE_5__["UserService"]])], AuthGuard);
+    /***/
+  },
+
+  /***/
+  "./src/app/modules/auth/guards/index.ts":
+  /*!**********************************************!*\
+    !*** ./src/app/modules/auth/guards/index.ts ***!
+    \**********************************************/
+
+  /*! exports provided: guards, AuthGuard */
+
+  /***/
+  function srcAppModulesAuthGuardsIndexTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "guards", function () {
+      return guards;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _auth_guard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ./auth.guard */
+    "./src/app/modules/auth/guards/auth.guard.ts");
+    /* harmony reexport (safe) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AuthGuard", function () {
+      return _auth_guard__WEBPACK_IMPORTED_MODULE_1__["AuthGuard"];
+    });
+
+    var guards = [_auth_guard__WEBPACK_IMPORTED_MODULE_1__["AuthGuard"]];
     /***/
   },
 
@@ -1370,14 +1546,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ErrorInterceptor, [{
         key: "intercept",
         value: function intercept(request, next) {
-          var _this2 = this;
+          var _this3 = this;
 
           return next.handle(request).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (err) {
-            _this2.alertService.danger("Error occured (".concat(err.status, "): ").concat(err.statusText));
+            _this3.alertService.danger("Error occured (".concat(err.status, "): ").concat(err.statusText));
 
             if (err.status === 401) {
               // auto logout if 401 response returned from api
-              _this2.authenticationService.logout();
+              _this3.authenticationService.logout();
 
               location.replace('/account/login');
             }
@@ -1875,7 +2051,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       this._logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_2__["Logger"]({
         name: name,
-        flags: ["service"]
+        flags: ['service']
       });
     };
 
@@ -1978,7 +2154,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var BaseSearchService = /*#__PURE__*/function () {
       function BaseSearchService() {
-        var _this3 = this;
+        var _this4 = this;
 
         _classCallCheck(this, BaseSearchService);
 
@@ -1996,15 +2172,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](0);
 
         this._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(function () {
-          return _this3._loading$.next(true);
+          return _this4._loading$.next(true);
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["debounceTime"])(120), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["switchMap"])(function () {
-          return _this3._search();
+          return _this4._search();
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["delay"])(120), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(function () {
-          return _this3._loading$.next(false);
+          return _this4._loading$.next(false);
         })).subscribe(function (result) {
-          _this3._results$.next(result.items);
+          _this4._results$.next(result.items);
 
-          _this3._total$.next(result.total);
+          _this4._total$.next(result.total);
         });
 
         this._search$.next();
@@ -2036,7 +2212,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_search",
         value: function _search() {
-          var _this4 = this;
+          var _this5 = this;
 
           var cachedResults = this.getCache();
           var res;
@@ -2048,13 +2224,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           return res.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (allResults) {
-            _this4._cachedResults = allResults;
-            var _this4$_state = _this4._state,
-                sortColumn = _this4$_state.sortColumn,
-                sortDirection = _this4$_state.sortDirection,
-                pageSize = _this4$_state.pageSize,
-                page = _this4$_state.page,
-                searchTerm = _this4$_state.searchTerm;
+            _this5._cachedResults = allResults;
+            var _this5$_state = _this5._state,
+                sortColumn = _this5$_state.sortColumn,
+                sortDirection = _this5$_state.sortDirection,
+                pageSize = _this5$_state.pageSize,
+                page = _this5$_state.page,
+                searchTerm = _this5$_state.searchTerm;
             var items = allResults;
 
             if (sortColumn) {
@@ -2062,7 +2238,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
 
             items = items.filter(function (result) {
-              return matches(result, _this4.searchPropertyName, searchTerm, _this4.pipe);
+              return matches(result, _this5.searchPropertyName, searchTerm, _this5.pipe);
             });
             var total = items.length;
             items = items.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
@@ -2189,13 +2365,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _base_config_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var _base_config_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ./base.config.service */
     "./src/services/base.config.service.ts");
     /* harmony import */
 
 
-    var _user_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _user_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ./user.service */
     "./src/services/user.service.ts");
 
@@ -2207,15 +2389,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super = _createSuper(ClubModelService);
 
       function ClubModelService(apiClient, userService) {
-        var _this5;
+        var _this6;
 
         _classCallCheck(this, ClubModelService);
 
-        _this5 = _super.call(this, ClubModelService_1.name);
-        _this5.apiClient = apiClient;
-        _this5.userService = userService;
-        _this5._cachedConfig = null;
-        return _this5;
+        _this6 = _super.call(this, ClubModelService_1.name);
+        _this6.apiClient = apiClient;
+        _this6.userService = userService;
+        _this6._cachedConfig = null;
+        return _this6;
       }
 
       _createClass(ClubModelService, [{
@@ -2234,33 +2416,38 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "get",
         value: function get(refresh) {
-          if (this._getCachedConfig() == null || refresh) return this._refresh(); // @ts-ignore
+          if (this._getCachedConfig() == null || refresh) return this._refresh(); // @ts-ignore null check above
 
           return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(this._getCachedConfig());
         }
       }, {
         key: "_refresh",
         value: function _refresh() {
+          var _this7 = this;
+
           return this.apiClient.getClub({
             clubId: this.userService.club_id
-          });
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (clubModel) {
+            _this7._cachedConfig = clubModel;
+            return clubModel;
+          }));
         }
       }]);
 
       return ClubModelService;
-    }(_base_config_service__WEBPACK_IMPORTED_MODULE_4__["BaseConfigService"]);
+    }(_base_config_service__WEBPACK_IMPORTED_MODULE_5__["BaseConfigService"]);
 
     ClubModelService.ctorParameters = function () {
       return [{
         type: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"]
       }, {
-        type: _user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"]
+        type: _user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"]
       }];
     };
 
     ClubModelService = ClubModelService_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
       providedIn: 'root'
-    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"], _user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"]])], ClubModelService);
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"], _user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"]])], ClubModelService);
     /***/
   },
 
@@ -2411,7 +2598,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var NavigationService = /*#__PURE__*/function () {
       function NavigationService(route, router) {
-        var _this6 = this;
+        var _this8 = this;
 
         _classCallCheck(this, NavigationService);
 
@@ -2429,9 +2616,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             snapshot = snapshot.firstChild;
           }
 
-          _this6._routeData$.next(snapshot.data);
+          _this8._routeData$.next(snapshot.data);
 
-          _this6._currentURL$.next(router.url);
+          _this8._currentURL$.next(router.url);
         });
       }
 
@@ -2522,13 +2709,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _base_config_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var _base_config_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ./base.config.service */
     "./src/services/base.config.service.ts");
     /* harmony import */
 
 
-    var _user_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _user_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ./user.service */
     "./src/services/user.service.ts");
 
@@ -2540,15 +2733,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super2 = _createSuper(NewscenterService);
 
       function NewscenterService(apiClient, userService) {
-        var _this7;
+        var _this9;
 
         _classCallCheck(this, NewscenterService);
 
-        _this7 = _super2.call(this, NewscenterService_1.name);
-        _this7.apiClient = apiClient;
-        _this7.userService = userService;
-        _this7._cachedConfig = null;
-        return _this7;
+        _this9 = _super2.call(this, NewscenterService_1.name);
+        _this9.apiClient = apiClient;
+        _this9.userService = userService;
+        _this9._cachedConfig = null;
+        return _this9;
       }
 
       _createClass(NewscenterService, [{
@@ -2559,9 +2752,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_refresh",
         value: function _refresh() {
+          var _this10 = this;
+
           return this.apiClient.getConfig({
             clubId: this.userService.club_id
-          });
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (configModel) {
+            _this10._cachedConfig = configModel;
+            return configModel;
+          }));
         }
       }, {
         key: "get",
@@ -2581,19 +2779,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }]);
 
       return NewscenterService;
-    }(_base_config_service__WEBPACK_IMPORTED_MODULE_4__["BaseConfigService"]);
+    }(_base_config_service__WEBPACK_IMPORTED_MODULE_5__["BaseConfigService"]);
 
     NewscenterService.ctorParameters = function () {
       return [{
         type: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"]
       }, {
-        type: _user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"]
+        type: _user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"]
       }];
     };
 
     NewscenterService = NewscenterService_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
       providedIn: 'root'
-    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"], _user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"]])], NewscenterService);
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"], _user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"]])], NewscenterService);
     /***/
   },
 
@@ -2637,29 +2835,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! rxjs/operators */
     "./node_modules/rxjs/_esm2015/operators/index.js");
     /* harmony import */
 
 
-    var _upe_logger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @upe/logger */
     "./node_modules/@upe/logger/index.js");
     /* harmony import */
 
 
-    var _upe_logger__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_4__);
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_5__);
     /* harmony import */
 
 
-    var _base_search_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _base_search_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ./base.search.service */
     "./src/services/base.search.service.ts");
     /* harmony import */
 
 
-    var _user_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _user_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ./user.service */
     "./src/services/user.service.ts");
 
@@ -2671,68 +2875,150 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super3 = _createSuper(ProductsService);
 
       function ProductsService(apiClient, userService) {
-        var _this8;
+        var _this11;
 
         _classCallCheck(this, ProductsService);
 
-        _this8 = _super3.call(this);
-        _this8.apiClient = apiClient;
-        _this8.userService = userService;
-        _this8.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_4__["Logger"]({
+        _this11 = _super3.call(this);
+        _this11.apiClient = apiClient;
+        _this11.userService = userService;
+        _this11.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_5__["Logger"]({
           name: ProductsService_1.name,
-          flags: ["service"]
+          flags: ['service']
         });
-        _this8.searchPropertyName = 'name';
-        return _this8;
+        _this11.searchPropertyName = 'name';
+        _this11.refreshRequired$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](false);
+        return _this11;
       }
 
       _createClass(ProductsService, [{
         key: "getResults",
         value: function getResults() {
-          var _this9 = this;
+          var _this12 = this;
 
           return this.apiClient.getProducts({
             clubId: this.userService.club_id
-          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
-            _this9.logger.debug('Received Results', res);
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+            _this12.logger.debug('Received Results', res);
 
             return res.items;
           }));
         }
       }, {
         key: "addProduct",
-        value: function addProduct() {
-          var _this10 = this;
+        value: function addProduct(product) {
+          var _this13 = this;
 
-          this.logger.debug('Adding new Product (currently only static)');
+          this.logger.debug('Adding new Product', product);
           return this.apiClient.createProduct({
             clubId: this.userService.club_id,
             body: {
               active: true,
-              description: 'Description',
-              name: 'Name',
-              price: 5.5
+              description: product.description,
+              name: product.name,
+              price: product.price,
+              picture: product.picture
             }
-          }).subscribe(function () {
-            _this10.clearCacheAndSearch();
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (model) {
+            _this13.logger.info('Added new Product', model);
+
+            _this13.clearCacheAndSearch();
+
+            _this13.refreshRequired$.next(true);
+
+            return model;
+          }));
+        }
+      }, {
+        key: "editProduct",
+        value: function editProduct(product) {
+          var _this14 = this;
+
+          return this.apiClient.updateProduct({
+            clubId: this.userService.club_id,
+            productId: product.id,
+            body: {
+              active: true,
+              description: product.description,
+              name: product.name,
+              price: product.price,
+              picture: product.picture
+            }
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (model) {
+            _this14.logger.debug('Product updated', model);
+
+            _this14.clearCacheAndSearch();
+
+            _this14.refreshRequired$.next(true);
+
+            return model;
+          }));
+        }
+      }, {
+        key: "getProduct",
+        value: function getProduct(id) {
+          var _this15 = this;
+
+          return this.apiClient.getProduct({
+            clubId: this.userService.club_id,
+            productId: id
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (model) {
+            _this15.logger.debug('Fetched Product', model);
+
+            return model;
+          }));
+        }
+      }, {
+        key: "deleteProduct",
+        value: function deleteProduct(id) {
+          var _this16 = this;
+
+          return this.apiClient.deleteProduct({
+            clubId: this.userService.club_id,
+            productId: id
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (model) {
+            _this16.clearCacheAndSearch();
+
+            _this16.refreshRequired$.next(true);
+
+            _this16.logger.debug('Deleted Product', model);
+
+            return model;
+          }));
+        }
+      }, {
+        key: "getPictureForTerm",
+        value: function getPictureForTerm(term) {
+          return this.apiClient.searchPictures({
+            query: term
           });
         }
+      }, {
+        key: "getPictureById",
+        value: function getPictureById(id) {
+          return this.apiClient.getPicture({
+            pictureId: id
+          });
+        }
+      }, {
+        key: "uploadCustomPicture",
+        value: function uploadCustomPicture() {}
       }]);
 
       return ProductsService;
-    }(_base_search_service__WEBPACK_IMPORTED_MODULE_5__["BaseSearchService"]);
+    }(_base_search_service__WEBPACK_IMPORTED_MODULE_6__["BaseSearchService"]);
 
     ProductsService.ctorParameters = function () {
       return [{
         type: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"]
       }, {
-        type: _user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"]
+        type: _user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"]
       }];
     };
 
     ProductsService = ProductsService_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
       providedIn: 'root'
-    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"], _user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"]])], ProductsService);
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"], _user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"]])], ProductsService);
     /***/
   },
 
@@ -2810,31 +3096,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super4 = _createSuper(PushService);
 
       function PushService(apiClient, userService) {
-        var _this11;
+        var _this17;
 
         _classCallCheck(this, PushService);
 
-        _this11 = _super4.call(this);
-        _this11.apiClient = apiClient;
-        _this11.userService = userService;
-        _this11.searchPropertyName = 'title';
-        _this11.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_4__["Logger"]({
+        _this17 = _super4.call(this);
+        _this17.apiClient = apiClient;
+        _this17.userService = userService;
+        _this17.searchPropertyName = 'title';
+        _this17.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_4__["Logger"]({
           name: PushService_1.name,
           flags: ["service"]
         });
-        return _this11;
+        return _this17;
       }
 
       _createClass(PushService, [{
         key: "getResults",
         value: function getResults() {
-          var _this12 = this;
+          var _this18 = this;
 
           this.logger.debug('Query PushMessages');
           return this.apiClient.getPushMessages({
             clubId: this.userService.club_id
           }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
-            _this12.logger.debug('Received PushMessages', res);
+            _this18.logger.debug('Received PushMessages', res);
 
             return res.items;
           }));
@@ -2842,7 +3128,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "sendPush",
         value: function sendPush() {
-          var _this13 = this;
+          var _this19 = this;
 
           this.logger.debug('Creating Push Notification (currently static)');
           return this.apiClient.createPushMessage({
@@ -2852,7 +3138,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               title: 'Titel'
             }
           }).subscribe(function () {
-            _this13.clearCacheAndSearch();
+            _this19.clearCacheAndSearch();
           });
         }
       }]);
@@ -2908,50 +3194,57 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @myclapp/myclapp-server */
     "./node_modules/@myclapp/myclapp-server/fesm2015/myclapp-myclapp-server.js");
     /* harmony import */
 
 
-    var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! rxjs */
     "./node_modules/rxjs/_esm2015/index.js");
     /* harmony import */
 
 
-    var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! rxjs/operators */
     "./node_modules/rxjs/_esm2015/operators/index.js");
     /* harmony import */
 
 
-    var _upe_logger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! @upe/logger */
     "./node_modules/@upe/logger/index.js");
     /* harmony import */
 
 
-    var _upe_logger__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_5__);
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_6__);
 
     var UserService_1;
 
     var UserService = UserService_1 = /*#__PURE__*/function () {
-      function UserService(myClappService) {
+      function UserService(myClappService, router) {
         _classCallCheck(this, UserService);
 
         this.myClappService = myClappService;
-        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_5__["Logger"]({
+        this.router = router;
+        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_6__["Logger"]({
           name: UserService_1.name,
-          flags: ["service"]
+          flags: ['service']
         });
-        this.currentUserSubject = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](JSON.parse(localStorage.getItem('currentUser') || '{}'));
+        this.currentUserSubject = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"](JSON.parse(localStorage.getItem('currentUser') || '{}'));
       }
 
       _createClass(UserService, [{
         key: "login",
         value: function login(email, password) {
-          var _this14 = this;
+          var _this20 = this;
 
           this.logger.debug('Attempting login');
           return this.myClappService.login({
@@ -2959,13 +3252,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               email: email,
               password: password
             }
-          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (user) {
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (user) {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
-            _this14.logger.debug('Successful login', user);
+            _this20.logger.debug('Successful login', user);
 
             localStorage.setItem('currentUser', JSON.stringify(user));
 
-            _this14.currentUserSubject.next(user);
+            _this20.currentUserSubject.next(user);
 
             return user;
           }));
@@ -2976,6 +3269,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.logger.debug('Attempting log out');
           localStorage.removeItem('currentUser');
           this.currentUserSubject.next({});
+          this.router.navigate(['/account/login']);
+        }
+      }, {
+        key: "isAuthenticated",
+        value: function isAuthenticated() {
+          return !(this.currentUserSubject.value.token == undefined || this.currentUserSubject.value.token == '');
         }
       }, {
         key: "user",
@@ -3013,13 +3312,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     UserService.ctorParameters = function () {
       return [{
-        type: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"]
+        type: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_3__["MyClappService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
       }];
     };
 
     UserService = UserService_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
       providedIn: 'root'
-    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"]])], UserService);
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_3__["MyClappService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])], UserService);
     /***/
   },
 
@@ -3034,7 +3335,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! /home/fmaz/workspace/Work/MyClapp/my-clapp-manager/src/main.ts */
+    /*! /home/sschilling/Workspace/VM/my-clapp-manager/src/main.ts */
     "./src/main.ts");
     /***/
   }

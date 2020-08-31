@@ -318,6 +318,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @app/modules/auth/guards */ "./src/app/modules/auth/guards/index.ts");
+
 
 
 
@@ -330,6 +332,7 @@ const routes = [
     {
         path: 'dashboard',
         loadChildren: () => Promise.all(/*! import() | app-modules-dashboard-dashboard-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-products-products-routing-module"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-push-push-routing-module"), __webpack_require__.e("app-modules-dashboard-dashboard-routing-module")]).then(__webpack_require__.bind(null, /*! app/modules/dashboard/dashboard-routing.module */ "./src/app/modules/dashboard/dashboard-routing.module.ts")).then(m => m.DashboardRoutingModule),
+        canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'account',
@@ -342,30 +345,37 @@ const routes = [
     {
         path: 'newscenter',
         loadChildren: () => Promise.all(/*! import() | app-modules-newscenter-newscenter-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-newscenter-newscenter-routing-module")]).then(__webpack_require__.bind(null, /*! app/modules/newscenter/newscenter-routing.module */ "./src/app/modules/newscenter/newscenter-routing.module.ts")).then(m => m.NewscenterRoutingModule),
+        canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'clubmodel',
         loadChildren: () => Promise.all(/*! import() | app-modules-clubmodel-club-model-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-clubmodel-club-model-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/clubmodel/club-model-routing.module */ "./src/app/modules/clubmodel/club-model-routing.module.ts")).then(m => m.ClubModelRoutingModule),
+        canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'products',
         loadChildren: () => Promise.all(/*! import() | app-modules-products-products-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-products-products-routing-module"), __webpack_require__.e("app-modules-products-products-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/products/products-routing.module */ "./src/app/modules/products/products-routing.module.ts")).then(m => m.ProductsRoutingModule),
+        canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'stadium',
-        loadChildren: () => Promise.all(/*! import() | app-modules-corona-distribution-corona-distribution-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("app-modules-corona-distribution-corona-distribution-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/corona-distribution/corona-distribution-routing.module */ "./src/app/modules/corona-distribution/corona-distribution-routing.module.ts")).then(m => m.CoronaDistributionRoutingModule),
+        loadChildren: () => Promise.all(/*! import() | app-modules-corona-distribution-corona-distribution-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-corona-distribution-corona-distribution-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/corona-distribution/corona-distribution-routing.module */ "./src/app/modules/corona-distribution/corona-distribution-routing.module.ts")).then(m => m.CoronaDistributionRoutingModule),
+        canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'push',
         loadChildren: () => Promise.all(/*! import() | app-modules-push-push-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-push-push-routing-module"), __webpack_require__.e("app-modules-push-push-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/push/push-routing.module */ "./src/app/modules/push/push-routing.module.ts")).then(m => m.PushRoutingModule),
+        canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'intro',
         loadChildren: () => Promise.all(/*! import() | app-modules-intro-intro-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("app-modules-intro-intro-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/intro/intro-routing.module */ "./src/app/modules/intro/intro-routing.module.ts")).then(m => m.IntroRoutingModule),
+        canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'sponsors',
         loadChildren: () => Promise.all(/*! import() | app-modules-sponsoring-sponsoring-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-sponsoring-sponsoring-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/sponsoring/sponsoring-routing.module */ "./src/app/modules/sponsoring/sponsoring-routing.module.ts")).then(m => m.SponsoringRoutingModule),
+        canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: '**',
@@ -395,7 +405,7 @@ AppRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".form-control {\n  border-radius: 0.5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2ZtYXovd29ya3NwYWNlL1dvcmsvTXlDbGFwcC9teS1jbGFwcC1tYW5hZ2VyL3NyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxxQkFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZvcm0tY29udHJvbHtcbiAgICBib3JkZXItcmFkaXVzOiAwLjVyZW07XG5cbn1cbiIsIi5mb3JtLWNvbnRyb2wge1xuICBib3JkZXItcmFkaXVzOiAwLjVyZW07XG59Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = (".form-control {\n  border-radius: 0.5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3NzY2hpbGxpbmcvV29ya3NwYWNlL1ZNL215LWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHFCQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZm9ybS1jb250cm9se1xuICAgIGJvcmRlci1yYWRpdXM6IDAuNXJlbTtcblxufVxuIiwiLmZvcm0tY29udHJvbCB7XG4gIGJvcmRlci1yYWRpdXM6IDAuNXJlbTtcbn0iXX0= */");
 
 /***/ }),
 
@@ -469,13 +479,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var _app_api_config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @app/api.config */ "./src/app/api.config.ts");
 /* harmony import */ var _app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @app/directives/sortable.directive */ "./src/app/directives/sortable.directive.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @myclapp/myclapp-server */ "./node_modules/@myclapp/myclapp-server/fesm2015/myclapp-myclapp-server.js");
-/* harmony import */ var _helpers_error_interceptor__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../helpers/error.interceptor */ "./src/helpers/error.interceptor.ts");
-/* harmony import */ var _helpers_fake_backend__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../helpers/fake-backend */ "./src/helpers/fake-backend.ts");
-/* harmony import */ var _helpers_jwt_interceptor__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../helpers/jwt.interceptor */ "./src/helpers/jwt.interceptor.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @app/modules/auth/guards */ "./src/app/modules/auth/guards/index.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @myclapp/myclapp-server */ "./node_modules/@myclapp/myclapp-server/fesm2015/myclapp-myclapp-server.js");
+/* harmony import */ var _helpers_error_interceptor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../helpers/error.interceptor */ "./src/helpers/error.interceptor.ts");
+/* harmony import */ var _helpers_fake_backend__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../helpers/fake-backend */ "./src/helpers/fake-backend.ts");
+/* harmony import */ var _helpers_jwt_interceptor__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../helpers/jwt.interceptor */ "./src/helpers/jwt.interceptor.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+
 
 
 
@@ -494,26 +506,27 @@ let AppModule = class AppModule {
 };
 AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_13__["AppComponent"], _app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_6__["SBSortableHeaderDirective"]],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_12__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
-            _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_8__["MyClappApiModule"].forRoot(_app_api_config__WEBPACK_IMPORTED_MODULE_5__["apiConfigFactory"]),
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_14__["AppComponent"], _app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_6__["SBSortableHeaderDirective"]],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_13__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
+            _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_9__["MyClappApiModule"].forRoot(_app_api_config__WEBPACK_IMPORTED_MODULE_5__["apiConfigFactory"]),
         ],
         providers: [
             _angular_common__WEBPACK_IMPORTED_MODULE_1__["DecimalPipe"],
-            { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HTTP_INTERCEPTORS"], useClass: _helpers_jwt_interceptor__WEBPACK_IMPORTED_MODULE_11__["JwtInterceptor"], multi: true },
-            { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HTTP_INTERCEPTORS"], useClass: _helpers_error_interceptor__WEBPACK_IMPORTED_MODULE_9__["ErrorInterceptor"], multi: true },
+            { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HTTP_INTERCEPTORS"], useClass: _helpers_jwt_interceptor__WEBPACK_IMPORTED_MODULE_12__["JwtInterceptor"], multi: true },
+            { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HTTP_INTERCEPTORS"], useClass: _helpers_error_interceptor__WEBPACK_IMPORTED_MODULE_10__["ErrorInterceptor"], multi: true },
             {
-                provide: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_8__["BASE_PATH"],
-                useValue: _environments_environment__WEBPACK_IMPORTED_MODULE_7__["environment"].apiUrl,
+                provide: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_9__["BASE_PATH"],
+                useValue: _environments_environment__WEBPACK_IMPORTED_MODULE_8__["environment"].apiUrl,
             },
             // provider used to create fake backend
-            _helpers_fake_backend__WEBPACK_IMPORTED_MODULE_10__["fakeBackendProvider"],
+            _helpers_fake_backend__WEBPACK_IMPORTED_MODULE_11__["fakeBackendProvider"],
+            _app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_7__["AuthGuard"]
         ],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_13__["AppComponent"]],
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_14__["AppComponent"]],
     })
 ], AppModule);
 
-console.log(_environments_environment__WEBPACK_IMPORTED_MODULE_7__["environment"].apiUrl);
+console.log(_environments_environment__WEBPACK_IMPORTED_MODULE_8__["environment"].apiUrl);
 
 
 /***/ }),
@@ -582,6 +595,84 @@ SBSortableHeaderDirective = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorat
         selector: 'th[sbSortable]',
     })
 ], SBSortableHeaderDirective);
+
+
+
+/***/ }),
+
+/***/ "./src/app/modules/auth/guards/auth.guard.ts":
+/*!***************************************************!*\
+  !*** ./src/app/modules/auth/guards/auth.guard.ts ***!
+  \***************************************************/
+/*! exports provided: AuthGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return AuthGuard; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../services */ "./src/services/index.ts");
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @upe/logger */ "./node_modules/@upe/logger/index.js");
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_6__);
+var AuthGuard_1;
+
+
+
+
+
+
+
+let AuthGuard = AuthGuard_1 = class AuthGuard {
+    constructor(router, userService) {
+        this.router = router;
+        this.userService = userService;
+        this._logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_6__["Logger"]({ name: AuthGuard_1.name, flags: ['component'] });
+    }
+    canActivate() {
+        if (!this.userService.isAuthenticated()) {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(false).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(() => {
+                this._logger.error('User not authenticated -> redirect to login');
+                this.router.navigate(['/account/login']);
+                return false;
+            }));
+        }
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(true);
+    }
+};
+AuthGuard.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _services__WEBPACK_IMPORTED_MODULE_5__["UserService"] }
+];
+AuthGuard = AuthGuard_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _services__WEBPACK_IMPORTED_MODULE_5__["UserService"]])
+], AuthGuard);
+
+
+
+/***/ }),
+
+/***/ "./src/app/modules/auth/guards/index.ts":
+/*!**********************************************!*\
+  !*** ./src/app/modules/auth/guards/index.ts ***!
+  \**********************************************/
+/*! exports provided: guards, AuthGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "guards", function() { return guards; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _auth_guard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.guard */ "./src/app/modules/auth/guards/auth.guard.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return _auth_guard__WEBPACK_IMPORTED_MODULE_1__["AuthGuard"]; });
+
+
+
+const guards = [_auth_guard__WEBPACK_IMPORTED_MODULE_1__["AuthGuard"]];
 
 
 
@@ -955,7 +1046,7 @@ __webpack_require__.r(__webpack_exports__);
 
 let BaseConfigService = class BaseConfigService {
     constructor(name) {
-        this._logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_2__["Logger"]({ name: name, flags: ["service"] });
+        this._logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_2__["Logger"]({ name: name, flags: ['service'] });
     }
 };
 BaseConfigService.ctorParameters = () => [
@@ -1129,8 +1220,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @myclapp/myclapp-server */ "./node_modules/@myclapp/myclapp-server/fesm2015/myclapp-myclapp-server.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var _base_config_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./base.config.service */ "./src/services/base.config.service.ts");
-/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./user.service */ "./src/services/user.service.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _base_config_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.config.service */ "./src/services/base.config.service.ts");
+/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./user.service */ "./src/services/user.service.ts");
 var ClubModelService_1;
 
 
@@ -1138,7 +1230,8 @@ var ClubModelService_1;
 
 
 
-let ClubModelService = ClubModelService_1 = class ClubModelService extends _base_config_service__WEBPACK_IMPORTED_MODULE_4__["BaseConfigService"] {
+
+let ClubModelService = ClubModelService_1 = class ClubModelService extends _base_config_service__WEBPACK_IMPORTED_MODULE_5__["BaseConfigService"] {
     constructor(apiClient, userService) {
         super(ClubModelService_1.name);
         this.apiClient = apiClient;
@@ -1154,20 +1247,23 @@ let ClubModelService = ClubModelService_1 = class ClubModelService extends _base
     get(refresh) {
         if (this._getCachedConfig() == null || refresh)
             return this._refresh();
-        // @ts-ignore
+        // @ts-ignore null check above
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(this._getCachedConfig());
     }
     _refresh() {
-        return this.apiClient.getClub({ clubId: this.userService.club_id });
+        return this.apiClient.getClub({ clubId: this.userService.club_id }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(clubModel => {
+            this._cachedConfig = clubModel;
+            return clubModel;
+        }));
     }
 };
 ClubModelService.ctorParameters = () => [
     { type: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"] },
-    { type: _user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"] }
+    { type: _user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"] }
 ];
 ClubModelService = ClubModelService_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({ providedIn: 'root' }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"], _user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"]])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"], _user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"]])
 ], ClubModelService);
 
 
@@ -1296,8 +1392,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @myclapp/myclapp-server */ "./node_modules/@myclapp/myclapp-server/fesm2015/myclapp-myclapp-server.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var _base_config_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./base.config.service */ "./src/services/base.config.service.ts");
-/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./user.service */ "./src/services/user.service.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _base_config_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.config.service */ "./src/services/base.config.service.ts");
+/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./user.service */ "./src/services/user.service.ts");
 var NewscenterService_1;
 
 
@@ -1305,7 +1402,8 @@ var NewscenterService_1;
 
 
 
-let NewscenterService = NewscenterService_1 = class NewscenterService extends _base_config_service__WEBPACK_IMPORTED_MODULE_4__["BaseConfigService"] {
+
+let NewscenterService = NewscenterService_1 = class NewscenterService extends _base_config_service__WEBPACK_IMPORTED_MODULE_5__["BaseConfigService"] {
     constructor(apiClient, userService) {
         super(NewscenterService_1.name);
         this.apiClient = apiClient;
@@ -1316,7 +1414,10 @@ let NewscenterService = NewscenterService_1 = class NewscenterService extends _b
         return this._cachedConfig;
     }
     _refresh() {
-        return this.apiClient.getConfig({ clubId: this.userService.club_id });
+        return this.apiClient.getConfig({ clubId: this.userService.club_id }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(configModel => {
+            this._cachedConfig = configModel;
+            return configModel;
+        }));
     }
     get(refresh) {
         if (refresh || this._getCachedConfig() == null)
@@ -1330,11 +1431,11 @@ let NewscenterService = NewscenterService_1 = class NewscenterService extends _b
 };
 NewscenterService.ctorParameters = () => [
     { type: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"] },
-    { type: _user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"] }
+    { type: _user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"] }
 ];
 NewscenterService = NewscenterService_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({ providedIn: 'root' }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"], _user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"]])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"], _user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"]])
 ], NewscenterService);
 
 
@@ -1354,11 +1455,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @myclapp/myclapp-server */ "./node_modules/@myclapp/myclapp-server/fesm2015/myclapp-myclapp-server.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @upe/logger */ "./node_modules/@upe/logger/index.js");
-/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _base_search_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.search.service */ "./src/services/base.search.service.ts");
-/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./user.service */ "./src/services/user.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @upe/logger */ "./node_modules/@upe/logger/index.js");
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _base_search_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./base.search.service */ "./src/services/base.search.service.ts");
+/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./user.service */ "./src/services/user.service.ts");
 var ProductsService_1;
 
 
@@ -1367,44 +1469,100 @@ var ProductsService_1;
 
 
 
-let ProductsService = ProductsService_1 = class ProductsService extends _base_search_service__WEBPACK_IMPORTED_MODULE_5__["BaseSearchService"] {
+
+let ProductsService = ProductsService_1 = class ProductsService extends _base_search_service__WEBPACK_IMPORTED_MODULE_6__["BaseSearchService"] {
     constructor(apiClient, userService) {
         super();
         this.apiClient = apiClient;
         this.userService = userService;
-        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_4__["Logger"]({ name: ProductsService_1.name, flags: ["service"] });
+        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_5__["Logger"]({ name: ProductsService_1.name, flags: ['service'] });
         this.searchPropertyName = 'name';
+        this.refreshRequired$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](false);
     }
     getResults() {
         return this.apiClient.getProducts({
             clubId: this.userService.club_id,
-        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(res => {
             this.logger.debug('Received Results', res);
             return res.items;
         }));
     }
-    addProduct() {
-        this.logger.debug('Adding new Product (currently only static)');
+    addProduct(product) {
+        this.logger.debug('Adding new Product', product);
         return this.apiClient.createProduct({
             clubId: this.userService.club_id,
             body: {
                 active: true,
-                description: 'Description',
-                name: 'Name',
-                price: 5.5,
+                description: product.description,
+                name: product.name,
+                price: product.price,
+                picture: product.picture
             },
-        }).subscribe(() => {
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(model => {
+            this.logger.info('Added new Product', model);
             this.clearCacheAndSearch();
+            this.refreshRequired$.next(true);
+            return model;
+        }));
+    }
+    editProduct(product) {
+        return this.apiClient.updateProduct({
+            clubId: this.userService.club_id,
+            productId: product.id,
+            body: {
+                active: true,
+                description: product.description,
+                name: product.name,
+                price: product.price,
+                picture: product.picture
+            }
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(model => {
+            this.logger.debug('Product updated', model);
+            this.clearCacheAndSearch();
+            this.refreshRequired$.next(true);
+            return model;
+        }));
+    }
+    getProduct(id) {
+        return this.apiClient.getProduct({
+            clubId: this.userService.club_id,
+            productId: id
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(model => {
+            this.logger.debug('Fetched Product', model);
+            return model;
+        }));
+    }
+    deleteProduct(id) {
+        return this.apiClient.deleteProduct({
+            clubId: this.userService.club_id,
+            productId: id
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(model => {
+            this.clearCacheAndSearch();
+            this.refreshRequired$.next(true);
+            this.logger.debug('Deleted Product', model);
+            return model;
+        }));
+    }
+    getPictureForTerm(term) {
+        return this.apiClient.searchPictures({
+            query: term,
         });
+    }
+    getPictureById(id) {
+        return this.apiClient.getPicture({
+            pictureId: id
+        });
+    }
+    uploadCustomPicture() {
     }
 };
 ProductsService.ctorParameters = () => [
     { type: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"] },
-    { type: _user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"] }
+    { type: _user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"] }
 ];
 ProductsService = ProductsService_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({ providedIn: 'root' }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"], _user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"]])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"], _user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"]])
 ], ProductsService);
 
 
@@ -1492,11 +1650,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserService", function() { return UserService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @myclapp/myclapp-server */ "./node_modules/@myclapp/myclapp-server/fesm2015/myclapp-myclapp-server.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @upe/logger */ "./node_modules/@upe/logger/index.js");
-/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @myclapp/myclapp-server */ "./node_modules/@myclapp/myclapp-server/fesm2015/myclapp-myclapp-server.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @upe/logger */ "./node_modules/@upe/logger/index.js");
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_6__);
 var UserService_1;
 
 
@@ -1504,11 +1663,13 @@ var UserService_1;
 
 
 
+
 let UserService = UserService_1 = class UserService {
-    constructor(myClappService) {
+    constructor(myClappService, router) {
         this.myClappService = myClappService;
-        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_5__["Logger"]({ name: UserService_1.name, flags: ["service"] });
-        this.currentUserSubject = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](JSON.parse(localStorage.getItem('currentUser') || '{}'));
+        this.router = router;
+        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_6__["Logger"]({ name: UserService_1.name, flags: ['service'] });
+        this.currentUserSubject = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"](JSON.parse(localStorage.getItem('currentUser') || '{}'));
     }
     get user() {
         var _a;
@@ -1530,7 +1691,7 @@ let UserService = UserService_1 = class UserService {
     }
     login(email, password) {
         this.logger.debug('Attempting login');
-        return this.myClappService.login({ body: { email, password } }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(user => {
+        return this.myClappService.login({ body: { email, password } }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(user => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
             this.logger.debug('Successful login', user);
             localStorage.setItem('currentUser', JSON.stringify(user));
@@ -1542,14 +1703,19 @@ let UserService = UserService_1 = class UserService {
         this.logger.debug('Attempting log out');
         localStorage.removeItem('currentUser');
         this.currentUserSubject.next({});
+        this.router.navigate(['/account/login']);
+    }
+    isAuthenticated() {
+        return !(this.currentUserSubject.value.token == undefined || this.currentUserSubject.value.token == '');
     }
 };
 UserService.ctorParameters = () => [
-    { type: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"] }
+    { type: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_3__["MyClappService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
 ];
 UserService = UserService_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({ providedIn: 'root' }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"]])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_3__["MyClappService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
 ], UserService);
 
 
@@ -1563,7 +1729,7 @@ UserService = UserService_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decor
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/fmaz/workspace/Work/MyClapp/my-clapp-manager/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/sschilling/Workspace/VM/my-clapp-manager/src/main.ts */"./src/main.ts");
 
 
 /***/ })

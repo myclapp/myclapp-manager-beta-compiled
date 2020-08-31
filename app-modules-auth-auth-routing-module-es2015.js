@@ -380,57 +380,6 @@ RegisterComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 
 
-/***/ }),
-
-/***/ "./src/app/modules/auth/guards/auth.guard.ts":
-/*!***************************************************!*\
-  !*** ./src/app/modules/auth/guards/auth.guard.ts ***!
-  \***************************************************/
-/*! exports provided: AuthGuard */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return AuthGuard; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-
-
-
-let AuthGuard = class AuthGuard {
-    canActivate() {
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(true);
-    }
-};
-AuthGuard = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
-], AuthGuard);
-
-
-
-/***/ }),
-
-/***/ "./src/app/modules/auth/guards/index.ts":
-/*!**********************************************!*\
-  !*** ./src/app/modules/auth/guards/index.ts ***!
-  \**********************************************/
-/*! exports provided: guards, AuthGuard */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "guards", function() { return guards; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _auth_guard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.guard */ "./src/app/modules/auth/guards/auth.guard.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return _auth_guard__WEBPACK_IMPORTED_MODULE_1__["AuthGuard"]; });
-
-
-
-const guards = [_auth_guard__WEBPACK_IMPORTED_MODULE_1__["AuthGuard"]];
-
-
-
 /***/ })
 
 }]);

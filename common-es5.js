@@ -59,7 +59,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         });
         this._logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_1__["Logger"]({
           name: name,
-          flags: ["component"]
+          flags: ['component']
         });
       }
 
