@@ -766,7 +766,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | app-modules-dashboard-dashboard-routing-module */
-        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-products-products-routing-module"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-push-push-routing-module"), __webpack_require__.e("app-modules-dashboard-dashboard-routing-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-products-products-routing-module"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-push-push-routing-module"), __webpack_require__.e("app-modules-dashboard-dashboard-routing-module")]).then(__webpack_require__.bind(null,
         /*! app/modules/dashboard/dashboard-routing.module */
         "./src/app/modules/dashboard/dashboard-routing.module.ts")).then(function (m) {
           return m.DashboardRoutingModule;
@@ -778,7 +778,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | app-modules-auth-auth-routing-module */
-        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("app-modules-auth-auth-routing-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("app-modules-auth-auth-routing-module")]).then(__webpack_require__.bind(null,
         /*! app/modules/auth/auth-routing.module */
         "./src/app/modules/auth/auth-routing.module.ts")).then(function (m) {
           return m.AuthRoutingModule;
@@ -789,7 +789,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | app-modules-error-error-routing-module */
-        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("app-modules-error-error-routing-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("app-modules-error-error-routing-module")]).then(__webpack_require__.bind(null,
         /*! app/modules/error/error-routing.module */
         "./src/app/modules/error/error-routing.module.ts")).then(function (m) {
           return m.ErrorRoutingModule;
@@ -800,7 +800,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | app-modules-newscenter-newscenter-routing-module */
-        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-newscenter-newscenter-routing-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-newscenter-newscenter-routing-module")]).then(__webpack_require__.bind(null,
         /*! app/modules/newscenter/newscenter-routing.module */
         "./src/app/modules/newscenter/newscenter-routing.module.ts")).then(function (m) {
           return m.NewscenterRoutingModule;
@@ -812,7 +812,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | app-modules-clubmodel-club-model-routing-module */
-        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-clubmodel-club-model-routing-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-clubmodel-club-model-routing-module")]).then(__webpack_require__.bind(null,
         /*! @app/modules/clubmodel/club-model-routing.module */
         "./src/app/modules/clubmodel/club-model-routing.module.ts")).then(function (m) {
           return m.ClubModelRoutingModule;
@@ -824,7 +824,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | app-modules-products-products-routing-module */
-        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-products-products-routing-module"), __webpack_require__.e("app-modules-products-products-routing-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-products-products-routing-module"), __webpack_require__.e("app-modules-products-products-routing-module")]).then(__webpack_require__.bind(null,
         /*! @app/modules/products/products-routing.module */
         "./src/app/modules/products/products-routing.module.ts")).then(function (m) {
           return m.ProductsRoutingModule;
@@ -836,7 +836,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | app-modules-corona-distribution-corona-distribution-routing-module */
-        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-corona-distribution-corona-distribution-routing-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-corona-distribution-corona-distribution-routing-module")]).then(__webpack_require__.bind(null,
         /*! @app/modules/corona-distribution/corona-distribution-routing.module */
         "./src/app/modules/corona-distribution/corona-distribution-routing.module.ts")).then(function (m) {
           return m.CoronaDistributionRoutingModule;
@@ -848,7 +848,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | app-modules-push-push-routing-module */
-        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-push-push-routing-module"), __webpack_require__.e("app-modules-push-push-routing-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-push-push-routing-module"), __webpack_require__.e("app-modules-push-push-routing-module")]).then(__webpack_require__.bind(null,
         /*! @app/modules/push/push-routing.module */
         "./src/app/modules/push/push-routing.module.ts")).then(function (m) {
           return m.PushRoutingModule;
@@ -860,7 +860,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | app-modules-intro-intro-routing-module */
-        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("app-modules-intro-intro-routing-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("app-modules-intro-intro-routing-module")]).then(__webpack_require__.bind(null,
         /*! @app/modules/intro/intro-routing.module */
         "./src/app/modules/intro/intro-routing.module.ts")).then(function (m) {
           return m.IntroRoutingModule;
@@ -872,10 +872,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | app-modules-sponsoring-sponsoring-routing-module */
-        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-sponsoring-sponsoring-routing-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-sponsoring-sponsoring-routing-module")]).then(__webpack_require__.bind(null,
         /*! @app/modules/sponsoring/sponsoring-routing.module */
         "./src/app/modules/sponsoring/sponsoring-routing.module.ts")).then(function (m) {
           return m.SponsoringRoutingModule;
+        });
+      },
+      canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
+    }, {
+      path: 'tickets',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | app-modules-tickets-tickets-routing-module */
+        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("app-modules-tickets-tickets-routing-module")]).then(__webpack_require__.bind(null,
+        /*! @app/modules/tickets/tickets-routing.module */
+        "./src/app/modules/tickets/tickets-routing.module.ts")).then(function (m) {
+          return m.TicketsRoutingModule;
         });
       },
       canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
@@ -885,7 +897,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | app-modules-error-error-routing-module */
-        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("app-modules-error-error-routing-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("app-modules-error-error-routing-module")]).then(__webpack_require__.bind(null,
         /*! app/modules/error/error-routing.module */
         "./src/app/modules/error/error-routing.module.ts")).then(function (m) {
           return m.ErrorRoutingModule;
