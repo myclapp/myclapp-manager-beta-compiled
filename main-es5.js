@@ -2847,25 +2847,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! rxjs */
-    "./node_modules/rxjs/_esm2015/index.js");
-    /* harmony import */
-
-
-    var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! rxjs/operators */
-    "./node_modules/rxjs/_esm2015/operators/index.js");
-    /* harmony import */
-
-
-    var _upe_logger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @upe/logger */
     "./node_modules/@upe/logger/index.js");
     /* harmony import */
 
 
-    var _upe_logger__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_5__);
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_3__);
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
     /* harmony import */
 
 
@@ -2894,12 +2894,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this11 = _super3.call(this);
         _this11.apiClient = apiClient;
         _this11.userService = userService;
-        _this11.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_5__["Logger"]({
+        _this11.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_3__["Logger"]({
           name: ProductsService_1.name,
           flags: ['service']
         });
         _this11.searchPropertyName = 'name';
-        _this11.refreshRequired$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](false);
+        _this11.refreshRequired$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"](false);
         return _this11;
       }
 
@@ -2910,7 +2910,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           return this.apiClient.getProducts({
             clubId: this.userService.club_id
-          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (res) {
             _this12.logger.debug('Received Results', res);
 
             return res.items;
@@ -2931,7 +2931,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               price: product.price,
               picture: product.picture
             }
-          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (model) {
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (model) {
             _this13.logger.info('Added new Product', model);
 
             _this13.clearCacheAndSearch();
@@ -2956,7 +2956,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               price: product.price,
               picture: product.picture
             }
-          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (model) {
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (model) {
             _this14.logger.debug('Product updated', model);
 
             _this14.clearCacheAndSearch();
@@ -2974,7 +2974,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return this.apiClient.getProduct({
             clubId: this.userService.club_id,
             productId: id
-          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (model) {
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (model) {
             _this15.logger.debug('Fetched Product', model);
 
             return model;
@@ -2988,7 +2988,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return this.apiClient.deleteProduct({
             clubId: this.userService.club_id,
             productId: id
-          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (model) {
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (model) {
             _this16.clearCacheAndSearch();
 
             _this16.refreshRequired$.next(true);

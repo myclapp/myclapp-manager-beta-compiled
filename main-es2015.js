@@ -1460,10 +1460,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @myclapp/myclapp-server */ "./node_modules/@myclapp/myclapp-server/fesm2015/myclapp-myclapp-server.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @upe/logger */ "./node_modules/@upe/logger/index.js");
-/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @upe/logger */ "./node_modules/@upe/logger/index.js");
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 /* harmony import */ var _base_search_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./base.search.service */ "./src/services/base.search.service.ts");
 /* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./user.service */ "./src/services/user.service.ts");
 var ProductsService_1;
@@ -1480,14 +1480,14 @@ let ProductsService = ProductsService_1 = class ProductsService extends _base_se
         super();
         this.apiClient = apiClient;
         this.userService = userService;
-        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_5__["Logger"]({ name: ProductsService_1.name, flags: ['service'] });
+        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_3__["Logger"]({ name: ProductsService_1.name, flags: ['service'] });
         this.searchPropertyName = 'name';
-        this.refreshRequired$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](false);
+        this.refreshRequired$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"](false);
     }
     getResults() {
         return this.apiClient.getProducts({
             clubId: this.userService.club_id,
-        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(res => {
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(res => {
             this.logger.debug('Received Results', res);
             return res.items;
         }));
@@ -1503,7 +1503,7 @@ let ProductsService = ProductsService_1 = class ProductsService extends _base_se
                 price: product.price,
                 picture: product.picture
             },
-        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(model => {
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(model => {
             this.logger.info('Added new Product', model);
             this.clearCacheAndSearch();
             this.refreshRequired$.next(true);
@@ -1521,7 +1521,7 @@ let ProductsService = ProductsService_1 = class ProductsService extends _base_se
                 price: product.price,
                 picture: product.picture
             }
-        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(model => {
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(model => {
             this.logger.debug('Product updated', model);
             this.clearCacheAndSearch();
             this.refreshRequired$.next(true);
@@ -1532,7 +1532,7 @@ let ProductsService = ProductsService_1 = class ProductsService extends _base_se
         return this.apiClient.getProduct({
             clubId: this.userService.club_id,
             productId: id
-        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(model => {
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(model => {
             this.logger.debug('Fetched Product', model);
             return model;
         }));
@@ -1541,7 +1541,7 @@ let ProductsService = ProductsService_1 = class ProductsService extends _base_se
         return this.apiClient.deleteProduct({
             clubId: this.userService.club_id,
             productId: id
-        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(model => {
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(model => {
             this.clearCacheAndSearch();
             this.refreshRequired$.next(true);
             this.logger.debug('Deleted Product', model);
