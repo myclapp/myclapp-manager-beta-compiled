@@ -33818,19 +33818,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/dashboard/components/corona-list-modal/corona-list-modal.component.html":
-/*!***************************************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/modules/dashboard/components/corona-list-modal/corona-list-modal.component.html ***!
-  \***************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<sb-standard-modal (onClose)=\"generateCSV()\" title=\"Verteilung generieren\" closeText=\"Liste erstellen\">\n    <div class=\"row\">\n        <form style=\"width: 100%\">\n            <select class=\"form-control\">\n                <option>\n                    Bonn - Wiedenbrück\n                </option>\n                <option>Bonn - Monheim</option>\n                <option>Bonn Köln</option>\n            </select>\n        </form>\n    </div>\n</sb-standard-modal>\n");
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/dashboard/components/dashboard-cards/dashboard-cards.component.html":
 /*!***********************************************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/modules/dashboard/components/dashboard-cards/dashboard-cards.component.html ***!
@@ -33840,7 +33827,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row mb-3\">\n    <div class=\"col-xl-3 col-md-6 mt-2\">\n        <div class=\"card\" style=\"border-width: 1px\">\n            <div class=\"card-body\">\n                <h5 class=\"card-title\">\n                    <fa-icon [icon]='[\"fas\", \"chart-area\"]' class=\"mr-1 text-muted\"></fa-icon>\n                    Coronaliste generieren\n                </h5>\n                <p class=\"card-text\">Klicken Sie hier um die Besucherlisten der vergangenen Spiele zu generieren</p>\n                <div class=\"text-right mt-1\"><span class=\"btn-sm btn-primary\"\n                                                   (click)=\"openAddModal()\">Liste erstellen</span></div>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-xl-3 col-md-6 mt-2\">\n        <div class=\"card\" style=\"border-width: 1px\">\n            <div class=\"card-body\">\n                <h5 class=\"card-title\">\n                    <fa-icon [icon]='[\"fas\", \"chart-pie\"]' class=\"mr-1 text-muted\"></fa-icon>\n                    Absatz/Umsatz anzeigen\n                </h5>\n                <p class=\"card-text\">Klicken Sie hier um die aktuellesten Zahlen zum Absatz und Umsatz anzuzeigne</p>\n                <div class=\"text-right mt-1\"><span class=\"btn-sm btn-primary\"\n                                                   (click)=\"demoAlert()\">Zahlen anzeigen</span></div>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-xl-3 col-md-6 mt-2\">\n        <div class=\"card\" style=\"border-width: 1px\">\n            <div class=\"card-body\">\n                <h5 class=\"card-title\">\n                    <fa-icon [icon]='[\"fas\", \"users-cog\"]' class=\"mr-1 text-muted\"></fa-icon>\n                    Sponsorenmanagement\n                </h5>\n                <p class=\"card-text\">Klicken Sie hier um zum Sponsorenmanagement zu gelangen</p>\n                <div class=\"text-right mt-1\"><span class=\"btn-sm btn-primary\"\n                                                   (click)=\"demoAlert()\">Sponsorenmanagement</span></div>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-xl-3 col-md-6 mt-2\">\n        <div class=\"card\" style=\"border-width: 1px\">\n            <div class=\"card-body\">\n                <h5 class=\"card-title\">\n                    <fa-icon [icon]='[\"fas\", \"users\"]' class=\"mr-1 text-muted\"></fa-icon>\n                    Kundenmanagement\n                </h5>\n                <p class=\"card-text\">Klicken Sie hier um zum Kundenmanagement zu gelangen</p>\n                <div class=\"text-right mt-1\"><span class=\"btn-sm btn-primary\"\n                                                   (click)=\"demoAlert()\">Kundenmanagement</span></div>\n            </div>\n        </div>\n    </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-xl-3 col-md-6\">\n        <sb-card-view-details background=\"bg-primary\" link=\"/dashboard\">\n            <div class=\"card-body\">Primary Card</div>\n        </sb-card-view-details>\n    </div>\n    <div class=\"col-xl-3 col-md-6\">\n        <sb-card-view-details background=\"bg-warning\" link=\"/dashboard\">\n            <div class=\"card-body\">Warning Card</div>\n        </sb-card-view-details>\n    </div>\n    <div class=\"col-xl-3 col-md-6\">\n        <sb-card-view-details background=\"bg-success\" link=\"/dashboard\">\n            <div class=\"card-body\">Success Card</div>\n        </sb-card-view-details>\n    </div>\n    <div class=\"col-xl-3 col-md-6\">\n        <sb-card-view-details background=\"bg-danger\" link=\"/dashboard\">\n            <div class=\"card-body\">Danger Card</div>\n        </sb-card-view-details>\n    </div>\n</div>\n");
 
 /***/ }),
 
@@ -33853,7 +33840,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div [ngClass]=\"classesTicketsGraph\">\n        <div class=\"card\">\n            <div class=\"card-body\">\n                <div class=\"row pl-2 pr-2\">\n                    <div>\n                        <h5 class=\"card-title mb-3\" style=\"width: 100%\">\n                            <fa-icon [icon]='[\"fas\", \"chart-bar\"]' class=\"mr-1 text-muted\"></fa-icon>\n                            Ticketverkäufe\n                        </h5>\n                    </div>\n                    <div *ngIf=\"expand != 'tickets'\" class=\"d-sm-none d-md-inline ml-auto btn bg-transparent\"\n                         (click)=\"expand = 'tickets'\">\n                        <fa-icon [icon]='[\"fas\", \"expand-alt\"]' class=\"ml-auto text-muted\"></fa-icon>\n                    </div>\n                    <div *ngIf=\"expand == 'tickets'\" class=\"d-sm-none d-md-inline ml-auto btn bg-transparent\"\n                         (click)=\"expand = 'none'\">\n                        <fa-icon [icon]='[\"fas\", \"times-circle\"]' class=\"ml-auto text-muted\"></fa-icon>\n                    </div>\n                </div>\n                <sb-charts-bar></sb-charts-bar>\n            </div>\n\n        </div>\n    </div>\n    <div [ngClass]=\"classesUmsatzGraph\">\n        <div class=\"card\">\n            <div class=\"card-body\">\n                <div class=\"row pl-2 pr-2\">\n                    <div>\n                        <h5 class=\"card-title mb-3\" style=\"width: 100%\">\n                            <fa-icon [icon]='[\"fas\", \"chart-area\"]' class=\"mr-1 text-muted\"></fa-icon>\n                            Gesamtumsatz\n                        </h5>\n                    </div>\n                    <div *ngIf=\"expand != 'umsatz'\" class=\"d-sm-none d-md-inline ml-auto btn bg-transparent\"\n                         (click)=\"expand='umsatz'\">\n                        <fa-icon [icon]='[\"fas\", \"expand-alt\"]' class=\"ml-auto text-muted\"></fa-icon>\n                    </div>\n                    <div *ngIf=\"expand == 'umsatz'\" class=\"d-sm-none d-md-inline ml-auto btn bg-transparent\"\n                         (click)=\"expand='none'\">\n                        <fa-icon [icon]='[\"fas\", \"times-circle\"]' class=\"ml-auto text-muted\"></fa-icon>\n                    </div>\n                </div>\n                <sb-charts-area></sb-charts-area>\n            </div>\n        </div>\n    </div>\n    <div [ngClass]=\"classesTicketRightCol\">\n        <div class=\"row h-30 mt-3\">\n            <div class=\"card\">\n                <div class=\"card-body\" style=\"\">\n                    <div class=\"h4\">\n                        <fa-icon [icon]='[\"fas\", \"ticket-alt\"]' class=\"mr-1 text-muted\"></fa-icon>\n                        Insgesamt verkaufte Tickets <span class=\"h2\"\n                                                          style=\"color: var(--success)\"> {{115 + 98 + 107 + 78 + 103 + 105 + 45 + 57 + 51 + 60 + 63 + 92 + 30 + 52 + 70 + 62 + 74 + 69}}</span>\n                    </div>\n                    <div>Letzter Monat: <span class=\"h4\" style=\"color: var(--success)\">+{{105 + 92 + 69}}</span>\n                        | Steigerung zum Vormonat\n                        <span class=\"h4\" style=\"color: var(--success)\">\n                            +25%\n                        </span>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"row h-30 mt-3\">\n            <div class=\"card\">\n                <div class=\"card-body\" style=\"\">\n                    <div class=\"h4\">\n                        <fa-icon [icon]='[\"fas\", \"chart-pie\"]' class=\"mr-1 text-muted\"></fa-icon>\n                        Tickets nach Kategorie\n                    </div>\n                    <div>Stehplatz Tribüne: {{115 + 98 + 107 + 78 + 103 + 105}}(<span class=\"font-weight-bold\"\n                                                                                      style=\"color: var(--success)\">+105</span>)\n                        | Sitzplatz Tribüne: {{45 + 57 + 51 + 60 + 63 + 92}}(<span class=\"font-weight-bold\"\n                                                                                   style=\"color: var(--success)\">+92</span>)\n                        | Stehplatz Gegengerade: {{30 + 52 + 70 + 62 + 74 + 69}}(<span class=\"font-weight-bold\"\n                                                                                       style=\"color: var(--success)\">+59</span>)\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"row h-30 mt-3\">\n            <div class=\"card\">\n                <div class=\"card-body\" style=\"\">\n                    <div class=\"h4\">\n                        <fa-icon [icon]='[\"fas\", \"ticket-alt\"]' class=\"mr-1 text-muted\"></fa-icon>\n                        Gekaufte Tickets für das nächste Spiel <span class=\"font-weight-bold\"\n                                                                     style=\"color: var(--success)\">{{105 + 92 + 69}}</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div [ngClass]=\"classesUmsatzRightCol\">\n        <div class=\"row h-30 mt-3\">\n            <div class=\"card\">\n                <div class=\"card-body\" style=\"\">\n                    <div class=\"h4\">\n                        <fa-icon [icon]='[\"fas\", \"euro-sign\"]' class=\"mr-1 text-muted\"></fa-icon>\n                        Gesamtumsatz <span class=\"h2\" style=\"color: var(--success)\"> {{7890 + 204 + 278}}</span></div>\n                    <div>Letzter Monat: <span class=\"h4\" style=\"color: var(--success)\">1347</span>\n                        | Steigerung zum Vormonat\n                        <span class=\"h4\" style=\"color: var(--success)\">\n                            +23%\n                        </span>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"row h-30 mt-3\">\n            <div class=\"card\">\n                <div class=\"card-body\" style=\"\">\n                    <div class=\"h4\">\n                        <fa-icon [icon]='[\"fas\", \"chart-pie\"]' class=\"mr-1 text-muted\"></fa-icon>\n                        Verkäufe nach Kategorie\n                    </div>\n                    <div>Merchandise: 204(<span class=\"font-weight-bold\" style=\"color: var(--success)\">+35</span>)\n                        | Verpflegung: 278(<span class=\"font-weight-bold\" style=\"color: var(--success)\">+92</span>)\n                        | Tickets: 7890(<span class=\"font-weight-bold\" style=\"color: var(--success)\">+1500</span>)\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"row h-30 mt-3\">\n            <div class=\"card\">\n                <div class=\"card-body\" style=\"\">\n                    <div class=\"h4\">\n                        <fa-icon [icon]='[\"fas\", \"store\"]' class=\"mr-1 text-muted\"></fa-icon>\n                        Beliebte Produkte\n                    </div>\n                    <div>Bratwurst(<span class=\"font-weight-bold\" style=\"color: var(--success)\">+62</span>)\n                        | Bier (<span class=\"font-weight-bold\" style=\"color: var(--success)\">+30</span>)\n                        | Trikot (<span class=\"font-weight-bold\" style=\"color: var(--success)\">+35</span>)\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-xl-6\">\n        <sb-card\n        >\n            <div class=\"card-header\">\n                <fa-icon [icon]='[\"fas\", \"chart-bar\"]' class=\"mr-1\"></fa-icon>\n                Deine Umsätze\n            </div>\n            <div class=\"card-body\">\n                <sb-charts-bar></sb-charts-bar>\n            </div\n            >\n        </sb-card>\n    </div>\n    <div class=\"col-xl-6\">\n        <sb-card\n        >\n            <div class=\"card-header\">\n                <fa-icon [icon]='[\"fas\", \"chart-area\"]' class=\"mr-1\"></fa-icon>\n                Nutzerzahlen\n            </div>\n            <div class=\"card-body\">\n                <sb-charts-area></sb-charts-area>\n            </div\n            >\n        </sb-card>\n    </div>\n</div>\n");
 
 /***/ }),
 
@@ -33879,7 +33866,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<sb-layout-dashboard>\n    <sb-dashboard-head [hideBreadcrumbs]=\"true\" title=\"Dashboard\"></sb-dashboard-head>\n    <sb-dashboard-cards></sb-dashboard-cards>\n    <sb-dashboard-charts></sb-dashboard-charts>\n</sb-layout-dashboard>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<sb-layout-dashboard>\n    <sb-dashboard-head [hideBreadcrumbs]=\"false\" title=\"Club Dash\"></sb-dashboard-head>\n    <sb-dashboard-cards></sb-dashboard-cards>\n    <sb-dashboard-charts></sb-dashboard-charts>\n    <sb-dashboard-tables></sb-dashboard-tables>\n</sb-layout-dashboard>\n");
 
 /***/ }),
 
@@ -34008,7 +33995,7 @@ ChartsModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (":host {\n  display: block;\n  width: 100%;\n  height: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3NzY2hpbGxpbmcvV29ya3NwYWNlL1ZNL215LWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL2NoYXJ0cy9jb21wb25lbnRzL2NoYXJ0cy1hcmVhL2NoYXJ0cy1hcmVhLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9tb2R1bGVzL2NoYXJ0cy9jb21wb25lbnRzL2NoYXJ0cy1hcmVhL2NoYXJ0cy1hcmVhLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0ksY0FBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0FDREoiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL2NoYXJ0cy9jb21wb25lbnRzL2NoYXJ0cy1hcmVhL2NoYXJ0cy1hcmVhLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCAnLi4vLi4vLi4vLi4vLi4vc3R5bGVzL3ZhcmlhYmxlcyc7XG5cbjpob3N0IHtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG59XG4iLCI6aG9zdCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (":host {\n  display: block;\n  width: 100%;\n  height: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2ZtYXovd29ya3NwYWNlL1dvcmsvTXlDbGFwcC9teS1jbGFwcC1tYW5hZ2VyL3NyYy9hcHAvbW9kdWxlcy9jaGFydHMvY29tcG9uZW50cy9jaGFydHMtYXJlYS9jaGFydHMtYXJlYS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvbW9kdWxlcy9jaGFydHMvY29tcG9uZW50cy9jaGFydHMtYXJlYS9jaGFydHMtYXJlYS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNJLGNBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtBQ0RKIiwiZmlsZSI6InNyYy9hcHAvbW9kdWxlcy9jaGFydHMvY29tcG9uZW50cy9jaGFydHMtYXJlYS9jaGFydHMtYXJlYS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgJy4uLy4uLy4uLy4uLy4uL3N0eWxlcy92YXJpYWJsZXMnO1xuXG46aG9zdCB7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xufVxuIiwiOmhvc3Qge1xuICBkaXNwbGF5OiBibG9jaztcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbn0iXX0= */");
 
 /***/ }),
 
@@ -34039,39 +34026,41 @@ let ChartsAreaComponent = class ChartsAreaComponent {
             type: 'line',
             data: {
                 labels: [
-                    'Februar',
-                    'März',
-                    'April',
-                    'Mai',
-                    'Juni',
-                    'Juli',
-                    'August',
-                    'September',
-                    'Oktober',
+                    'Mar 1',
+                    'Mar 15',
+                    'Jun 1',
+                    'Jun 15',
+                    'Jul 1',
+                    'Jul 15',
+                    'Aug 1',
+                    'Aug 15',
+                    'Sep 1',
+                    'Sep 15',
                 ],
                 datasets: [
                     {
-                        label: 'Gesamtumsatz',
+                        label: 'Sessions',
                         lineTension: 0.3,
-                        backgroundColor: 'rgba(255, 216, 3,0.6)',
-                        borderColor: 'rgba(45, 51, 74,0.8)',
+                        backgroundColor: 'rgba(2,117,216,0.2)',
+                        borderColor: 'rgba(2,117,216,1)',
                         pointRadius: 5,
-                        pointBackgroundColor: 'rgba(108, 117, 125,1)',
+                        pointBackgroundColor: 'rgba(2,117,216,1)',
                         pointBorderColor: 'rgba(255,255,255,0.8)',
                         pointHoverRadius: 5,
-                        pointHoverBackgroundColor: '#90989F',
+                        pointHoverBackgroundColor: 'rgba(2,117,216,1)',
                         pointHitRadius: 50,
                         pointBorderWidth: 2,
                         data: [
-                            180,
-                            313,
-                            406,
-                            1145,
-                            2800,
-                            3431,
-                            4890,
-                            6765,
-                            8372,
+                            100,
+                            301,
+                            262,
+                            183,
+                            182,
+                            286,
+                            312,
+                            332,
+                            258,
+                            241,
                         ],
                     },
                 ],
@@ -34095,7 +34084,7 @@ let ChartsAreaComponent = class ChartsAreaComponent {
                         {
                             ticks: {
                                 min: 0,
-                                max: 10000,
+                                max: 400,
                                 maxTicksLimit: 5,
                             },
                             gridLines: {
@@ -34138,7 +34127,7 @@ ChartsAreaComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (":host {\n  display: block;\n  width: 100%;\n  height: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3NzY2hpbGxpbmcvV29ya3NwYWNlL1ZNL215LWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL2NoYXJ0cy9jb21wb25lbnRzL2NoYXJ0cy1iYXIvY2hhcnRzLWJhci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvbW9kdWxlcy9jaGFydHMvY29tcG9uZW50cy9jaGFydHMtYmFyL2NoYXJ0cy1iYXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDSSxjQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7QUNESiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvY2hhcnRzL2NvbXBvbmVudHMvY2hhcnRzLWJhci9jaGFydHMtYmFyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCAnLi4vLi4vLi4vLi4vLi4vc3R5bGVzL3ZhcmlhYmxlcyc7XG5cbjpob3N0IHtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG59XG4iLCI6aG9zdCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (":host {\n  display: block;\n  width: 100%;\n  height: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2ZtYXovd29ya3NwYWNlL1dvcmsvTXlDbGFwcC9teS1jbGFwcC1tYW5hZ2VyL3NyYy9hcHAvbW9kdWxlcy9jaGFydHMvY29tcG9uZW50cy9jaGFydHMtYmFyL2NoYXJ0cy1iYXIuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21vZHVsZXMvY2hhcnRzL2NvbXBvbmVudHMvY2hhcnRzLWJhci9jaGFydHMtYmFyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0ksY0FBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0FDREoiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL2NoYXJ0cy9jb21wb25lbnRzL2NoYXJ0cy1iYXIvY2hhcnRzLWJhci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgJy4uLy4uLy4uLy4uLy4uL3N0eWxlcy92YXJpYWJsZXMnO1xuXG46aG9zdCB7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xufVxuIiwiOmhvc3Qge1xuICBkaXNwbGF5OiBibG9jaztcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbn0iXX0= */");
 
 /***/ }),
 
@@ -34168,87 +34157,49 @@ let ChartsBarComponent = class ChartsBarComponent {
         this.chart = new chart_js__WEBPACK_IMPORTED_MODULE_2__["Chart"](this.myBarChart.nativeElement, {
             type: 'bar',
             data: {
-                labels: ['dummy', 'Bonn - Spich', 'Bonn - Alfter', 'Bonn - Hennef', 'Bonn - Köln', 'Bonn - Monheim', 'Bonn - Wiedenbrück'],
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
                 datasets: [
                     {
-                        label: 'Stehplatz Tribüne',
-                        backgroundColor: 'rgba(256,216,3,1)',
-                        borderColor: 'rgba(108, 117, 125,1)',
-                        data: [0, 115, 98, 107, 78, 103, 105],
+                        label: 'Revenue',
+                        backgroundColor: 'rgba(2,117,216,1)',
+                        borderColor: 'rgba(2,117,216,1)',
+                        data: [4215, 5312, 6251, 7841, 9821, 14984],
                     },
-                    {
-                        label: 'Sitzplatz Tribüne',
-                        backgroundColor: 'rgba(45, 51, 74,1)',
-                        borderColor: 'rgba(108, 117, 125,1)',
-                        data: [0, 45, 57, 51, 60, 63, 92],
-                    },
-                    {
-                        label: 'Stehplatz Gegengerade',
-                        backgroundColor: 'rgba(108, 117, 125,1)',
-                        borderColor: 'rgba(108, 117, 125,1)',
-                        data: [0, 30, 52, 70, 62, 74, 69],
-                    },
-                    {
-                        label: 'Limitierung',
-                        data: [300, 300, 300, 300, 300, 300, 300, 300],
-                        fill: false,
-                        borderColor: 'rgba(50, 159, 91,1)',
-                        borderDash: [5, 4],
-                        borderWidth: 3,
-                        type: 'line',
-                    }
                 ],
             },
             options: {
                 scales: {
                     xAxes: [
                         {
+                            time: {
+                                unit: 'month',
+                            },
                             gridLines: {
                                 display: false,
                             },
                             ticks: {
-                                min: 'Bonn - Spich',
+                                maxTicksLimit: 6,
                             },
-                            stacked: true
                         },
                     ],
                     yAxes: [
                         {
                             ticks: {
                                 min: 0,
-                                max: 360,
+                                max: 15000,
                                 maxTicksLimit: 5,
                             },
                             gridLines: {
                                 display: true,
                             },
-                            stacked: true
                         },
                     ],
                 },
                 legend: {
-                    display: true,
-                    labels: {
-                        filter(legendItem) {
-                            var _a;
-                            return !((_a = legendItem.text) === null || _a === void 0 ? void 0 : _a.includes('Limitierung'));
-                        },
-                    },
+                    display: false,
                 },
             },
         });
-        const colors = ['rgba(256,216,3,1)', 'rgba(45, 51, 74,1)', 'rgba(108, 117, 125,1)'];
-        const colorsOp = ['rgba(256,216,3,0.6)', 'rgba(45, 51, 74,0.6)', 'rgba(108, 117, 125,0.6)'];
-        if (this.chart.data.datasets) {
-            for (let i = 0; i < this.chart.data.datasets.length - 1; i++) {
-                let colArr = new Array(6).fill(colorsOp[i]);
-                colArr.pop();
-                colArr.push(colors[i]);
-                colArr.unshift(colors[i]);
-                this.chart.data.datasets[i].backgroundColor = colArr;
-            }
-        }
-        this.chart.update();
     }
 };
 Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
@@ -34278,7 +34229,7 @@ ChartsBarComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (":host {\n  display: block;\n  width: 100%;\n  height: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3NzY2hpbGxpbmcvV29ya3NwYWNlL1ZNL215LWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL2NoYXJ0cy9jb21wb25lbnRzL2NoYXJ0cy1waWUvY2hhcnRzLXBpZS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvbW9kdWxlcy9jaGFydHMvY29tcG9uZW50cy9jaGFydHMtcGllL2NoYXJ0cy1waWUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDSSxjQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7QUNESiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvY2hhcnRzL2NvbXBvbmVudHMvY2hhcnRzLXBpZS9jaGFydHMtcGllLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCAnLi4vLi4vLi4vLi4vLi4vc3R5bGVzL3ZhcmlhYmxlcyc7XG5cbjpob3N0IHtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG59XG4iLCI6aG9zdCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (":host {\n  display: block;\n  width: 100%;\n  height: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2ZtYXovd29ya3NwYWNlL1dvcmsvTXlDbGFwcC9teS1jbGFwcC1tYW5hZ2VyL3NyYy9hcHAvbW9kdWxlcy9jaGFydHMvY29tcG9uZW50cy9jaGFydHMtcGllL2NoYXJ0cy1waWUuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21vZHVsZXMvY2hhcnRzL2NvbXBvbmVudHMvY2hhcnRzLXBpZS9jaGFydHMtcGllLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0ksY0FBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0FDREoiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL2NoYXJ0cy9jb21wb25lbnRzL2NoYXJ0cy1waWUvY2hhcnRzLXBpZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgJy4uLy4uLy4uLy4uLy4uL3N0eWxlcy92YXJpYWJsZXMnO1xuXG46aG9zdCB7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xufVxuIiwiOmhvc3Qge1xuICBkaXNwbGF5OiBibG9jaztcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbn0iXX0= */");
 
 /***/ }),
 
@@ -34489,63 +34440,6 @@ const guards = [_charts_guard__WEBPACK_IMPORTED_MODULE_1__["ChartsGuard"]];
 
 /***/ }),
 
-/***/ "./src/app/modules/dashboard/components/corona-list-modal/corona-list-modal.component.scss":
-/*!*************************************************************************************************!*\
-  !*** ./src/app/modules/dashboard/components/corona-list-modal/corona-list-modal.component.scss ***!
-  \*************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvZGFzaGJvYXJkL2NvbXBvbmVudHMvY29yb25hLWxpc3QtbW9kYWwvY29yb25hLWxpc3QtbW9kYWwuY29tcG9uZW50LnNjc3MifQ== */");
-
-/***/ }),
-
-/***/ "./src/app/modules/dashboard/components/corona-list-modal/corona-list-modal.component.ts":
-/*!***********************************************************************************************!*\
-  !*** ./src/app/modules/dashboard/components/corona-list-modal/corona-list-modal.component.ts ***!
-  \***********************************************************************************************/
-/*! exports provided: CoronaListModalComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoronaListModalComponent", function() { return CoronaListModalComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-
-
-let CoronaListModalComponent = class CoronaListModalComponent {
-    constructor() {
-    }
-    ngOnInit() {
-    }
-    generateCSV() {
-        const rows = [
-            ['Max Mustermann', 'Bonn', 'Musterstraße 12', '022123456'],
-            ['Maria Musterftau', 'Köln', 'Am Musterweg 7', '022876544'],
-            ['Herbert Beispiel', 'Beispielhausen', 'Exemplarweg 45', '01234456']
-        ];
-        let csvContent = 'data:text/csv;charset=utf-8,'
-            + rows.map(e => e.join(',')).join('\n');
-        const encodedUri = encodeURI(csvContent);
-        window.open(encodedUri);
-    }
-};
-CoronaListModalComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'sb-corona-list-modal',
-        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./corona-list-modal.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/dashboard/components/corona-list-modal/corona-list-modal.component.html")).default,
-        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./corona-list-modal.component.scss */ "./src/app/modules/dashboard/components/corona-list-modal/corona-list-modal.component.scss")).default]
-    }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
-], CoronaListModalComponent);
-
-
-
-/***/ }),
-
 /***/ "./src/app/modules/dashboard/components/dashboard-cards/dashboard-cards.component.scss":
 /*!*********************************************************************************************!*\
   !*** ./src/app/modules/dashboard/components/dashboard-cards/dashboard-cards.component.scss ***!
@@ -34571,32 +34465,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardCardsComponent", function() { return DashboardCardsComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _app_modules_dashboard_components_corona_list_modal_corona_list_modal_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @app/modules/dashboard/components/corona-list-modal/corona-list-modal.component */ "./src/app/modules/dashboard/components/corona-list-modal/corona-list-modal.component.ts");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
-
-
 
 
 let DashboardCardsComponent = class DashboardCardsComponent {
-    constructor(modalService) {
-        this.modalService = modalService;
+    constructor() {
     }
     ngOnInit() {
     }
-    openAddModal() {
-        this.modalService.open(_app_modules_dashboard_components_corona_list_modal_corona_list_modal_component__WEBPACK_IMPORTED_MODULE_2__["CoronaListModalComponent"], {
-            ariaLabelledBy: 'Besucherliste generieren',
-            size: 'lg',
-            centered: true,
-        });
-    }
-    demoAlert() {
-        window.alert('Demo Content');
-    }
 };
-DashboardCardsComponent.ctorParameters = () => [
-    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbModal"] }
-];
 DashboardCardsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'sb-dashboard-cards',
@@ -34604,7 +34480,7 @@ DashboardCardsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"
         template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./dashboard-cards.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/dashboard/components/dashboard-cards/dashboard-cards.component.html")).default,
         styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./dashboard-cards.component.scss */ "./src/app/modules/dashboard/components/dashboard-cards/dashboard-cards.component.scss")).default]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbModal"]])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
 ], DashboardCardsComponent);
 
 
@@ -34620,7 +34496,7 @@ DashboardCardsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".card {\n  border-width: 1px;\n}\n\n.right-col {\n  overflow-y: scroll;\n}\n\n.h-30 {\n  height: 30% !important;\n}\n\n.h-30 > .card {\n  width: 100%;\n  height: 100%;\n}\n\n.h-30 > .card > .card-body {\n  text-align: center;\n  align-items: center;\n  display: grid;\n}\n\n.h-30 > .card > .card-body > div {\n  margin-left: auto;\n  margin-right: auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3NzY2hpbGxpbmcvV29ya3NwYWNlL1ZNL215LWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL2Rhc2hib2FyZC9jb21wb25lbnRzL2Rhc2hib2FyZC1jaGFydHMvZGFzaGJvYXJkLWNoYXJ0cy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvbW9kdWxlcy9kYXNoYm9hcmQvY29tcG9uZW50cy9kYXNoYm9hcmQtY2hhcnRzL2Rhc2hib2FyZC1jaGFydHMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7RUFDSSxpQkFBQTtBQ0FKOztBREdBO0VBQ0ksa0JBQUE7QUNBSjs7QURHQTtFQUNJLHNCQUFBO0FDQUo7O0FER0E7RUFDSSxXQUFBO0VBQ0EsWUFBQTtBQ0FKOztBREdBO0VBQ0ksa0JBQUE7RUFDQSxtQkFBQTtFQUNBLGFBQUE7QUNBSjs7QURHQTtFQUNJLGlCQUFBO0VBQ0Esa0JBQUE7QUNBSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvZGFzaGJvYXJkL2NvbXBvbmVudHMvZGFzaGJvYXJkLWNoYXJ0cy9kYXNoYm9hcmQtY2hhcnRzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCAnLi4vLi4vLi4vLi4vLi4vc3R5bGVzL3ZhcmlhYmxlcyc7XG4uY2FyZCB7XG4gICAgYm9yZGVyLXdpZHRoOiAxcHhcbn1cblxuLnJpZ2h0LWNvbCB7XG4gICAgb3ZlcmZsb3cteTogc2Nyb2xsO1xufVxuXG4uaC0zMCB7XG4gICAgaGVpZ2h0OiAzMCUgIWltcG9ydGFudDtcbn1cblxuLmgtMzAgPiAuY2FyZCB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xufVxuXG4uaC0zMCA+IC5jYXJkID4gLmNhcmQtYm9keSB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgZGlzcGxheTogZ3JpZDtcbn1cblxuLmgtMzAgPiAuY2FyZCA+IC5jYXJkLWJvZHkgPiBkaXYge1xuICAgIG1hcmdpbi1sZWZ0OiBhdXRvO1xuICAgIG1hcmdpbi1yaWdodDogYXV0bztcbn1cbiIsIi5jYXJkIHtcbiAgYm9yZGVyLXdpZHRoOiAxcHg7XG59XG5cbi5yaWdodC1jb2wge1xuICBvdmVyZmxvdy15OiBzY3JvbGw7XG59XG5cbi5oLTMwIHtcbiAgaGVpZ2h0OiAzMCUgIWltcG9ydGFudDtcbn1cblxuLmgtMzAgPiAuY2FyZCB7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5oLTMwID4gLmNhcmQgPiAuY2FyZC1ib2R5IHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBkaXNwbGF5OiBncmlkO1xufVxuXG4uaC0zMCA+IC5jYXJkID4gLmNhcmQtYm9keSA+IGRpdiB7XG4gIG1hcmdpbi1sZWZ0OiBhdXRvO1xuICBtYXJnaW4tcmlnaHQ6IGF1dG87XG59Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvZGFzaGJvYXJkL2NvbXBvbmVudHMvZGFzaGJvYXJkLWNoYXJ0cy9kYXNoYm9hcmQtY2hhcnRzLmNvbXBvbmVudC5zY3NzIn0= */");
 
 /***/ }),
 
@@ -34640,43 +34516,8 @@ __webpack_require__.r(__webpack_exports__);
 
 let DashboardChartsComponent = class DashboardChartsComponent {
     constructor() {
-        this.expand = 'none';
     }
     ngOnInit() {
-    }
-    get classesTicketsGraph() {
-        if (this.expand == 'none') {
-            return 'col-xl-6 col-md-12 col-sm-12';
-        }
-        else if (this.expand == 'tickets') {
-            return 'col-xl-8 col-md-8 col-sm-12';
-        }
-        else
-            return 'd-none';
-    }
-    get classesTicketRightCol() {
-        if (this.expand == 'tickets') {
-            return 'col-xl-4 col-md-4 col-sm-12';
-        }
-        else
-            return 'd-none';
-    }
-    get classesUmsatzGraph() {
-        if (this.expand == 'none') {
-            return 'col-xl-6 col-md-12 col-sm-12';
-        }
-        else if (this.expand == 'umsatz') {
-            return 'col-xl-8 col-md-8 col-sm-12';
-        }
-        else
-            return 'd-none';
-    }
-    get classesUmsatzRightCol() {
-        if (this.expand == 'umsatz') {
-            return 'col-xl-4 col-md-4 col-sm-12';
-        }
-        else
-            return 'd-none';
     }
 };
 DashboardChartsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
@@ -35058,13 +34899,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @app/modules/app-common/app-common.module */ "./src/app/modules/app-common/app-common.module.ts");
 /* harmony import */ var _app_modules_charts_charts_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @app/modules/charts/charts.module */ "./src/app/modules/charts/charts.module.ts");
 /* harmony import */ var _app_modules_navigation_navigation_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @app/modules/navigation/navigation.module */ "./src/app/modules/navigation/navigation.module.ts");
-/* harmony import */ var _app_modules_page_layout_page_layouts_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @app/modules/page-layout/page-layouts.module */ "./src/app/modules/page-layout/page-layouts.module.ts");
-/* harmony import */ var _app_modules_products_products_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @app/modules/products/products.module */ "./src/app/modules/products/products.module.ts");
-/* harmony import */ var _app_modules_push_push_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @app/modules/push/push.module */ "./src/app/modules/push/push.module.ts");
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components */ "./src/app/modules/dashboard/components/index.ts");
-/* harmony import */ var _containers__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./containers */ "./src/app/modules/dashboard/containers/index.ts");
-/* harmony import */ var _guards__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./guards */ "./src/app/modules/dashboard/guards/index.ts");
-/* harmony import */ var _components_corona_list_modal_corona_list_modal_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/corona-list-modal/corona-list-modal.component */ "./src/app/modules/dashboard/components/corona-list-modal/corona-list-modal.component.ts");
+/* harmony import */ var _app_modules_products_products_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @app/modules/products/products.module */ "./src/app/modules/products/products.module.ts");
+/* harmony import */ var _app_modules_push_push_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @app/modules/push/push.module */ "./src/app/modules/push/push.module.ts");
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components */ "./src/app/modules/dashboard/components/index.ts");
+/* harmony import */ var _containers__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./containers */ "./src/app/modules/dashboard/containers/index.ts");
+/* harmony import */ var _guards__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./guards */ "./src/app/modules/dashboard/guards/index.ts");
 
 /* tslint:disable: ordered-imports*/
 
@@ -35077,13 +34916,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 /* Components */
 
 /* Containers */
 
 /* Guards */
-
 
 let DashboardModule = class DashboardModule {
 };
@@ -35097,14 +34934,12 @@ DashboardModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_5__["AppCommonModule"],
             _app_modules_navigation_navigation_module__WEBPACK_IMPORTED_MODULE_7__["NavigationModule"],
             _app_modules_charts_charts_module__WEBPACK_IMPORTED_MODULE_6__["ChartsModule"],
-            _app_modules_products_products_module__WEBPACK_IMPORTED_MODULE_9__["ProductsModule"],
-            _app_modules_push_push_module__WEBPACK_IMPORTED_MODULE_10__["PushModule"],
-            _app_modules_page_layout_page_layouts_module__WEBPACK_IMPORTED_MODULE_8__["PageLayoutsModule"],
+            _app_modules_products_products_module__WEBPACK_IMPORTED_MODULE_8__["ProductsModule"],
+            _app_modules_push_push_module__WEBPACK_IMPORTED_MODULE_9__["PushModule"],
         ],
-        providers: [..._guards__WEBPACK_IMPORTED_MODULE_13__["guards"]],
-        declarations: [..._containers__WEBPACK_IMPORTED_MODULE_12__["containers"], ..._components__WEBPACK_IMPORTED_MODULE_11__["components"], _components_corona_list_modal_corona_list_modal_component__WEBPACK_IMPORTED_MODULE_14__["CoronaListModalComponent"]],
-        exports: [..._containers__WEBPACK_IMPORTED_MODULE_12__["containers"], ..._components__WEBPACK_IMPORTED_MODULE_11__["components"]],
-        entryComponents: [_components_corona_list_modal_corona_list_modal_component__WEBPACK_IMPORTED_MODULE_14__["CoronaListModalComponent"]]
+        providers: [..._guards__WEBPACK_IMPORTED_MODULE_12__["guards"]],
+        declarations: [..._containers__WEBPACK_IMPORTED_MODULE_11__["containers"], ..._components__WEBPACK_IMPORTED_MODULE_10__["components"]],
+        exports: [..._containers__WEBPACK_IMPORTED_MODULE_11__["containers"], ..._components__WEBPACK_IMPORTED_MODULE_10__["components"]],
     })
 ], DashboardModule);
 

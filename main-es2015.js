@@ -331,61 +331,56 @@ const routes = [
     },
     {
         path: 'dashboard',
-        loadChildren: () => Promise.all(/*! import() | app-modules-dashboard-dashboard-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-products-products-routing-module"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-push-push-routing-module"), __webpack_require__.e("app-modules-dashboard-dashboard-routing-module")]).then(__webpack_require__.bind(null, /*! app/modules/dashboard/dashboard-routing.module */ "./src/app/modules/dashboard/dashboard-routing.module.ts")).then(m => m.DashboardRoutingModule),
+        loadChildren: () => Promise.all(/*! import() | app-modules-dashboard-dashboard-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-products-products-routing-module"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-push-push-routing-module"), __webpack_require__.e("app-modules-dashboard-dashboard-routing-module")]).then(__webpack_require__.bind(null, /*! app/modules/dashboard/dashboard-routing.module */ "./src/app/modules/dashboard/dashboard-routing.module.ts")).then(m => m.DashboardRoutingModule),
         canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'account',
-        loadChildren: () => Promise.all(/*! import() | app-modules-auth-auth-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("app-modules-auth-auth-routing-module")]).then(__webpack_require__.bind(null, /*! app/modules/auth/auth-routing.module */ "./src/app/modules/auth/auth-routing.module.ts")).then(m => m.AuthRoutingModule),
+        loadChildren: () => Promise.all(/*! import() | app-modules-auth-auth-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("app-modules-auth-auth-routing-module")]).then(__webpack_require__.bind(null, /*! app/modules/auth/auth-routing.module */ "./src/app/modules/auth/auth-routing.module.ts")).then(m => m.AuthRoutingModule),
     },
     {
         path: 'error',
-        loadChildren: () => Promise.all(/*! import() | app-modules-error-error-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("app-modules-error-error-routing-module")]).then(__webpack_require__.bind(null, /*! app/modules/error/error-routing.module */ "./src/app/modules/error/error-routing.module.ts")).then(m => m.ErrorRoutingModule),
+        loadChildren: () => Promise.all(/*! import() | app-modules-error-error-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("app-modules-error-error-routing-module")]).then(__webpack_require__.bind(null, /*! app/modules/error/error-routing.module */ "./src/app/modules/error/error-routing.module.ts")).then(m => m.ErrorRoutingModule),
     },
     {
         path: 'newscenter',
-        loadChildren: () => Promise.all(/*! import() | app-modules-newscenter-newscenter-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-newscenter-newscenter-routing-module")]).then(__webpack_require__.bind(null, /*! app/modules/newscenter/newscenter-routing.module */ "./src/app/modules/newscenter/newscenter-routing.module.ts")).then(m => m.NewscenterRoutingModule),
+        loadChildren: () => Promise.all(/*! import() | app-modules-newscenter-newscenter-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-newscenter-newscenter-routing-module")]).then(__webpack_require__.bind(null, /*! app/modules/newscenter/newscenter-routing.module */ "./src/app/modules/newscenter/newscenter-routing.module.ts")).then(m => m.NewscenterRoutingModule),
         canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'clubmodel',
-        loadChildren: () => Promise.all(/*! import() | app-modules-clubmodel-club-model-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-clubmodel-club-model-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/clubmodel/club-model-routing.module */ "./src/app/modules/clubmodel/club-model-routing.module.ts")).then(m => m.ClubModelRoutingModule),
+        loadChildren: () => Promise.all(/*! import() | app-modules-clubmodel-club-model-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-clubmodel-club-model-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/clubmodel/club-model-routing.module */ "./src/app/modules/clubmodel/club-model-routing.module.ts")).then(m => m.ClubModelRoutingModule),
         canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'products',
-        loadChildren: () => Promise.all(/*! import() | app-modules-products-products-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-products-products-routing-module"), __webpack_require__.e("app-modules-products-products-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/products/products-routing.module */ "./src/app/modules/products/products-routing.module.ts")).then(m => m.ProductsRoutingModule),
+        loadChildren: () => Promise.all(/*! import() | app-modules-products-products-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-products-products-routing-module"), __webpack_require__.e("app-modules-products-products-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/products/products-routing.module */ "./src/app/modules/products/products-routing.module.ts")).then(m => m.ProductsRoutingModule),
         canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'stadium',
-        loadChildren: () => Promise.all(/*! import() | app-modules-corona-distribution-corona-distribution-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-corona-distribution-corona-distribution-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/corona-distribution/corona-distribution-routing.module */ "./src/app/modules/corona-distribution/corona-distribution-routing.module.ts")).then(m => m.CoronaDistributionRoutingModule),
+        loadChildren: () => Promise.all(/*! import() | app-modules-corona-distribution-corona-distribution-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-corona-distribution-corona-distribution-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/corona-distribution/corona-distribution-routing.module */ "./src/app/modules/corona-distribution/corona-distribution-routing.module.ts")).then(m => m.CoronaDistributionRoutingModule),
         canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'push',
-        loadChildren: () => Promise.all(/*! import() | app-modules-push-push-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-push-push-routing-module"), __webpack_require__.e("app-modules-push-push-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/push/push-routing.module */ "./src/app/modules/push/push-routing.module.ts")).then(m => m.PushRoutingModule),
+        loadChildren: () => Promise.all(/*! import() | app-modules-push-push-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("default~app-modules-dashboard-dashboard-routing-module~app-modules-push-push-routing-module"), __webpack_require__.e("app-modules-push-push-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/push/push-routing.module */ "./src/app/modules/push/push-routing.module.ts")).then(m => m.PushRoutingModule),
         canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'intro',
-        loadChildren: () => Promise.all(/*! import() | app-modules-intro-intro-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("app-modules-intro-intro-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/intro/intro-routing.module */ "./src/app/modules/intro/intro-routing.module.ts")).then(m => m.IntroRoutingModule),
+        loadChildren: () => Promise.all(/*! import() | app-modules-intro-intro-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("app-modules-intro-intro-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/intro/intro-routing.module */ "./src/app/modules/intro/intro-routing.module.ts")).then(m => m.IntroRoutingModule),
         canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'sponsors',
-        loadChildren: () => Promise.all(/*! import() | app-modules-sponsoring-sponsoring-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-sponsoring-sponsoring-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/sponsoring/sponsoring-routing.module */ "./src/app/modules/sponsoring/sponsoring-routing.module.ts")).then(m => m.SponsoringRoutingModule),
-        canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
-    },
-    {
-        path: 'tickets',
-        loadChildren: () => Promise.all(/*! import() | app-modules-tickets-tickets-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("app-modules-tickets-tickets-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/tickets/tickets-routing.module */ "./src/app/modules/tickets/tickets-routing.module.ts")).then(m => m.TicketsRoutingModule),
+        loadChildren: () => Promise.all(/*! import() | app-modules-sponsoring-sponsoring-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("common"), __webpack_require__.e("app-modules-sponsoring-sponsoring-routing-module")]).then(__webpack_require__.bind(null, /*! @app/modules/sponsoring/sponsoring-routing.module */ "./src/app/modules/sponsoring/sponsoring-routing.module.ts")).then(m => m.SponsoringRoutingModule),
         canActivate: [_app_modules_auth_guards__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: '**',
         pathMatch: 'full',
-        loadChildren: () => Promise.all(/*! import() | app-modules-error-error-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~aee28387"), __webpack_require__.e("app-modules-error-error-routing-module")]).then(__webpack_require__.bind(null, /*! app/modules/error/error-routing.module */ "./src/app/modules/error/error-routing.module.ts")).then(m => m.ErrorRoutingModule),
+        loadChildren: () => Promise.all(/*! import() | app-modules-error-error-routing-module */[__webpack_require__.e("default~app-modules-auth-auth-routing-module~app-modules-clubmodel-club-model-routing-module~app-mod~9758be40"), __webpack_require__.e("app-modules-error-error-routing-module")]).then(__webpack_require__.bind(null, /*! app/modules/error/error-routing.module */ "./src/app/modules/error/error-routing.module.ts")).then(m => m.ErrorRoutingModule),
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -410,7 +405,7 @@ AppRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".form-control {\n  border-radius: 0.5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3NzY2hpbGxpbmcvV29ya3NwYWNlL1ZNL215LWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHFCQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZm9ybS1jb250cm9se1xuICAgIGJvcmRlci1yYWRpdXM6IDAuNXJlbTtcblxufVxuIiwiLmZvcm0tY29udHJvbCB7XG4gIGJvcmRlci1yYWRpdXM6IDAuNXJlbTtcbn0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".form-control {\n  border-radius: 0.5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2ZtYXovd29ya3NwYWNlL1dvcmsvTXlDbGFwcC9teS1jbGFwcC1tYW5hZ2VyL3NyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxxQkFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZvcm0tY29udHJvbHtcbiAgICBib3JkZXItcmFkaXVzOiAwLjVyZW07XG5cbn1cbiIsIi5mb3JtLWNvbnRyb2wge1xuICBib3JkZXItcmFkaXVzOiAwLjVyZW07XG59Il19 */");
 
 /***/ }),
 
@@ -1734,7 +1729,7 @@ UserService = UserService_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decor
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/sschilling/Workspace/VM/my-clapp-manager/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/fmaz/workspace/Work/MyClapp/my-clapp-manager/src/main.ts */"./src/main.ts");
 
 
 /***/ })
