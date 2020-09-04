@@ -106,15 +106,15 @@ let NewscenterComponent = NewscenterComponent_1 = class NewscenterComponent exte
         this.newscenterService = newscenterService;
         this.userService = userService;
         this._mappedModel$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"]({
-            'sporttotal_url': '',
-            'club_id': -1,
-            'homepage_url': '',
-            'fussballde_url': '',
-            'id': -1,
-            'twitter_id': '',
-            'youtube_id': '',
-            'facebook_id': '',
-            'instagram_id': ''
+            sporttotal_url: '',
+            club_id: -1,
+            homepage_url: '',
+            fussballde_url: '',
+            id: -1,
+            twitter_id: '',
+            youtube_id: '',
+            facebook_id: '',
+            instagram_id: ''
         });
         this.formLayout = _app_modules_newscenter_newscenter_form__WEBPACK_IMPORTED_MODULE_3__["FORM"];
         this._logger.debug('Constructing component');
@@ -136,11 +136,16 @@ let NewscenterComponent = NewscenterComponent_1 = class NewscenterComponent exte
             }, 300);
         });
         this._mappedModel$.subscribe(data => {
-            var _a;
             this._logger.debug('_mappedModel updated ', data);
-            for (const [key, value] of Object.entries(data)) {
-                (_a = this._form.controls[key]) === null || _a === void 0 ? void 0 : _a.setValue(value);
-            }
+            this._form.patchValue({
+                facebook_id: data.facebook_id,
+                twitter_id: data.twitter_id,
+                instagram_id: data.instagram_id,
+                homepage_url: data.homepage_url,
+                sporttotal_url: data.sporttotal_url,
+                fussballde_url: data.fussballde_url,
+                youtube_id: data.youtube_id,
+            });
         });
     }
     _submitData() {
@@ -388,10 +393,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let StandardModalComponent = class StandardModalComponent {
-    //@Input() form!: FormGroup
+    // @Input() form!: FormGroup
     constructor(ngbActiveModal) {
         this.ngbActiveModal = ngbActiveModal;
-        this.onClose = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.closeFunction = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.closeText = 'Schließen';
         this.buttonDisabled = false;
         this.type = 'primary';
@@ -401,7 +406,7 @@ let StandardModalComponent = class StandardModalComponent {
     ngOnInit() {
     }
     close() {
-        this.onClose.emit();
+        this.closeFunction.emit();
         if (this.dismissOnClose)
             this.ngbActiveModal.close(true);
     }
@@ -416,7 +421,7 @@ Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
-], StandardModalComponent.prototype, "onClose", void 0);
+], StandardModalComponent.prototype, "closeFunction", void 0);
 Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
@@ -459,7 +464,7 @@ StandardModalComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".content-card {\n  min-height: 60%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL215Y2xhcHAtbWFuYWdlci9teWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL3BhZ2UtbGF5b3V0L2xheW91dHMvdmlldy1jb250ZW50LWNhcmQvdmlldy1jb250ZW50LWNhcmQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGVBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250ZW50LWNhcmR7XG4gICAgbWluLWhlaWdodDogNjAlO1xufVxuIiwiLmNvbnRlbnQtY2FyZCB7XG4gIG1pbi1oZWlnaHQ6IDYwJTtcbn0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".content-card {\n  min-height: 60%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL215Y2xhcHAtbWFuYWdlci9teWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL3BhZ2UtbGF5b3V0L2xheW91dHMvdmlldy1jb250ZW50LWNhcmQvdmlldy1jb250ZW50LWNhcmQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGVBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250ZW50LWNhcmQge1xuICAgIG1pbi1oZWlnaHQ6IDYwJTtcbn1cbiIsIi5jb250ZW50LWNhcmQge1xuICBtaW4taGVpZ2h0OiA2MCU7XG59Il19 */");
 
 /***/ }),
 
@@ -478,7 +483,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ViewContentCardComponent = class ViewContentCardComponent {
-    constructor() { }
+    constructor() {
+    }
     ngOnInit() {
     }
 };
@@ -506,13 +512,13 @@ ViewContentCardComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageLayoutsModule", function() { return PageLayoutsModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @app/modules/app-common/app-common.module */ "./src/app/modules/app-common/app-common.module.ts");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
-/* harmony import */ var _layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./layouts/view-content-card/view-content-card.component */ "./src/app/modules/page-layout/layouts/view-content-card/view-content-card.component.ts");
-/* harmony import */ var _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./layouts/standard-modal/standard-modal.component */ "./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.ts");
+/* harmony import */ var _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./layouts/standard-modal/standard-modal.component */ "./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.ts");
+/* harmony import */ var _layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./layouts/view-content-card/view-content-card.component */ "./src/app/modules/page-layout/layouts/view-content-card/view-content-card.component.ts");
 
 
 
@@ -524,16 +530,16 @@ __webpack_require__.r(__webpack_exports__);
 let PageLayoutsModule = class PageLayoutsModule {
 };
 PageLayoutsModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_4__["AppCommonModule"]],
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_4__["AppCommonModule"]],
         exports: [
-            _layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__["ViewContentCardComponent"],
-            _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__["StandardModalComponent"]
+            _layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_7__["ViewContentCardComponent"],
+            _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_6__["StandardModalComponent"]
         ],
         providers: [
             _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbActiveModal"],
         ],
-        declarations: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__["StandardModalComponent"]]
+        declarations: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_7__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_6__["StandardModalComponent"]]
     })
 ], PageLayoutsModule);
 

@@ -1,11 +1,3 @@
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
@@ -55,7 +47,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<sb-layout-dashboard>\n    <sb-dashboard-head\n        [hideBreadcrumbs]=\"true\"\n        title=\"Clubdaten\"\n    ></sb-dashboard-head>\n    <sb-view-information-card>\n        <div text>\n            Auf dieser Seite können Sie die Daten Ihres Vereins pflegen. Falls möglich geben Sie bitte alle vorhandenen Verknüpfungen an. Relevante Verlinkungen wie\n            zum Beispiel Ihre direkten Social Media Auftritte werden direkt in der App angezeigt.\n        </div>\n    </sb-view-information-card>\n    <sb-view-content-card>\n            <div class=\"col-12 card shadow\" >\n                <div class=\"card-body\">\n                    <sb-loading-indicator-overlay [_loadingStatus]=\"_initialStatus$\"></sb-loading-indicator-overlay>\n                    <div>\n                        <h4><b>Clubdaten von {{this.userService.club_name}}</b></h4>\n                    </div>\n                    <form (ngSubmit)=\"onSubmit()\" [formGroup]=\"_form\">\n                        <div *ngFor=\"let formEl of formLayout\" class=\"form-group\">\n                            <label class=\"small mb-1\" for={{formEl.id}}>{{formEl.label}}</label>\n                            <input\n                                [ngClass]=\"{\n                    'is-invalid':\n                    form[formEl.name].touched && form[formEl.name].errors\n                    }\"\n                                class=\"form-control\"\n                                formControlName=\"{{formEl.name}}\"\n                                id={{formEl.id}}\n                                name=\"{{formEl.name}}\"\n                                placeholder=\"{{formEl.placeholder}}\"\n                                type=\"{{formEl.type}}\"\n                            />\n                            <div\n                                *ngIf=\"form[formEl.name].touched && form[formEl.name].errors\"\n                                class=\"invalid-feedback\"\n                            >\n                                <div *ngIf=\"form[formEl.name].errors!.required\">\n                                    {{formEl.errors.required}}\n                                </div>\n                            </div>\n                        </div>\n\n                        <div class=\"mt-3 mb-2\" style=\"text-align: end;\">\n                            <button [disabled]=\"!_form.valid\" class=\"btn btn-primary\"\n                                    type=\"submit\">\n                                Speichern\n                                <span *ngIf=\"(_submitStatus$ |async)?.status == 'pending'\"\n                                      aria-hidden=\"true\" class=\"spinner-border spinner-border-sm\" role=\"status\"></span>\n                                <fa-icon *ngIf=\"(_submitStatus$ |async)?.status == 'success'\" [icon]=\"['fas', 'check']\"\n                                         class=\"ml-1\"></fa-icon>\n                            </button>\n\n                        </div>\n                    </form>\n                </div>\n            </div>\n    </sb-view-content-card>\n</sb-layout-dashboard>\n";
+    __webpack_exports__["default"] = "<sb-layout-dashboard>\n    <sb-dashboard-head\n        [hideBreadcrumbs]=\"true\"\n        title=\"Clubdaten\"\n    ></sb-dashboard-head>\n    <sb-view-information-card>\n        <div text>\n            Auf dieser Seite können Sie die Daten Ihres Vereins pflegen. Falls möglich geben Sie bitte alle vorhandenen\n            Verknüpfungen an. Relevante Verlinkungen wie\n            zum Beispiel Ihre direkten Social Media Auftritte werden direkt in der App angezeigt.\n        </div>\n    </sb-view-information-card>\n    <sb-view-content-card>\n        <div class=\"col-12 card shadow\">\n            <div class=\"card-body\">\n                <sb-loading-indicator-overlay [_loadingStatus]=\"_initialStatus$\"></sb-loading-indicator-overlay>\n                <div>\n                    <h4><b>Clubdaten von {{this.userService.club_name}}</b></h4>\n                </div>\n                <form (ngSubmit)=\"onSubmit()\" [formGroup]=\"_form\">\n                    <div *ngFor=\"let formEl of formLayout\" class=\"form-group\">\n                        <label class=\"small mb-1\" for={{formEl.id}}>{{formEl.label}}</label>\n                        <input\n                            [ngClass]=\"{\n                    'is-invalid':\n                    form[formEl.name].touched && form[formEl.name].errors\n                    }\"\n                            class=\"form-control\"\n                            formControlName=\"{{formEl.name}}\"\n                            id={{formEl.id}}\n                            name=\"{{formEl.name}}\"\n                            placeholder=\"{{formEl.placeholder}}\"\n                            type=\"{{formEl.type}}\"\n                        />\n                        <div\n                            *ngIf=\"form[formEl.name].touched && form[formEl.name].errors\"\n                            class=\"invalid-feedback\"\n                        >\n                            <div *ngIf=\"form[formEl.name].errors!.required\">\n                                {{formEl.errors.required}}\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"mt-3 mb-2\" style=\"text-align: end;\">\n                        <button [disabled]=\"!_form.valid\" class=\"btn btn-primary\"\n                                type=\"submit\">\n                            Speichern\n                            <span *ngIf=\"(_submitStatus$ |async)?.status == 'pending'\"\n                                  aria-hidden=\"true\" class=\"spinner-border spinner-border-sm\" role=\"status\"></span>\n                            <fa-icon *ngIf=\"(_submitStatus$ |async)?.status == 'success'\" [icon]=\"['fas', 'check']\"\n                                     class=\"ml-1\"></fa-icon>\n                        </button>\n\n                    </div>\n                </form>\n            </div>\n        </div>\n    </sb-view-content-card>\n</sb-layout-dashboard>\n";
     /***/
   },
 
@@ -326,24 +318,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _containers__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! ./containers */
-    "./src/app/modules/clubmodel/containers/index.ts");
+    var _app_modules_page_layout_page_layouts_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! @app/modules/page-layout/page-layouts.module */
+    "./src/app/modules/page-layout/page-layouts.module.ts");
     /* harmony import */
 
 
-    var _app_modules_page_layout_page_layouts_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-    /*! @app/modules/page-layout/page-layouts.module */
-    "./src/app/modules/page-layout/page-layouts.module.ts");
+    var _containers__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! ./containers */
+    "./src/app/modules/clubmodel/containers/index.ts");
 
     var ClubModelModule = function ClubModelModule() {
       _classCallCheck(this, ClubModelModule);
     };
 
     ClubModelModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_5__["AppCommonModule"], _app_modules_navigation_navigation_module__WEBPACK_IMPORTED_MODULE_6__["NavigationModule"], _app_modules_page_layout_page_layouts_module__WEBPACK_IMPORTED_MODULE_8__["PageLayoutsModule"]],
-      declarations: _toConsumableArray(_containers__WEBPACK_IMPORTED_MODULE_7__["containers"]),
-      exports: _toConsumableArray(_containers__WEBPACK_IMPORTED_MODULE_7__["containers"])
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_5__["AppCommonModule"], _app_modules_navigation_navigation_module__WEBPACK_IMPORTED_MODULE_6__["NavigationModule"], _app_modules_page_layout_page_layouts_module__WEBPACK_IMPORTED_MODULE_7__["PageLayoutsModule"]],
+      declarations: _toConsumableArray(_containers__WEBPACK_IMPORTED_MODULE_8__["containers"]),
+      exports: _toConsumableArray(_containers__WEBPACK_IMPORTED_MODULE_8__["containers"])
     })], ClubModelModule);
     /***/
   },
@@ -408,21 +400,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _helpers_base_config_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ../../../../../helpers/base-config.component */
-    "./src/helpers/base-config.component.ts");
-    /* harmony import */
-
-
-    var _app_modules_clubmodel_club_model_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _app_modules_clubmodel_club_model_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @app/modules/clubmodel/club-model.form */
     "./src/app/modules/clubmodel/club-model.form.ts");
     /* harmony import */
 
 
-    var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! rxjs */
     "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var _helpers_base_config_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ../../../../../helpers/base-config.component */
+    "./src/helpers/base-config.component.ts");
     /* harmony import */
 
 
@@ -446,8 +438,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this.fb = fb;
         _this.clubModelService = clubModelService;
         _this.userService = userService;
-        _this.formLayout = _app_modules_clubmodel_club_model_form__WEBPACK_IMPORTED_MODULE_4__["FORM"];
-        _this._mappedModel$ = new rxjs__WEBPACK_IMPORTED_MODULE_5__["BehaviorSubject"]({
+        _this.formLayout = _app_modules_clubmodel_club_model_form__WEBPACK_IMPORTED_MODULE_3__["FORM"];
+        _this._mappedModel$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"]({
           secondary_color_hex: '',
           city: '',
           street: '',
@@ -486,51 +478,40 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         });
 
         _this._mappedModel$.subscribe(function (data) {
-          var _a;
-
           _this._logger.debug('_mappedModel updated ', data);
 
-          try {
-            for (var _i = 0, _Object$entries = Object.entries(data); _i < _Object$entries.length; _i++) {
-              var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
-                  key = _Object$entries$_i[0],
-                  value = _Object$entries$_i[1];
-
-              (_a = _this._form.controls[key]) === null || _a === void 0 ? void 0 : _a.setValue(value);
-            }
-          } catch (e) {
-            _this._logger.error('Failed initializing of component data', e);
-
-            _this._initialStatus$.next({
-              status: 'error'
-            });
-
-            throw e;
-          }
+          _this._form.patchValue({
+            name: data.name,
+            street: data.street,
+            postcode: data.postcode,
+            city: data.city,
+            primary_color_hex: data.primary_color_hex,
+            secondary_color_hex: data.secondary_color_hex
+          });
         });
 
-        _this._form.controls['primary_color_hex'].valueChanges.subscribe(function (value) {
+        _this._form.controls.primary_color_hex.valueChanges.subscribe(function (value) {
           var inputField = document.getElementById('inputPrimaryColor');
 
           var colorTrans = ClubModelComponent_1._hexToRGB(value, 0);
 
           var colorFull = ClubModelComponent_1._hexToRGB(value, 1);
 
-          if (inputField != null && colorFull != '' && colorTrans != '') {
+          if (inputField != null && colorFull !== '' && colorTrans !== '') {
             _this._logger.info('entered if', [colorFull, colorTrans]);
 
             inputField.style.background = 'linear-gradient(to right, ' + colorTrans + ', ' + colorFull + ')';
           }
         });
 
-        _this._form.controls['secondary_color_hex'].valueChanges.subscribe(function (value) {
+        _this._form.controls.secondary_color_hex.valueChanges.subscribe(function (value) {
           var inputField = document.getElementById('inputSecondaryColor');
 
           var colorTrans = ClubModelComponent_1._hexToRGB(value, 0);
 
           var colorFull = ClubModelComponent_1._hexToRGB(value, 1);
 
-          if (inputField != null && colorFull != '' && colorTrans != '') {
+          if (inputField != null && colorFull !== '' && colorTrans !== '') {
             inputField.style.background = 'linear-gradient(to right, ' + colorTrans + ', ' + colorFull + ')';
           }
         });
@@ -564,9 +545,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "_hexToRGB",
         value: function _hexToRGB(hex, alpha) {
           if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
-            var r = parseInt(hex.slice(1, 3), 16),
-                g = parseInt(hex.slice(3, 5), 16),
-                b = parseInt(hex.slice(5, 7), 16);
+            var r = parseInt(hex.slice(1, 3), 16);
+            var g = parseInt(hex.slice(3, 5), 16);
+            var b = parseInt(hex.slice(5, 7), 16);
 
             if (alpha) {
               return 'rgba(' + r + ', ' + g + ', ' + b + ', ' + alpha + ')';
@@ -578,7 +559,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }]);
 
       return ClubModelComponent;
-    }(_helpers_base_config_component__WEBPACK_IMPORTED_MODULE_3__["BaseConfigComponent"]);
+    }(_helpers_base_config_component__WEBPACK_IMPORTED_MODULE_5__["BaseConfigComponent"]);
 
     ClubModelComponent.ctorParameters = function () {
       return [{
@@ -710,12 +691,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/index.js");
 
     var StandardModalComponent = /*#__PURE__*/function () {
-      //@Input() form!: FormGroup
+      // @Input() form!: FormGroup
       function StandardModalComponent(ngbActiveModal) {
         _classCallCheck(this, StandardModalComponent);
 
         this.ngbActiveModal = ngbActiveModal;
-        this.onClose = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.closeFunction = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.closeText = 'Schließen';
         this.buttonDisabled = false;
         this.type = 'primary';
@@ -731,7 +712,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "close",
         value: function close() {
-          this.onClose.emit();
+          this.closeFunction.emit();
           if (this.dismissOnClose) this.ngbActiveModal.close(true);
         }
       }]);
@@ -746,7 +727,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     };
 
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], StandardModalComponent.prototype, "title", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], StandardModalComponent.prototype, "onClose", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], StandardModalComponent.prototype, "closeFunction", void 0);
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], StandardModalComponent.prototype, "closeText", void 0);
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], StandardModalComponent.prototype, "buttonDisabled", void 0);
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], StandardModalComponent.prototype, "type", void 0);
@@ -780,7 +761,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".content-card {\n  min-height: 60%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL215Y2xhcHAtbWFuYWdlci9teWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL3BhZ2UtbGF5b3V0L2xheW91dHMvdmlldy1jb250ZW50LWNhcmQvdmlldy1jb250ZW50LWNhcmQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGVBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250ZW50LWNhcmR7XG4gICAgbWluLWhlaWdodDogNjAlO1xufVxuIiwiLmNvbnRlbnQtY2FyZCB7XG4gIG1pbi1oZWlnaHQ6IDYwJTtcbn0iXX0= */";
+    __webpack_exports__["default"] = ".content-card {\n  min-height: 60%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL215Y2xhcHAtbWFuYWdlci9teWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL3BhZ2UtbGF5b3V0L2xheW91dHMvdmlldy1jb250ZW50LWNhcmQvdmlldy1jb250ZW50LWNhcmQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGVBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250ZW50LWNhcmQge1xuICAgIG1pbi1oZWlnaHQ6IDYwJTtcbn1cbiIsIi5jb250ZW50LWNhcmQge1xuICBtaW4taGVpZ2h0OiA2MCU7XG59Il19 */";
     /***/
   },
 
@@ -869,15 +850,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/fesm2015/common.js");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
 
 
@@ -899,25 +880,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! ./layouts/view-content-card/view-content-card.component */
-    "./src/app/modules/page-layout/layouts/view-content-card/view-content-card.component.ts");
+    var _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./layouts/standard-modal/standard-modal.component */
+    "./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.ts");
     /* harmony import */
 
 
-    var _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! ./layouts/standard-modal/standard-modal.component */
-    "./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.ts");
+    var _layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./layouts/view-content-card/view-content-card.component */
+    "./src/app/modules/page-layout/layouts/view-content-card/view-content-card.component.ts");
 
     var PageLayoutsModule = function PageLayoutsModule() {
       _classCallCheck(this, PageLayoutsModule);
     };
 
-    PageLayoutsModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_4__["AppCommonModule"]],
-      exports: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__["StandardModalComponent"]],
+    PageLayoutsModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_4__["AppCommonModule"]],
+      exports: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_7__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_6__["StandardModalComponent"]],
       providers: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbActiveModal"]],
-      declarations: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__["StandardModalComponent"]]
+      declarations: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_7__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_6__["StandardModalComponent"]]
     })], PageLayoutsModule);
     /***/
   }

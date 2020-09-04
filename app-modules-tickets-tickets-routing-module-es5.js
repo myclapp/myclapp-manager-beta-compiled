@@ -1,3 +1,17 @@
+function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -75,7 +89,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<sb-standard-modal (onClose)=\"addProduct()\" title=\"Neues Produkt anlegen\" closeText=\"Produkt hinzufügen\"\n                   [buttonDisabled]=\"!productForm.valid\" [buttonLoadingIndicator]=\"submit$.asObservable()\"\n                   [dismissOnClose]=\"false\">\n    <form>\n        <div class=\"row\">\n            <div class=\"col-12\">\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputName\">Name</label>\n                    <div class=\"col-sm-9\">\n                        <input title=\"Geben Sie hier den Produktnamen ein\" class=\"form-control\" id=\"inputName\"\n                               type=\"text\" [formControl]=\"controls['name']\">\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputPrice\">Beschreibung</label>\n                    <div class=\"col-sm-9\">\n                        <textarea title=\"Geben Sie hier die Produktbeschreibung ein\" class=\"form-control\"\n                                  id=\"inputPrice\" [formControl]=\"controls['description']\"></textarea>\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"price\">Preis</label>\n                    <div class=\"col-sm-9\">\n                        <input title=\"Geben Sie hier den Preis an\" class=\"form-control\" id=\"price\" type=\"number\"\n                               [formControl]=\"controls['price']\">\n                    </div>\n                </div>\n                <div class=\"row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"add-product-picture\">Bild</label>\n                    <div class=\"col-sm-9\">\n                        <select [formControl]=\"controls['picture']\" id=\"add-product-picture\" class=\"form-control\">\n                            <option *ngFor=\"let picture of pictureOptions; let i = index\" [ngValue]=\"picture.id\">\n                                Option {{i + 1}}\n                                ({{picture.name}})\n                            </option>\n                            <!--<option ngValue=\"custom\">Eigenes Bild hochladen</option>-->\n                        </select>\n                    </div>\n                </div>\n                <!--<div *ngIf=\"selectedCustom\" class=\"form-group row mt-1\">\n                    <div class=\"offset-3 col-sm-9\">\n                        <input (change)=\"addPicture($event)\" class=\"form-control\" id=\"inputAppImage\" type=\"file\">\n                    </div>\n                </div>-->\n                <div *ngIf=\"previewURL\" class=\"row mt-3 mb-3\">\n                    <div class=\"col offset-3 text-center\" style=\"height: 300px\">\n                        <img alt=\"BILD\" [src]=\"previewURL\" class=\"img-fluid h-100\">\n                    </div>\n                </div>\n                <div *ngIf=\"!previewURL\" class=\"row mt-3 mb-3\">\n                    <div class=\"col offset-3 text-center\" style=\"height: 300px\">\n                        <span style=\"top: 50%; position: relative\">Bitte wählen Sie ein Bild aus</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </form>\n</sb-standard-modal>\n";
+    __webpack_exports__["default"] = "<sb-standard-modal (closeFunction)=\"addProduct()\" title=\"Neue Ticketkategorie anlegen\" closeText=\"Produkt hinzufügen\"\n                   [buttonDisabled]=\"!productForm.valid\" [buttonLoadingIndicator]=\"submit$.asObservable()\"\n                   [dismissOnClose]=\"false\">\n    <form [formGroup]=\"productForm\">\n        <div class=\"row\">\n            <div class=\"col-12\">\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputName\">Name</label>\n                    <div class=\"col-sm-9\">\n                        <input title=\"Geben Sie hier den Produktnamen ein\" class=\"form-control\" id=\"inputName\"\n                               type=\"text\" formControlName=\"name\">\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputPrice\">Beschreibung</label>\n                    <div class=\"col-sm-9\">\n                        <textarea title=\"Geben Sie hier die Produktbeschreibung ein\" class=\"form-control\"\n                                  id=\"inputPrice\" formControlName=\"description\"></textarea>\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"price\">Preis</label>\n                    <div class=\"col-sm-9\">\n                        <input title=\"Geben Sie hier den Preis an\" class=\"form-control\" id=\"price\" type=\"number\"\n                               formControlName=\"price\">\n                    </div>\n                </div>\n                <div class=\"row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"add-product-picture\">Bild</label>\n                    <div class=\"col-sm-9\">\n                        <select formControlName=\"picture\" id=\"add-product-picture\" class=\"form-control\">\n                            <option *ngFor=\"let picture of pictureOptions; let i = index\" [ngValue]=\"picture.id\">\n                                Option {{i + 1}}\n                                ({{picture.name}})\n                            </option>\n                            <!--<option ngValue=\"custom\">Eigenes Bild hochladen</option>-->\n                        </select>\n                    </div>\n                </div>\n                <!--<div *ngIf=\"selectedCustom\" class=\"form-group row mt-1\">\n                    <div class=\"offset-3 col-sm-9\">\n                        <input (change)=\"addPicture($event)\" class=\"form-control\" id=\"inputAppImage\" type=\"file\">\n                    </div>\n                </div>-->\n                <div *ngIf=\"previewURL\" class=\"row mt-3 mb-3\">\n                    <div class=\"col offset-3 text-center\" style=\"height: 300px\">\n                        <img alt=\"BILD\" [src]=\"previewURL\" class=\"img-fluid h-100\">\n                    </div>\n                </div>\n                <div *ngIf=\"!previewURL\" class=\"row mt-3 mb-3\">\n                    <div class=\"col offset-3 text-center\" style=\"height: 300px\">\n                        <span style=\"top: 50%; position: relative\">Bitte wählen Sie ein Bild aus</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </form>\n</sb-standard-modal>\n";
     /***/
   },
 
@@ -95,7 +109,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<sb-standard-modal title=\"Möchten Sie dieses Produkt wirklich löschen?\"\n                   (onClose)=\"deleteProduct()\" closeText=\"Produkt löschen\"\n                   type=\"danger\" [buttonLoadingIndicator]=\"status.asObservable()\" [dismissOnClose]=\"false\">\n    <p>\n        Wenn Sie das Produkt löschen wird es aus unserem System entfernt. Das Produkt kann nicht mehr in der App gekauft\n        werden. Wenn Sie das Produkt nur vorrübergehend deaktivieren wollen, wählen Sie bitte die Option Deaktivieren.\n    </p>\n</sb-standard-modal>\n";
+    __webpack_exports__["default"] = "<sb-standard-modal title=\"Möchten Sie dieses Produkt wirklich löschen?\"\n                   (closeFunction)=\"deleteProduct()\" closeText=\"Produkt löschen\"\n                   type=\"danger\" [buttonLoadingIndicator]=\"status.asObservable()\" [dismissOnClose]=\"false\">\n    <p>\n        Wenn Sie das Produkt löschen wird es aus unserem System entfernt. Das Produkt kann nicht mehr in der App gekauft\n        werden. Wenn Sie das Produkt nur vorrübergehend deaktivieren wollen, wählen Sie bitte die Option Deaktivieren.\n    </p>\n</sb-standard-modal>\n";
     /***/
   },
 
@@ -115,7 +129,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<sb-standard-modal (onClose)=\"save()\" title=\"Produkt bearbeiten\" closeText=\"Speichern\"\n                   [buttonDisabled]=\"!productForm.valid\" [dismissOnClose]=\"false\"\n                   [buttonLoadingIndicator]=\"submit$.asObservable()\">\n    <sb-loading-indicator-overlay [_loadingStatus]=\"loading$\" [backdrop]=\"false\"></sb-loading-indicator-overlay>\n    <form>\n        <div class=\"row\">\n            <div class=\"col-12\">\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputName\">Name</label>\n                    <div class=\"col-sm-9\">\n                        <input title=\"Geben Sie hier den Produktnamen ein\" class=\"form-control\" id=\"inputName\"\n                               type=\"text\" [formControl]=\"controls['name']\">\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputPrice\">Beschreibung</label>\n                    <div class=\"col-sm-9\">\n                        <textarea title=\"Geben Sie hier die Produktbeschreibung ein\" class=\"form-control\"\n                                  id=\"inputPrice\" [formControl]=\"controls['description']\"></textarea>\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"price\">Preis</label>\n                    <div class=\"col-sm-9\">\n                        <input title=\"Geben Sie hier den Preis an\" class=\"form-control\" id=\"price\" type=\"number\"\n                               [formControl]=\"controls['price']\">\n                    </div>\n                </div>\n                <div class=\"row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"add-product-picture\">Bild</label>\n                    <div class=\"col-sm-9\">\n                        <select [formControl]=\"controls['picture']\" id=\"add-product-picture\" class=\"form-control\">\n                            <option *ngFor=\"let picture of pictureOptions; let i = index\" [ngValue]=\"picture.id\">\n                                Option {{i + 1}}\n                                ({{picture.name}})\n                            </option>\n                            <!--<option ngValue=\"custom\">Eigenes Bild hochladen</option>-->\n                        </select>\n                    </div>\n                </div>\n                <!--<div *ngIf=\"selectedCustom\" class=\"form-group row mt-1\">\n                    <div class=\"offset-3 col-sm-9\">\n                        <input (change)=\"addPicture($event)\" class=\"form-control\" id=\"inputAppImage\" type=\"file\">\n                    </div>\n                </div>-->\n                <div *ngIf=\"previewURL\" class=\"row mt-3 mb-3\">\n                    <div class=\"col offset-3 text-center\" style=\"height: 300px\">\n                        <img alt=\"BILD\" [src]=\"previewURL\" class=\"img-fluid h-100\">\n                    </div>\n                </div>\n                <div *ngIf=\"!previewURL\" class=\"row mt-3 mb-3\">\n                    <div class=\"col offset-3 text-center\" style=\"height: 300px\">\n                        <span style=\"top: 50%; position: relative\">Bild wird geladen</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </form>\n</sb-standard-modal>\n";
+    __webpack_exports__["default"] = "<sb-standard-modal (closeFunction)=\"save()\" title=\"Produkt bearbeiten\" closeText=\"Speichern\"\n                   [buttonDisabled]=\"!productForm.valid\" [dismissOnClose]=\"false\"\n                   [buttonLoadingIndicator]=\"submit$.asObservable()\">\n    <sb-loading-indicator-overlay [_loadingStatus]=\"loading$\" [backdrop]=\"false\"></sb-loading-indicator-overlay>\n    <form [formGroup]=\"productForm\">\n        <div class=\"row\">\n            <div class=\"col-12\">\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputName\">Name</label>\n                    <div class=\"col-sm-9\">\n                        <input title=\"Geben Sie hier den Produktnamen ein\" class=\"form-control\" id=\"inputName\"\n                               type=\"text\" formControlName=\"name\">\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputPrice\">Beschreibung</label>\n                    <div class=\"col-sm-9\">\n                        <textarea title=\"Geben Sie hier die Produktbeschreibung ein\" class=\"form-control\"\n                                  id=\"inputPrice\" formControlName=\"description\"></textarea>\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"price\">Preis</label>\n                    <div class=\"col-sm-9\">\n                        <input title=\"Geben Sie hier den Preis an\" class=\"form-control\" id=\"price\" type=\"number\"\n                               formControlName=\"price\">\n                    </div>\n                </div>\n                <div class=\"row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"add-product-picture\">Bild</label>\n                    <div class=\"col-sm-9\">\n                        <select formControlName=\"picture\" id=\"add-product-picture\" class=\"form-control\">\n                            <option *ngFor=\"let picture of pictureOptions; let i = index\" [ngValue]=\"picture.id\">\n                                Option {{i + 1}}\n                                ({{picture.name}})\n                            </option>\n                            <!--<option ngValue=\"custom\">Eigenes Bild hochladen</option>-->\n                        </select>\n                    </div>\n                </div>\n                <!--<div *ngIf=\"selectedCustom\" class=\"form-group row mt-1\">\n                    <div class=\"offset-3 col-sm-9\">\n                        <input (change)=\"addPicture($event)\" class=\"form-control\" id=\"inputAppImage\" type=\"file\">\n                    </div>\n                </div>-->\n                <div *ngIf=\"previewURL\" class=\"row mt-3 mb-3\">\n                    <div class=\"col offset-3 text-center\" style=\"height: 300px\">\n                        <img alt=\"BILD\" [src]=\"previewURL\" class=\"img-fluid h-100\">\n                    </div>\n                </div>\n                <div *ngIf=\"!previewURL\" class=\"row mt-3 mb-3\">\n                    <div class=\"col offset-3 text-center\" style=\"height: 300px\">\n                        <span style=\"top: 50%; position: relative\">Bild wird geladen</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </form>\n</sb-standard-modal>\n";
     /***/
   },
 
@@ -135,7 +149,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<form>\n    <div class=\"form-group form-inline\"><label>Suche:<input [(ngModel)]=\"productsService.searchTerm\"\n                                                            class=\"form-control ml-2\"\n                                                            name=\"searchTerm\"\n                                                            type=\"text\"/></label>\n        <span\n            *ngIf=\"productsService.loading$ | async\" class=\"ml-3\">\n            <div class=\"spinner-border\" role=\"status\">\n                <span class=\"sr-only\">Loading...</span>\n            </div>\n        </span>\n    </div>\n    <table class=\"table table-striped\">\n        <thead>\n        <tr>\n            <th (sort)=\"onSort($event)\" sbSortable=\"name\" scope=\"col\"><span>Gruppenname</span>\n                <sb-sort-icon *ngIf='sortedColumn === \"name\"' [direction]=\"sortedDirection\"></sb-sort-icon>\n            </th>\n            <th (sort)=\"onSort($event)\" sbSortable=\"price\" scope=\"col\"><span>Preis</span>\n                <sb-sort-icon *ngIf='sortedColumn === \"price\"' [direction]=\"sortedDirection\"></sb-sort-icon>\n            </th>\n            <th (sort)=\"onSort($event)\" sbSortable=\"sold\" scope=\"col\"><span>Verkauft</span>\n                <sb-sort-icon *ngIf='sortedColumn === \"sold\"' [direction]=\"sortedDirection\"></sb-sort-icon>\n            </th>\n            <th><span>Optionen</span></th>\n        </tr>\n        </thead>\n        <tbody>\n        <tr *ngFor=\"let product of products$ | async\">\n            <td>\n                <ngb-highlight [result]=\"product.name\" [term]=\"productsService.searchTerm\"></ngb-highlight>\n            </td>\n            <td>\n                <ngb-highlight [result]=\"product.price | number\"\n                               [term]=\"productsService.searchTerm\"></ngb-highlight>\n                €\n            </td>\n            <td>\n                <ngb-highlight [result]=\"product.sold | number\"\n                               [term]=\"productsService.searchTerm\"></ngb-highlight>\n            </td>\n            <td>\n                <span (click)=\"editProduct(product.id)\" class=\"btn\" title=\"Produkt bearbeiten\"><fa-icon\n                    [icon]='[\"fas\",\"edit\"]'></fa-icon></span>\n                <span (click)=\"deleteProduct(product.id)\" class=\"btn\" title=\"Produkt löschen\"><fa-icon\n                    [icon]='[\"fas\",\"trash\"]' class=\"ml-3\"></fa-icon></span>\n            </td>\n        </tr>\n        </tbody>\n    </table>\n    <div class=\"d-flex justify-content-between p-2\">\n        <ngb-pagination [(page)]=\"productsService.page\" [collectionSize]=\"total$ | async\"\n                        [pageSize]=\"productsService.pageSize\"></ngb-pagination\n        >\n        <select [(ngModel)]=\"productsService.pageSize\" class=\"custom-select\" name=\"pageSize\" style=\"width: auto;\"\n        >\n            <option [ngValue]=\"2\">2 items per page\n            </option\n            >\n            <option [ngValue]=\"4\">4 items per page\n            </option\n            >\n            <option [ngValue]=\"6\">6 items per page</option>\n        </select\n        >\n    </div>\n</form>\n";
+    __webpack_exports__["default"] = "<form>\n    <div class=\"form-group form-inline\"><label>Suche:<input [(ngModel)]=\"ticketsService.searchTerm\"\n                                                            class=\"form-control ml-2\"\n                                                            name=\"searchTerm\"\n                                                            type=\"text\"/></label>\n        <span\n            *ngIf=\"ticketsService.loading$ | async\" class=\"ml-3\">\n            <div class=\"spinner-border\" role=\"status\">\n                <span class=\"sr-only\">Loading...</span>\n            </div>\n        </span>\n    </div>\n    <table class=\"table table-striped\">\n        <thead>\n        <tr>\n            <th (sort)=\"onSort($event)\" sbSortable=\"name\" scope=\"col\"><span>Gruppenname</span>\n                <sb-sort-icon *ngIf='sortedColumn === \"name\"' [direction]=\"sortedDirection\"></sb-sort-icon>\n            </th>\n            <th (sort)=\"onSort($event)\" sbSortable=\"price\" scope=\"col\"><span>Preis</span>\n                <sb-sort-icon *ngIf='sortedColumn === \"price\"' [direction]=\"sortedDirection\"></sb-sort-icon>\n            </th>\n            <th (sort)=\"onSort($event)\" sbSortable=\"sold\" scope=\"col\"><span>Verkauft</span>\n                <sb-sort-icon *ngIf='sortedColumn === \"sold\"' [direction]=\"sortedDirection\"></sb-sort-icon>\n            </th>\n            <th><span>Optionen</span></th>\n        </tr>\n        </thead>\n        <tbody>\n        <tr *ngFor=\"let product of tickets$ | async\">\n            <td>\n                <ngb-highlight [result]=\"product.name\" [term]=\"ticketsService.searchTerm\"></ngb-highlight>\n            </td>\n            <td>\n                <ngb-highlight [result]=\"product.price | number\"\n                               [term]=\"ticketsService.searchTerm\"></ngb-highlight>\n                €\n            </td>\n            <td>\n                <ngb-highlight [result]=\"product.sold | number\"\n                               [term]=\"ticketsService.searchTerm\"></ngb-highlight>\n            </td>\n            <td>\n                <span (click)=\"editProduct(product.id)\" class=\"btn\" title=\"Produkt bearbeiten\"><fa-icon\n                    [icon]='[\"fas\",\"edit\"]'></fa-icon></span>\n                <span (click)=\"deleteProduct(product.id)\" class=\"btn\" title=\"Produkt löschen\"><fa-icon\n                    [icon]='[\"fas\",\"trash\"]' class=\"ml-3\"></fa-icon></span>\n            </td>\n        </tr>\n        </tbody>\n    </table>\n    <div class=\"d-flex justify-content-between p-2\">\n        <ngb-pagination [(page)]=\"ticketsService.page\" [collectionSize]=\"total$ | async\"\n                        [pageSize]=\"ticketsService.pageSize\"></ngb-pagination\n        >\n        <select [(ngModel)]=\"ticketsService.pageSize\" class=\"custom-select\" name=\"pageSize\" style=\"width: auto;\"\n        >\n            <option [ngValue]=\"2\">2 items per page\n            </option\n            >\n            <option [ngValue]=\"4\">4 items per page\n            </option\n            >\n            <option [ngValue]=\"6\">6 items per page</option>\n        </select\n        >\n    </div>\n</form>\n";
     /***/
   },
 
@@ -175,7 +189,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<sb-layout-dashboard>\n    <sb-dashboard-head [hideBreadcrumbs]=\"true\" title=\"Produkte\"></sb-dashboard-head>\n\n    <sb-view-information-card>\n        <div text>\n            Auf dieser Seite können Sie Ihre Tickets verwalten.\n        </div>\n        <div buttons>\n            <span (click)=\"openAddModal()\" class=\"btn btn-primary\">Ticket hinzufügen</span>\n        </div>\n    </sb-view-information-card>\n    <sb-view-content-card>\n        <div class=\"col-12 h-100 card shadow\">\n            <div class=\"card-body\">\n                <sb-ng-bootstrap-table [pageSize]=\"6\"></sb-ng-bootstrap-table>\n            </div>\n\n        </div>\n    </sb-view-content-card>\n</sb-layout-dashboard>\n";
+    __webpack_exports__["default"] = "<sb-layout-dashboard>\n    <sb-dashboard-head [hideBreadcrumbs]=\"true\" title=\"Tickets\"></sb-dashboard-head>\n\n    <sb-view-information-card>\n        <div text>\n            Auf dieser Seite können Sie Ihre Tickets verwalten.\n        </div>\n        <div buttons>\n            <span (click)=\"openAddModal()\" class=\"btn btn-primary\">Ticket hinzufügen</span>\n        </div>\n    </sb-view-information-card>\n    <sb-view-content-card>\n        <div class=\"col-12 h-100 card shadow\">\n            <div class=\"card-body\">\n                <sb-ng-bootstrap-table [pageSize]=\"6\"></sb-ng-bootstrap-table>\n            </div>\n\n        </div>\n    </sb-view-content-card>\n</sb-layout-dashboard>\n";
     /***/
   },
 
@@ -244,12 +258,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     "./node_modules/rxjs/_esm2015/index.js");
 
     var StandardModalComponent = /*#__PURE__*/function () {
-      //@Input() form!: FormGroup
+      // @Input() form!: FormGroup
       function StandardModalComponent(ngbActiveModal) {
         _classCallCheck(this, StandardModalComponent);
 
         this.ngbActiveModal = ngbActiveModal;
-        this.onClose = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.closeFunction = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.closeText = 'Schließen';
         this.buttonDisabled = false;
         this.type = 'primary';
@@ -265,7 +279,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "close",
         value: function close() {
-          this.onClose.emit();
+          this.closeFunction.emit();
           if (this.dismissOnClose) this.ngbActiveModal.close(true);
         }
       }]);
@@ -280,7 +294,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     };
 
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], StandardModalComponent.prototype, "title", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], StandardModalComponent.prototype, "onClose", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], StandardModalComponent.prototype, "closeFunction", void 0);
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], StandardModalComponent.prototype, "closeText", void 0);
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], StandardModalComponent.prototype, "buttonDisabled", void 0);
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], StandardModalComponent.prototype, "type", void 0);
@@ -314,7 +328,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".content-card {\n  min-height: 60%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL215Y2xhcHAtbWFuYWdlci9teWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL3BhZ2UtbGF5b3V0L2xheW91dHMvdmlldy1jb250ZW50LWNhcmQvdmlldy1jb250ZW50LWNhcmQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGVBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250ZW50LWNhcmR7XG4gICAgbWluLWhlaWdodDogNjAlO1xufVxuIiwiLmNvbnRlbnQtY2FyZCB7XG4gIG1pbi1oZWlnaHQ6IDYwJTtcbn0iXX0= */";
+    __webpack_exports__["default"] = ".content-card {\n  min-height: 60%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL215Y2xhcHAtbWFuYWdlci9teWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL3BhZ2UtbGF5b3V0L2xheW91dHMvdmlldy1jb250ZW50LWNhcmQvdmlldy1jb250ZW50LWNhcmQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGVBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250ZW50LWNhcmQge1xuICAgIG1pbi1oZWlnaHQ6IDYwJTtcbn1cbiIsIi5jb250ZW50LWNhcmQge1xuICBtaW4taGVpZ2h0OiA2MCU7XG59Il19 */";
     /***/
   },
 
@@ -403,15 +417,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/fesm2015/common.js");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
 
 
@@ -433,25 +447,25 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! ./layouts/view-content-card/view-content-card.component */
-    "./src/app/modules/page-layout/layouts/view-content-card/view-content-card.component.ts");
+    var _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./layouts/standard-modal/standard-modal.component */
+    "./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.ts");
     /* harmony import */
 
 
-    var _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! ./layouts/standard-modal/standard-modal.component */
-    "./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.ts");
+    var _layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./layouts/view-content-card/view-content-card.component */
+    "./src/app/modules/page-layout/layouts/view-content-card/view-content-card.component.ts");
 
     var PageLayoutsModule = function PageLayoutsModule() {
       _classCallCheck(this, PageLayoutsModule);
     };
 
-    PageLayoutsModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_4__["AppCommonModule"]],
-      exports: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__["StandardModalComponent"]],
+    PageLayoutsModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_4__["AppCommonModule"]],
+      exports: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_7__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_6__["StandardModalComponent"]],
       providers: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbActiveModal"]],
-      declarations: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__["StandardModalComponent"]]
+      declarations: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_7__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_6__["StandardModalComponent"]]
     })], PageLayoutsModule);
     /***/
   },
@@ -658,15 +672,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _services__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! ../../../../../services */
-    "./src/services/index.ts");
+    var _services_tickets_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ../../../../../services/tickets.service */
+    "./src/services/tickets.service.ts");
 
     var AddTicketsModalComponent = /*#__PURE__*/function () {
-      function AddTicketsModalComponent(productsService, fb, ngbActiveModal) {
+      function AddTicketsModalComponent(ticketsService, fb, ngbActiveModal) {
         _classCallCheck(this, AddTicketsModalComponent);
 
-        this.productsService = productsService;
+        this.ticketsService = ticketsService;
         this.fb = fb;
         this.ngbActiveModal = ngbActiveModal;
         this.selectedCustom = false;
@@ -682,9 +696,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(AddTicketsModalComponent, [{
         key: "pictureSelected",
         value: function pictureSelected(item) {
-          console.log(item.item);
-
-          if (item.item.id == 'custom') {
+          if (item.item.id === 'custom') {
             this.selectedCustom = true;
             this.previewURL = null;
           } else {
@@ -701,16 +713,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             description: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             price: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            picture: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+            picture: [''],
+            category: ['Tickets']
           });
-          this.controls['name'].valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["debounceTime"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (term) {
-            if (term != '' && typeof term === 'string') {
+          this.controls.name.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["debounceTime"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (term) {
+            if (term !== '' && typeof term === 'string') {
               if (term.length >= 3) {
                 _this.loadingPictureOptions$.next({
                   status: 'pending'
                 });
 
-                _this.productsService.getPictureForTerm(term).subscribe(function (model) {
+                _this.ticketsService.getPictureForTerm(term).subscribe(function (model) {
                   _this.pictureOptions = model.items;
 
                   _this.loadingPictureOptions$.next({
@@ -720,10 +733,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               }
             }
           })).subscribe();
-          this.controls['picture'].valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (id) {
-            console.log('picture');
-            console.log(id);
-
+          this.controls.picture.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (id) {
             if (id === 'custom') {
               _this.selectedCustom = true;
               _this.previewURL = null;
@@ -737,7 +747,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                 for (_iterator.s(); !(_step = _iterator.n()).done;) {
                   var picture = _step.value;
 
-                  if (picture.id == id) {
+                  if (picture.id === id) {
                     _this.previewURL = 'data:image/gif;base64,' + picture.data;
                   }
                 }
@@ -757,7 +767,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           this.submit$.next({
             status: 'pending'
           });
-          this.productsService.addProduct(this.productForm.value).subscribe(function () {
+          this.ticketsService.addTicket(this.productForm.value).subscribe(function () {
             _this2.submit$.next({
               status: 'success'
             });
@@ -775,8 +785,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           if (event.target.files && event.target.files[0]) {
             var reader = new FileReader();
 
-            reader.onload = function (event) {
-              _this3.previewURL = event.target.result;
+            reader.onload = function (onLoadEvent) {
+              _this3.previewURL = onLoadEvent.target.result;
             };
 
             reader.readAsDataURL(event.target.files[0]);
@@ -794,7 +804,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     AddTicketsModalComponent.ctorParameters = function () {
       return [{
-        type: _services__WEBPACK_IMPORTED_MODULE_6__["ProductsService"]
+        type: _services_tickets_service__WEBPACK_IMPORTED_MODULE_6__["TicketsService"]
       }, {
         type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
       }, {
@@ -810,7 +820,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
       /*! ./add-tickets-modal.component.scss */
       "./src/app/modules/tickets/components/add-tickets-modal/add-tickets-modal.component.scss"))["default"]]
-    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_services__WEBPACK_IMPORTED_MODULE_6__["ProductsService"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbActiveModal"]])], AddTicketsModalComponent);
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_services_tickets_service__WEBPACK_IMPORTED_MODULE_6__["TicketsService"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbActiveModal"]])], AddTicketsModalComponent);
     /***/
   },
 
@@ -880,15 +890,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _services__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! ../../../../../services */
-    "./src/services/index.ts");
+    var _services_tickets_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../../../../../services/tickets.service */
+    "./src/services/tickets.service.ts");
 
     var DeleteTicketsModalComponent = /*#__PURE__*/function () {
-      function DeleteTicketsModalComponent(productsService, ngbActiveModal) {
+      function DeleteTicketsModalComponent(ticketsService, ngbActiveModal) {
         _classCallCheck(this, DeleteTicketsModalComponent);
 
-        this.productsService = productsService;
+        this.ticketsService = ticketsService;
         this.ngbActiveModal = ngbActiveModal;
         this.status = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"]({
           status: 'idle'
@@ -906,7 +916,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           this.status.next({
             status: 'pending'
           });
-          this.productsService.deleteProduct(this.product_id).subscribe(function () {
+          this.ticketsService.deleteTicket(this.productId).subscribe(function () {
             _this4.status.next({
               status: 'success'
             });
@@ -923,13 +933,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     DeleteTicketsModalComponent.ctorParameters = function () {
       return [{
-        type: _services__WEBPACK_IMPORTED_MODULE_4__["ProductsService"]
+        type: _services_tickets_service__WEBPACK_IMPORTED_MODULE_4__["TicketsService"]
       }, {
         type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"]
       }];
     };
 
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], DeleteTicketsModalComponent.prototype, "product_id", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], DeleteTicketsModalComponent.prototype, "productId", void 0);
     DeleteTicketsModalComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'sb-delete-product-modal',
       template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
@@ -938,7 +948,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
       /*! ./delete-tickets-modal.component.scss */
       "./src/app/modules/tickets/components/delete-product-modal/delete-tickets-modal.component.scss"))["default"]]
-    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_services__WEBPACK_IMPORTED_MODULE_4__["ProductsService"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"]])], DeleteTicketsModalComponent);
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_services_tickets_service__WEBPACK_IMPORTED_MODULE_4__["TicketsService"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"]])], DeleteTicketsModalComponent);
     /***/
   },
 
@@ -1020,19 +1030,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _services__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! ../../../../../services */
-    "./src/services/index.ts");
+    var _services_tickets_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ../../../../../services/tickets.service */
+    "./src/services/tickets.service.ts");
 
     var EditTicketsModalComponent = /*#__PURE__*/function () {
-      function EditTicketsModalComponent(productsService, fb, ngbActiveModal) {
+      function EditTicketsModalComponent(ticketsService, fb, ngbActiveModal) {
         _classCallCheck(this, EditTicketsModalComponent);
 
-        this.productsService = productsService;
+        this.ticketsService = ticketsService;
         this.fb = fb;
         this.ngbActiveModal = ngbActiveModal;
         this.productForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({});
-        this.product_id = -1;
+        this.productId = -1;
         this.loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"]({
           status: 'idle'
         });
@@ -1050,7 +1060,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function ngOnInit() {
           var _this5 = this;
 
-          if (this.product_id != -1) {
+          if (this.productId !== -1) {
             this.loading$.next({
               status: 'pending'
             });
@@ -1058,20 +1068,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
               description: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
               price: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-              picture: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+              picture: ['']
             });
-            this.productsService.getProduct(this.product_id).subscribe(function (model) {
+            this.ticketsService.getTicket(this.productId).subscribe(function (model) {
               _this5.productForm = _this5.fb.group({
                 id: [model.id, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
                 name: [model.name, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
                 description: [model.description, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
                 price: [model.price, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-                picture: [model.picture, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+                picture: [model.picture],
+                category: [model.category]
               });
 
-              if (model.picture != undefined) {
-                _this5.productsService.getPictureById(model.picture).subscribe(function (model) {
-                  _this5.previewURL = 'data:image/gif;base64,' + model.data;
+              if (model.picture !== undefined) {
+                _this5.ticketsService.getPictureById(model.picture).subscribe(function (pictureModel) {
+                  _this5.previewURL = 'data:image/gif;base64,' + pictureModel.data;
                 });
               }
 
@@ -1083,22 +1094,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             });
           }
 
-          this.controls['name'].valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["debounceTime"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (term) {
-            if (term != '' && typeof term === 'string') {
+          this.controls.name.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["debounceTime"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (term) {
+            if (term !== '' && typeof term === 'string') {
               if (term.length >= 3) {
                 _this5.loadPictureOptions(term);
               }
             }
           })).subscribe();
-          this.controls['picture'].valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (id) {
-            console.log('picture');
-            console.log(id);
-
+          this.controls.picture.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (id) {
             if (id === 'custom') {
-              //this.selectedCustom = true;
+              // this.selectedCustom = true;
               _this5.previewURL = null;
             } else {
-              //this.selectedCustom = false;
+              // this.selectedCustom = false;
               var _iterator2 = _createForOfIteratorHelper(_this5.pictureOptions),
                   _step2;
 
@@ -1106,7 +1114,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                 for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
                   var picture = _step2.value;
 
-                  if (picture.id == id) {
+                  if (picture.id === id) {
                     _this5.previewURL = 'data:image/gif;base64,' + picture.data;
                   }
                 }
@@ -1127,7 +1135,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             this.submit$.next({
               status: 'pending'
             });
-            this.productsService.editProduct(this.productForm.value).subscribe(function () {
+            this.ticketsService.editTicket(this.productForm.value).subscribe(function () {
               _this6.submit$.next({
                 status: 'success'
               });
@@ -1146,7 +1154,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           this.loadingPictureOptions$.next({
             status: 'pending'
           });
-          this.productsService.getPictureForTerm(term).subscribe(function (model) {
+          this.ticketsService.getPictureForTerm(term).subscribe(function (model) {
             _this7.pictureOptions = model.items;
 
             _this7.loadingPictureOptions$.next({
@@ -1166,7 +1174,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     EditTicketsModalComponent.ctorParameters = function () {
       return [{
-        type: _services__WEBPACK_IMPORTED_MODULE_6__["ProductsService"]
+        type: _services_tickets_service__WEBPACK_IMPORTED_MODULE_6__["TicketsService"]
       }, {
         type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
       }, {
@@ -1175,7 +1183,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     };
 
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"])], EditTicketsModalComponent.prototype, "productForm", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], EditTicketsModalComponent.prototype, "product_id", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], EditTicketsModalComponent.prototype, "productId", void 0);
     EditTicketsModalComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'sb-edit-product-modal',
       template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
@@ -1184,7 +1192,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
       /*! ./edit-tickets-modal.component.scss */
       "./src/app/modules/tickets/components/edit-product-modal/edit-tickets-modal.component.scss"))["default"]]
-    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_services__WEBPACK_IMPORTED_MODULE_6__["ProductsService"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbActiveModal"]])], EditTicketsModalComponent);
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_services_tickets_service__WEBPACK_IMPORTED_MODULE_6__["TicketsService"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbActiveModal"]])], EditTicketsModalComponent);
     /***/
   },
 
@@ -1320,15 +1328,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _services__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! ../../../../../services */
-    "./src/services/index.ts");
+    var _services_tickets_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ../../../../../services/tickets.service */
+    "./src/services/tickets.service.ts");
 
     var NgBootstrapTableComponent = /*#__PURE__*/function () {
-      function NgBootstrapTableComponent(productsService, changeDetectorRef, modalService) {
+      function NgBootstrapTableComponent(ticketsService, changeDetectorRef, modalService) {
         _classCallCheck(this, NgBootstrapTableComponent);
 
-        this.productsService = productsService;
+        this.ticketsService = ticketsService;
         this.changeDetectorRef = changeDetectorRef;
         this.modalService = modalService;
         this.pageSize = 4;
@@ -1339,14 +1347,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function ngOnInit() {
           var _this8 = this;
 
-          this.productsService.pageSize = this.pageSize;
-          this.products$ = this.productsService.results$;
-          this.total$ = this.productsService.total$;
-          this.productsService.refreshRequired$.subscribe(function (bool) {
+          this.ticketsService.pageSize = this.pageSize;
+          this.tickets$ = this.ticketsService.results$;
+          this.total$ = this.ticketsService.total$;
+          this.ticketsService.refreshRequired$.subscribe(function (bool) {
             if (bool) {
               _this8.refreshTable();
 
-              _this8.productsService.refreshRequired$.next(false);
+              _this8.ticketsService.refreshRequired$.next(false);
             }
           });
         }
@@ -1357,8 +1365,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               direction = _ref.direction;
           this.sortedColumn = column;
           this.sortedDirection = direction;
-          this.productsService.sortColumn = column;
-          this.productsService.sortDirection = direction;
+          this.ticketsService.sortColumn = column;
+          this.ticketsService.sortDirection = direction;
           this.changeDetectorRef.detectChanges();
         }
       }, {
@@ -1369,7 +1377,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             size: 'lg',
             centered: true
           });
-          modalRef.componentInstance.product_id = id;
+          modalRef.componentInstance.productId = id;
         }
       }, {
         key: "deleteProduct",
@@ -1379,14 +1387,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             size: 'lg',
             centered: true
           });
-          modalRef.componentInstance.product_id = id;
+          modalRef.componentInstance.productId = id;
         }
       }, {
         key: "refreshTable",
         value: function refreshTable() {
-          this.productsService.pageSize = this.pageSize;
-          this.products$ = this.productsService.results$;
-          this.total$ = this.productsService.total$;
+          this.ticketsService.pageSize = this.pageSize;
+          this.tickets$ = this.ticketsService.results$;
+          this.total$ = this.ticketsService.total$;
         }
       }]);
 
@@ -1395,7 +1403,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     NgBootstrapTableComponent.ctorParameters = function () {
       return [{
-        type: _services__WEBPACK_IMPORTED_MODULE_6__["ProductsService"]
+        type: _services_tickets_service__WEBPACK_IMPORTED_MODULE_6__["TicketsService"]
       }, {
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
       }, {
@@ -1414,7 +1422,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
       /*! ./ng-bootstrap-table.component.scss */
       "./src/app/modules/tickets/components/ng-bootstrap-table/ng-bootstrap-table.component.scss"))["default"]]
-    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_services__WEBPACK_IMPORTED_MODULE_6__["ProductsService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbModal"]])], NgBootstrapTableComponent);
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_services_tickets_service__WEBPACK_IMPORTED_MODULE_6__["TicketsService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbModal"]])], NgBootstrapTableComponent);
     /***/
   },
 
@@ -2097,6 +2105,239 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       entryComponents: [_components_add_tickets_modal_add_tickets_modal_component__WEBPACK_IMPORTED_MODULE_9__["AddTicketsModalComponent"], _components_edit_product_modal_edit_tickets_modal_component__WEBPACK_IMPORTED_MODULE_13__["EditTicketsModalComponent"], _components_delete_product_modal_delete_tickets_modal_component__WEBPACK_IMPORTED_MODULE_14__["DeleteTicketsModalComponent"]],
       exports: [].concat(_toConsumableArray(_containers__WEBPACK_IMPORTED_MODULE_10__["containers"]), _toConsumableArray(_components__WEBPACK_IMPORTED_MODULE_8__["components"]))
     })], TicketsModule);
+    /***/
+  },
+
+  /***/
+  "./src/services/tickets.service.ts":
+  /*!*****************************************!*\
+    !*** ./src/services/tickets.service.ts ***!
+    \*****************************************/
+
+  /*! exports provided: TicketsService */
+
+  /***/
+  function srcServicesTicketsServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TicketsService", function () {
+      return TicketsService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @myclapp/myclapp-server */
+    "./node_modules/@myclapp/myclapp-server/fesm2015/myclapp-myclapp-server.js");
+    /* harmony import */
+
+
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @upe/logger */
+    "./node_modules/@upe/logger/index.js");
+    /* harmony import */
+
+
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_3__);
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var _base_search_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./base.search.service */
+    "./src/services/base.search.service.ts");
+    /* harmony import */
+
+
+    var _user_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./user.service */
+    "./src/services/user.service.ts");
+
+    var TicketsService_1;
+
+    var TicketsService = TicketsService_1 = /*#__PURE__*/function (_base_search_service_) {
+      _inherits(TicketsService, _base_search_service_);
+
+      var _super = _createSuper(TicketsService);
+
+      function TicketsService(apiClient, userService) {
+        var _this9;
+
+        _classCallCheck(this, TicketsService);
+
+        _this9 = _super.call(this);
+        _this9.apiClient = apiClient;
+        _this9.userService = userService;
+        _this9.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_3__["Logger"]({
+          name: TicketsService_1.name,
+          flags: ['service']
+        });
+        _this9.searchPropertyName = 'name';
+        _this9.refreshRequired$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"](false);
+        return _this9;
+      }
+      /**
+       * Fetches the products of every category and removes
+       * every ticket
+       * @return List of ProductModels excluding products of category 'Tickets'
+       */
+
+
+      _createClass(TicketsService, [{
+        key: "getResults",
+        value: function getResults() {
+          var _this10 = this;
+
+          return this.apiClient.getProducts({
+            clubId: this.userService.club_id,
+            category: ['Tickets']
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (res) {
+            _this10.logger.debug('Received Results', res);
+
+            return res.items;
+          }));
+        }
+      }, {
+        key: "addTicket",
+        value: function addTicket(product) {
+          var _this11 = this;
+
+          this.logger.debug('Adding new Product', product);
+          return this.apiClient.createProduct({
+            clubId: this.userService.club_id,
+            body: {
+              active: true,
+              description: product.description,
+              name: product.name,
+              price: product.price,
+              picture: product.picture,
+              category: 'Tickets'
+            }
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (model) {
+            _this11.logger.info('Added new Product', model);
+
+            _this11.clearCacheAndSearch();
+
+            _this11.refreshRequired$.next(true);
+
+            return model;
+          }));
+        }
+      }, {
+        key: "editTicket",
+        value: function editTicket(product) {
+          var _this12 = this;
+
+          return this.apiClient.updateProduct({
+            clubId: this.userService.club_id,
+            productId: product.id,
+            body: {
+              active: true,
+              description: product.description,
+              name: product.name,
+              price: product.price,
+              picture: product.picture,
+              category: 'Tickets'
+            }
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (model) {
+            _this12.logger.debug('Product updated', model);
+
+            _this12.clearCacheAndSearch();
+
+            _this12.refreshRequired$.next(true);
+
+            return model;
+          }));
+        }
+      }, {
+        key: "getTicket",
+        value: function getTicket(id) {
+          var _this13 = this;
+
+          return this.apiClient.getProduct({
+            clubId: this.userService.club_id,
+            productId: id
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (model) {
+            _this13.logger.debug('Fetched Product', model);
+
+            return model;
+          }));
+        }
+      }, {
+        key: "deleteTicket",
+        value: function deleteTicket(id) {
+          var _this14 = this;
+
+          return this.apiClient.deleteProduct({
+            clubId: this.userService.club_id,
+            productId: id
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (model) {
+            _this14.clearCacheAndSearch();
+
+            _this14.refreshRequired$.next(true);
+
+            _this14.logger.debug('Deleted Product', model);
+
+            return model;
+          }));
+        }
+      }, {
+        key: "getPictureForTerm",
+        value: function getPictureForTerm(term) {
+          return this.apiClient.searchPictures({
+            query: term
+          });
+        }
+      }, {
+        key: "getPictureById",
+        value: function getPictureById(id) {
+          return this.apiClient.getPicture({
+            pictureId: id
+          });
+        }
+      }]);
+
+      return TicketsService;
+    }(_base_search_service__WEBPACK_IMPORTED_MODULE_6__["BaseSearchService"]);
+
+    TicketsService.ctorParameters = function () {
+      return [{
+        type: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"]
+      }, {
+        type: _user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"]
+      }];
+    };
+
+    TicketsService = TicketsService_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"], _user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"]])], TicketsService);
     /***/
   }
 }]);

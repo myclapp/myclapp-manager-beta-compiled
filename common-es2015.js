@@ -21,7 +21,7 @@ class BaseConfigComponent {
     constructor(name) {
         this._initialStatus$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]({ status: 'idle' });
         this._submitStatus$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]({ status: 'idle' });
-        this._logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_1__["Logger"]({ name: name, flags: ['component'] });
+        this._logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_1__["Logger"]({ name, flags: ['component'] });
     }
     get form() {
         return this._form.controls;

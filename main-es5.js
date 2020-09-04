@@ -932,7 +932,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".form-control {\n  border-radius: 0.5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL215Y2xhcHAtbWFuYWdlci9teWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHFCQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZm9ybS1jb250cm9se1xuICAgIGJvcmRlci1yYWRpdXM6IDAuNXJlbTtcblxufVxuIiwiLmZvcm0tY29udHJvbCB7XG4gIGJvcmRlci1yYWRpdXM6IDAuNXJlbTtcbn0iXX0= */";
+    __webpack_exports__["default"] = ".form-control {\n  border-radius: 0.5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL215Y2xhcHAtbWFuYWdlci9teWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHFCQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZm9ybS1jb250cm9sIHtcbiAgICBib3JkZXItcmFkaXVzOiAwLjVyZW07XG5cbn1cbiIsIi5mb3JtLWNvbnRyb2wge1xuICBib3JkZXItcmFkaXVzOiAwLjVyZW07XG59Il19 */";
     /***/
   },
 
@@ -1285,31 +1285,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! rxjs */
-    "./node_modules/rxjs/_esm2015/index.js");
-    /* harmony import */
-
-
-    var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! rxjs/operators */
-    "./node_modules/rxjs/_esm2015/operators/index.js");
-    /* harmony import */
-
-
-    var _services__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! ../../../../services */
-    "./src/services/index.ts");
-    /* harmony import */
-
-
-    var _upe_logger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @upe/logger */
     "./node_modules/@upe/logger/index.js");
     /* harmony import */
 
 
-    var _upe_logger__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_6__);
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_3__);
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var _services__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ../../../../services */
+    "./src/services/index.ts");
 
     var AuthGuard_1;
 
@@ -1319,7 +1319,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.router = router;
         this.userService = userService;
-        this._logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_6__["Logger"]({
+        this._logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_3__["Logger"]({
           name: AuthGuard_1.name,
           flags: ['component']
         });
@@ -1331,7 +1331,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this2 = this;
 
           if (!this.userService.isAuthenticated()) {
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(false).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function () {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(false).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function () {
               _this2._logger.error('User not authenticated -> redirect to login');
 
               _this2.router.navigate(['/account/login']);
@@ -1340,7 +1340,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }));
           }
 
-          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(true);
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(true);
         }
       }]);
 
@@ -1351,11 +1351,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return [{
         type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
       }, {
-        type: _services__WEBPACK_IMPORTED_MODULE_5__["UserService"]
+        type: _services__WEBPACK_IMPORTED_MODULE_6__["UserService"]
       }];
     };
 
-    AuthGuard = AuthGuard_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _services__WEBPACK_IMPORTED_MODULE_5__["UserService"]])], AuthGuard);
+    AuthGuard = AuthGuard_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _services__WEBPACK_IMPORTED_MODULE_6__["UserService"]])], AuthGuard);
     /***/
   },
 
@@ -1807,7 +1807,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.authenticationService = authenticationService;
         this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_2__["Logger"]({
           name: JwtInterceptor_1.name,
-          flags: ["service"]
+          flags: ['service']
         });
       }
 
@@ -1930,19 +1930,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! rxjs */
-    "./node_modules/rxjs/_esm2015/index.js");
-    /* harmony import */
-
-
-    var _upe_logger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @upe/logger */
     "./node_modules/@upe/logger/index.js");
     /* harmony import */
 
 
-    var _upe_logger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_3__);
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_2__);
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
 
     var AlertService_1;
 
@@ -1950,29 +1950,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function AlertService() {
         _classCallCheck(this, AlertService);
 
-        this._alerts = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
-        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_3__["Logger"]({
+        this._alerts = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"]([]);
+        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_2__["Logger"]({
           name: AlertService_1.name,
-          flags: ["service"]
+          flags: ['service']
         });
       }
 
       _createClass(AlertService, [{
         key: "show",
         value: function show(alert) {
-          var _a, _b;
+          var _a;
 
-          this.logger.debug('Display new alert', alert);
-          (_a = this._alerts) === null || _a === void 0 ? void 0 : _a.value.push(alert);
+          if (this.alerts$()) {
+            this.logger.debug('Display new alert', alert);
+            (_a = this._alerts) === null || _a === void 0 ? void 0 : _a.value.push(alert);
 
-          this._alerts.next((_b = this._alerts) === null || _b === void 0 ? void 0 : _b.value);
+            this._alerts.next(this._alerts.value);
+          }
         }
       }, {
         key: "remove",
         value: function remove(alert) {
-          var _a;
-
-          this._alerts.next((_a = this._alerts) === null || _a === void 0 ? void 0 : _a.value.filter(function (a) {
+          if (this.alerts$()) this._alerts.next(this._alerts.value.filter(function (a) {
             return a !== alert;
           }));
         }
@@ -2902,6 +2902,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this11.refreshRequired$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"](false);
         return _this11;
       }
+      /**
+       * Fetches the products of every category and removes
+       * every ticket
+       * @return List of ProductModels excluding products of category 'Tickets'
+       */
+
 
       _createClass(ProductsService, [{
         key: "getResults",
@@ -2909,7 +2915,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this12 = this;
 
           return this.apiClient.getProducts({
-            clubId: this.userService.club_id
+            clubId: this.userService.club_id,
+            category: ['Catering', 'Fanartikel']
           }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (res) {
             _this12.logger.debug('Received Results', res);
 
@@ -2929,7 +2936,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               description: product.description,
               name: product.name,
               price: product.price,
-              picture: product.picture
+              picture: product.picture,
+              category: product.category
             }
           }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (model) {
             _this13.logger.info('Added new Product', model);
@@ -2954,7 +2962,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               description: product.description,
               name: product.name,
               price: product.price,
-              picture: product.picture
+              picture: product.picture,
+              category: product.category
             }
           }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (model) {
             _this14.logger.debug('Product updated', model);
@@ -3012,9 +3021,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             pictureId: id
           });
         }
-      }, {
-        key: "uploadCustomPicture",
-        value: function uploadCustomPicture() {}
       }]);
 
       return ProductsService;
@@ -3074,19 +3080,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! rxjs/operators */
-    "./node_modules/rxjs/_esm2015/operators/index.js");
-    /* harmony import */
-
-
-    var _upe_logger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @upe/logger */
     "./node_modules/@upe/logger/index.js");
     /* harmony import */
 
 
-    var _upe_logger__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_4__);
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_3__);
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
     /* harmony import */
 
 
@@ -3116,9 +3122,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _this17.apiClient = apiClient;
         _this17.userService = userService;
         _this17.searchPropertyName = 'title';
-        _this17.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_4__["Logger"]({
+        _this17.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_3__["Logger"]({
           name: PushService_1.name,
-          flags: ["service"]
+          flags: ['service']
         });
         return _this17;
       }
@@ -3131,7 +3137,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.logger.debug('Query PushMessages');
           return this.apiClient.getPushMessages({
             clubId: this.userService.club_id
-          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
             _this18.logger.debug('Received PushMessages', res);
 
             return res.items;
@@ -3218,25 +3224,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! rxjs */
-    "./node_modules/rxjs/_esm2015/index.js");
-    /* harmony import */
-
-
-    var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! rxjs/operators */
-    "./node_modules/rxjs/_esm2015/operators/index.js");
-    /* harmony import */
-
-
-    var _upe_logger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @upe/logger */
     "./node_modules/@upe/logger/index.js");
     /* harmony import */
 
 
-    var _upe_logger__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_6__);
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_4__);
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
 
     var UserService_1;
 
@@ -3246,11 +3252,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.myClappService = myClappService;
         this.router = router;
-        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_6__["Logger"]({
+        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_4__["Logger"]({
           name: UserService_1.name,
           flags: ['service']
         });
-        this.currentUserSubject = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"](JSON.parse(localStorage.getItem('currentUser') || '{}'));
+        this.currentUserSubject = new rxjs__WEBPACK_IMPORTED_MODULE_5__["BehaviorSubject"](JSON.parse(localStorage.getItem('currentUser') || '{}'));
       }
 
       _createClass(UserService, [{
@@ -3264,7 +3270,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               email: email,
               password: password
             }
-          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (user) {
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (user) {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
             _this20.logger.debug('Successful login', user);
 
@@ -3286,14 +3292,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "isAuthenticated",
         value: function isAuthenticated() {
-          return !(this.currentUserSubject.value.token == undefined || this.currentUserSubject.value.token == '');
+          return !(this.currentUserSubject.value.token === undefined || this.currentUserSubject.value.token === '');
         }
       }, {
         key: "user",
         get: function get() {
-          var _a;
-
-          return (_a = this.currentUserSubject) === null || _a === void 0 ? void 0 : _a.value;
+          return this.currentUserSubject.value;
         },
         set: function set(user) {
           this.currentUserSubject.next(user);

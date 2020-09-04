@@ -34177,7 +34177,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<sb-standard-modal (onClose)=\"generateCSV()\" title=\"Verteilung generieren\" closeText=\"Liste erstellen\">\n    <div class=\"row\">\n        <form style=\"width: 100%\">\n            <select class=\"form-control\">\n                <option>\n                    Bonn - Wiedenbrück\n                </option>\n                <option>Bonn - Monheim</option>\n                <option>Bonn Köln</option>\n            </select>\n        </form>\n    </div>\n</sb-standard-modal>\n";
+    __webpack_exports__["default"] = "<sb-standard-modal (closeFunction)=\"generateCSV()\" title=\"Verteilung generieren\" closeText=\"Liste erstellen\">\n    <div class=\"row\">\n        <form style=\"width: 100%\">\n            <label for=\"game-select\">Spielauswahl</label>\n            <select id=\"game-select\" class=\"form-control\">\n                <option>\n                    Bonn - Wiedenbrück\n                </option>\n                <option>Bonn - Monheim</option>\n                <option>Bonn Köln</option>\n            </select>\n        </form>\n    </div>\n</sb-standard-modal>\n";
     /***/
   },
 
@@ -35357,7 +35357,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".card {\n  border-width: 1px;\n}\n\n.right-col {\n  overflow-y: scroll;\n}\n\n.h-30 {\n  height: 30% !important;\n}\n\n.h-30 > .card {\n  width: 100%;\n  height: 100%;\n}\n\n.h-30 > .card > .card-body {\n  text-align: center;\n  align-items: center;\n  display: grid;\n}\n\n.h-30 > .card > .card-body > div {\n  margin-left: auto;\n  margin-right: auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL215Y2xhcHAtbWFuYWdlci9teWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL2Rhc2hib2FyZC9jb21wb25lbnRzL2Rhc2hib2FyZC1jaGFydHMvZGFzaGJvYXJkLWNoYXJ0cy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvbW9kdWxlcy9kYXNoYm9hcmQvY29tcG9uZW50cy9kYXNoYm9hcmQtY2hhcnRzL2Rhc2hib2FyZC1jaGFydHMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7RUFDSSxpQkFBQTtBQ0FKOztBREdBO0VBQ0ksa0JBQUE7QUNBSjs7QURHQTtFQUNJLHNCQUFBO0FDQUo7O0FER0E7RUFDSSxXQUFBO0VBQ0EsWUFBQTtBQ0FKOztBREdBO0VBQ0ksa0JBQUE7RUFDQSxtQkFBQTtFQUNBLGFBQUE7QUNBSjs7QURHQTtFQUNJLGlCQUFBO0VBQ0Esa0JBQUE7QUNBSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvZGFzaGJvYXJkL2NvbXBvbmVudHMvZGFzaGJvYXJkLWNoYXJ0cy9kYXNoYm9hcmQtY2hhcnRzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCAnLi4vLi4vLi4vLi4vLi4vc3R5bGVzL3ZhcmlhYmxlcyc7XG4uY2FyZCB7XG4gICAgYm9yZGVyLXdpZHRoOiAxcHhcbn1cblxuLnJpZ2h0LWNvbCB7XG4gICAgb3ZlcmZsb3cteTogc2Nyb2xsO1xufVxuXG4uaC0zMCB7XG4gICAgaGVpZ2h0OiAzMCUgIWltcG9ydGFudDtcbn1cblxuLmgtMzAgPiAuY2FyZCB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xufVxuXG4uaC0zMCA+IC5jYXJkID4gLmNhcmQtYm9keSB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgZGlzcGxheTogZ3JpZDtcbn1cblxuLmgtMzAgPiAuY2FyZCA+IC5jYXJkLWJvZHkgPiBkaXYge1xuICAgIG1hcmdpbi1sZWZ0OiBhdXRvO1xuICAgIG1hcmdpbi1yaWdodDogYXV0bztcbn1cbiIsIi5jYXJkIHtcbiAgYm9yZGVyLXdpZHRoOiAxcHg7XG59XG5cbi5yaWdodC1jb2wge1xuICBvdmVyZmxvdy15OiBzY3JvbGw7XG59XG5cbi5oLTMwIHtcbiAgaGVpZ2h0OiAzMCUgIWltcG9ydGFudDtcbn1cblxuLmgtMzAgPiAuY2FyZCB7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5oLTMwID4gLmNhcmQgPiAuY2FyZC1ib2R5IHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBkaXNwbGF5OiBncmlkO1xufVxuXG4uaC0zMCA+IC5jYXJkID4gLmNhcmQtYm9keSA+IGRpdiB7XG4gIG1hcmdpbi1sZWZ0OiBhdXRvO1xuICBtYXJnaW4tcmlnaHQ6IGF1dG87XG59Il19 */";
+    __webpack_exports__["default"] = ".card {\n  border-width: 1px;\n}\n\n.right-col {\n  overflow-y: scroll;\n}\n\n.h-30 {\n  height: 30% !important;\n}\n\n.h-30 > .card {\n  width: 100%;\n  height: 100%;\n}\n\n.h-30 > .card > .card-body {\n  text-align: center;\n  align-items: center;\n  display: grid;\n}\n\n.h-30 > .card > .card-body > div {\n  margin-left: auto;\n  margin-right: auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL215Y2xhcHAtbWFuYWdlci9teWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL2Rhc2hib2FyZC9jb21wb25lbnRzL2Rhc2hib2FyZC1jaGFydHMvZGFzaGJvYXJkLWNoYXJ0cy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvbW9kdWxlcy9kYXNoYm9hcmQvY29tcG9uZW50cy9kYXNoYm9hcmQtY2hhcnRzL2Rhc2hib2FyZC1jaGFydHMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDSSxpQkFBQTtBQ0RKOztBRElBO0VBQ0ksa0JBQUE7QUNESjs7QURJQTtFQUNJLHNCQUFBO0FDREo7O0FESUE7RUFDSSxXQUFBO0VBQ0EsWUFBQTtBQ0RKOztBRElBO0VBQ0ksa0JBQUE7RUFDQSxtQkFBQTtFQUNBLGFBQUE7QUNESjs7QURJQTtFQUNJLGlCQUFBO0VBQ0Esa0JBQUE7QUNESiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvZGFzaGJvYXJkL2NvbXBvbmVudHMvZGFzaGJvYXJkLWNoYXJ0cy9kYXNoYm9hcmQtY2hhcnRzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCAnLi4vLi4vLi4vLi4vLi4vc3R5bGVzL3ZhcmlhYmxlcyc7XG5cbi5jYXJkIHtcbiAgICBib3JkZXItd2lkdGg6IDFweFxufVxuXG4ucmlnaHQtY29sIHtcbiAgICBvdmVyZmxvdy15OiBzY3JvbGw7XG59XG5cbi5oLTMwIHtcbiAgICBoZWlnaHQ6IDMwJSAhaW1wb3J0YW50O1xufVxuXG4uaC0zMCA+IC5jYXJkIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5oLTMwID4gLmNhcmQgPiAuY2FyZC1ib2R5IHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBkaXNwbGF5OiBncmlkO1xufVxuXG4uaC0zMCA+IC5jYXJkID4gLmNhcmQtYm9keSA+IGRpdiB7XG4gICAgbWFyZ2luLWxlZnQ6IGF1dG87XG4gICAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xufVxuIiwiLmNhcmQge1xuICBib3JkZXItd2lkdGg6IDFweDtcbn1cblxuLnJpZ2h0LWNvbCB7XG4gIG92ZXJmbG93LXk6IHNjcm9sbDtcbn1cblxuLmgtMzAge1xuICBoZWlnaHQ6IDMwJSAhaW1wb3J0YW50O1xufVxuXG4uaC0zMCA+IC5jYXJkIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbn1cblxuLmgtMzAgPiAuY2FyZCA+IC5jYXJkLWJvZHkge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGRpc3BsYXk6IGdyaWQ7XG59XG5cbi5oLTMwID4gLmNhcmQgPiAuY2FyZC1ib2R5ID4gZGl2IHtcbiAgbWFyZ2luLWxlZnQ6IGF1dG87XG4gIG1hcmdpbi1yaWdodDogYXV0bztcbn0iXX0= */";
     /***/
   },
 
@@ -35406,32 +35406,32 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "classesTicketsGraph",
         get: function get() {
-          if (this.expand == 'none') {
+          if (this.expand === 'none') {
             return 'col-xl-6 col-md-12 col-sm-12';
-          } else if (this.expand == 'tickets') {
+          } else if (this.expand === 'tickets') {
             return 'col-xl-8 col-md-8 col-sm-12';
           } else return 'd-none';
         }
       }, {
         key: "classesTicketRightCol",
         get: function get() {
-          if (this.expand == 'tickets') {
+          if (this.expand === 'tickets') {
             return 'col-xl-4 col-md-4 col-sm-12';
           } else return 'd-none';
         }
       }, {
         key: "classesUmsatzGraph",
         get: function get() {
-          if (this.expand == 'none') {
+          if (this.expand === 'none') {
             return 'col-xl-6 col-md-12 col-sm-12';
-          } else if (this.expand == 'umsatz') {
+          } else if (this.expand === 'umsatz') {
             return 'col-xl-8 col-md-8 col-sm-12';
           } else return 'd-none';
         }
       }, {
         key: "classesUmsatzRightCol",
         get: function get() {
-          if (this.expand == 'umsatz') {
+          if (this.expand === 'umsatz') {
             return 'col-xl-4 col-md-4 col-sm-12';
           } else return 'd-none';
         }

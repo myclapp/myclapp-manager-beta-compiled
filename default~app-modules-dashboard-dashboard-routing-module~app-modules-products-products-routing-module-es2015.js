@@ -35,7 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<sb-standard-modal (onClose)=\"addProduct()\" title=\"Neues Produkt anlegen\" closeText=\"Produkt hinzufügen\"\n                   [buttonDisabled]=\"!productForm.valid\" [buttonLoadingIndicator]=\"submit$.asObservable()\"\n                   [dismissOnClose]=\"false\">\n    <form>\n        <div class=\"row\">\n            <div class=\"col-12\">\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputName\">Name</label>\n                    <div class=\"col-sm-9\">\n                        <input title=\"Geben Sie hier den Produktnamen ein\" class=\"form-control\" id=\"inputName\"\n                               type=\"text\" [formControl]=\"controls['name']\">\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputPrice\">Beschreibung</label>\n                    <div class=\"col-sm-9\">\n                        <textarea title=\"Geben Sie hier die Produktbeschreibung ein\" class=\"form-control\"\n                                  id=\"inputPrice\" [formControl]=\"controls['description']\"></textarea>\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"price\">Preis</label>\n                    <div class=\"col-sm-9\">\n                        <input title=\"Geben Sie hier den Preis an\" class=\"form-control\" id=\"price\" type=\"number\"\n                               [formControl]=\"controls['price']\">\n                    </div>\n                </div>\n                <div class=\"row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"add-product-picture\">Bild</label>\n                    <div class=\"col-sm-9\">\n                        <select [formControl]=\"controls['picture']\" id=\"add-product-picture\" class=\"form-control\">\n                            <option *ngFor=\"let picture of pictureOptions; let i = index\" [ngValue]=\"picture.id\">\n                                Option {{i + 1}}\n                                ({{picture.name}})\n                            </option>\n                            <!--<option ngValue=\"custom\">Eigenes Bild hochladen</option>-->\n                        </select>\n                    </div>\n                </div>\n                <!--<div *ngIf=\"selectedCustom\" class=\"form-group row mt-1\">\n                    <div class=\"offset-3 col-sm-9\">\n                        <input (change)=\"addPicture($event)\" class=\"form-control\" id=\"inputAppImage\" type=\"file\">\n                    </div>\n                </div>-->\n                <div *ngIf=\"previewURL\" class=\"row mt-3 mb-3\">\n                    <div class=\"col offset-3 text-center\" style=\"height: 300px\">\n                        <img alt=\"BILD\" [src]=\"previewURL\" class=\"img-fluid h-100\">\n                    </div>\n                </div>\n                <div *ngIf=\"!previewURL\" class=\"row mt-3 mb-3\">\n                    <div class=\"col offset-3 text-center\" style=\"height: 300px\">\n                        <span style=\"top: 50%; position: relative\">Bitte wählen Sie ein Bild aus</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </form>\n</sb-standard-modal>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<sb-standard-modal (closeFunction)=\"addProduct()\" title=\"Neues Produkt anlegen\" closeText=\"Produkt hinzufügen\"\n                   [buttonDisabled]=\"!productForm.valid\" [buttonLoadingIndicator]=\"submit$.asObservable()\"\n                   [dismissOnClose]=\"false\">\n    <form [formGroup]=\"productForm\">\n        <div class=\"row\">\n            <div class=\"col-12\">\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputName\">Name</label>\n                    <div class=\"col-sm-9\">\n                        <input title=\"Geben Sie hier den Produktnamen ein\" class=\"form-control\" id=\"inputName\"\n                               type=\"text\" formControlName=\"name\">\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputCategory\">Kategorie</label>\n                    <div class=\"col-sm-9\">\n                        <select formControlName=\"category\" title=\"Geben Sie hier die Produktkategorie an\" class=\"form-control\" id=\"inputCategory\">\n                            <option>Fanartikel</option>\n                            <option>Catering</option>\n                        </select>\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputPrice\">Beschreibung</label>\n                    <div class=\"col-sm-9\">\n                        <textarea title=\"Geben Sie hier die Produktbeschreibung ein\" class=\"form-control\"\n                                  id=\"inputPrice\" formControlName=\"description\" ></textarea>\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"price\">Preis</label>\n                    <div class=\"col-sm-9\">\n                        <input title=\"Geben Sie hier den Preis an\" class=\"form-control\" id=\"price\" type=\"number\"\n                               formControlName=\"price\">\n                    </div>\n                </div>\n                <div class=\"row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"add-product-picture\">Bild</label>\n                    <div class=\"col-sm-9\">\n                        <select formControlName=\"picture\" id=\"add-product-picture\" class=\"form-control\">\n                            <option *ngFor=\"let picture of pictureOptions; let i = index\" [ngValue]=\"picture.id\">\n                                Option {{i + 1}}\n                                ({{picture.name}})\n                            </option>\n                            <!--<option ngValue=\"custom\">Eigenes Bild hochladen</option>-->\n                        </select>\n                    </div>\n                </div>\n                <!--<div *ngIf=\"selectedCustom\" class=\"form-group row mt-1\">\n                    <div class=\"offset-3 col-sm-9\">\n                        <input (change)=\"addPicture($event)\" class=\"form-control\" id=\"inputAppImage\" type=\"file\">\n                    </div>\n                </div>-->\n                <div *ngIf=\"previewURL\" class=\"row mt-3 mb-3\">\n                    <div class=\"col offset-3 text-center\" style=\"height: 300px\">\n                        <img alt=\"BILD\" [src]=\"previewURL\" class=\"img-fluid h-100\">\n                    </div>\n                </div>\n                <div *ngIf=\"!previewURL\" class=\"row mt-3 mb-3\">\n                    <div class=\"col offset-3 text-center\" style=\"height: 300px\">\n                        <span style=\"top: 50%; position: relative\">Bitte wählen Sie ein Bild aus</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </form>\n</sb-standard-modal>\n");
 
 /***/ }),
 
@@ -48,7 +48,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<sb-standard-modal title=\"Möchten Sie dieses Produkt wirklich löschen?\"\n                   (onClose)=\"deleteProduct()\" closeText=\"Produkt löschen\"\n                   type=\"danger\" [buttonLoadingIndicator]=\"status.asObservable()\" [dismissOnClose]=\"false\">\n    <p>\n        Wenn Sie das Produkt löschen wird es aus unserem System entfernt. Das Produkt kann nicht mehr in der App gekauft\n        werden. Wenn Sie das Produkt nur vorrübergehend deaktivieren wollen, wählen Sie bitte die Option Deaktivieren.\n    </p>\n</sb-standard-modal>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<sb-standard-modal title=\"Möchten Sie dieses Produkt wirklich löschen?\"\n                   (closeFunction)=\"deleteProduct()\" closeText=\"Produkt löschen\"\n                   type=\"danger\" [buttonLoadingIndicator]=\"status.asObservable()\" [dismissOnClose]=\"false\">\n    <p>\n        Wenn Sie das Produkt löschen wird es aus unserem System entfernt. Das Produkt kann nicht mehr in der App gekauft\n        werden. Wenn Sie das Produkt nur vorrübergehend deaktivieren wollen, wählen Sie bitte die Option Deaktivieren.\n    </p>\n</sb-standard-modal>\n");
 
 /***/ }),
 
@@ -61,7 +61,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<sb-standard-modal (onClose)=\"save()\" title=\"Produkt bearbeiten\" closeText=\"Speichern\"\n                   [buttonDisabled]=\"!productForm.valid\" [dismissOnClose]=\"false\"\n                   [buttonLoadingIndicator]=\"submit$.asObservable()\">\n    <sb-loading-indicator-overlay [_loadingStatus]=\"loading$\" [backdrop]=\"false\"></sb-loading-indicator-overlay>\n    <form>\n        <div class=\"row\">\n            <div class=\"col-12\">\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputName\">Name</label>\n                    <div class=\"col-sm-9\">\n                        <input title=\"Geben Sie hier den Produktnamen ein\" class=\"form-control\" id=\"inputName\"\n                               type=\"text\" [formControl]=\"controls['name']\">\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputPrice\">Beschreibung</label>\n                    <div class=\"col-sm-9\">\n                        <textarea title=\"Geben Sie hier die Produktbeschreibung ein\" class=\"form-control\"\n                                  id=\"inputPrice\" [formControl]=\"controls['description']\"></textarea>\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"price\">Preis</label>\n                    <div class=\"col-sm-9\">\n                        <input title=\"Geben Sie hier den Preis an\" class=\"form-control\" id=\"price\" type=\"number\"\n                               [formControl]=\"controls['price']\">\n                    </div>\n                </div>\n                <div class=\"row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"add-product-picture\">Bild</label>\n                    <div class=\"col-sm-9\">\n                        <select [formControl]=\"controls['picture']\" id=\"add-product-picture\" class=\"form-control\">\n                            <option *ngFor=\"let picture of pictureOptions; let i = index\" [ngValue]=\"picture.id\">\n                                Option {{i + 1}}\n                                ({{picture.name}})\n                            </option>\n                            <!--<option ngValue=\"custom\">Eigenes Bild hochladen</option>-->\n                        </select>\n                    </div>\n                </div>\n                <!--<div *ngIf=\"selectedCustom\" class=\"form-group row mt-1\">\n                    <div class=\"offset-3 col-sm-9\">\n                        <input (change)=\"addPicture($event)\" class=\"form-control\" id=\"inputAppImage\" type=\"file\">\n                    </div>\n                </div>-->\n                <div *ngIf=\"previewURL\" class=\"row mt-3 mb-3\">\n                    <div class=\"col offset-3 text-center\" style=\"height: 300px\">\n                        <img alt=\"BILD\" [src]=\"previewURL\" class=\"img-fluid h-100\">\n                    </div>\n                </div>\n                <div *ngIf=\"!previewURL\" class=\"row mt-3 mb-3\">\n                    <div class=\"col offset-3 text-center\" style=\"height: 300px\">\n                        <span style=\"top: 50%; position: relative\">Bild wird geladen</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </form>\n</sb-standard-modal>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<sb-standard-modal (closeFunction)=\"save()\" title=\"Produkt bearbeiten\" closeText=\"Speichern\"\n                   [buttonDisabled]=\"!productForm.valid\" [dismissOnClose]=\"false\"\n                   [buttonLoadingIndicator]=\"submit$.asObservable()\">\n    <sb-loading-indicator-overlay [_loadingStatus]=\"loading$\" [backdrop]=\"false\"></sb-loading-indicator-overlay>\n    <form [formGroup]=\"productForm\">\n        <div class=\"row\">\n            <div class=\"col-12\">\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputName\">Name</label>\n                    <div class=\"col-sm-9\">\n                        <input title=\"Geben Sie hier den Produktnamen ein\" class=\"form-control\" id=\"inputName\"\n                               type=\"text\" formControlName=\"name\">\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputCategory\">Kategorie</label>\n                    <div class=\"col-sm-9\">\n                        <select formControlName=\"category\" title=\"Geben Sie hier die Produktkategorie an\" class=\"form-control\" id=\"inputCategory\">\n                            <option>Fanartikel</option>\n                            <option>Catering</option>\n                        </select>\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"inputPrice\">Beschreibung</label>\n                    <div class=\"col-sm-9\">\n                        <textarea title=\"Geben Sie hier die Produktbeschreibung ein\" class=\"form-control\"\n                                  id=\"inputPrice\" formControlName=\"description\" ></textarea>\n                    </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"price\">Preis</label>\n                    <div class=\"col-sm-9\">\n                        <input title=\"Geben Sie hier den Preis an\" class=\"form-control\" id=\"price\" type=\"number\"\n                               formControlName=\"price\">\n                    </div>\n                </div>\n                <div class=\"row\">\n                    <label class=\"col-sm-3 col-form-label\" for=\"add-product-picture\">Bild</label>\n                    <div class=\"col-sm-9\">\n                        <select formControlName=\"picture\" id=\"add-product-picture\" class=\"form-control\">\n                            <option *ngFor=\"let picture of pictureOptions; let i = index\" [ngValue]=\"picture.id\">\n                                Option {{i + 1}}\n                                ({{picture.name}})\n                            </option>\n                            <!--<option ngValue=\"custom\">Eigenes Bild hochladen</option>-->\n                        </select>\n                    </div>\n                </div>\n                <!--<div *ngIf=\"selectedCustom\" class=\"form-group row mt-1\">\n                    <div class=\"offset-3 col-sm-9\">\n                        <input (change)=\"addPicture($event)\" class=\"form-control\" id=\"inputAppImage\" type=\"file\">\n                    </div>\n                </div>-->\n                <div *ngIf=\"previewURL\" class=\"row mt-3 mb-3\">\n                    <div class=\"col offset-3 text-center\" style=\"height: 300px\">\n                        <img alt=\"BILD\" [src]=\"previewURL\" class=\"img-fluid h-100\">\n                    </div>\n                </div>\n                <div *ngIf=\"!previewURL\" class=\"row mt-3 mb-3\">\n                    <div class=\"col offset-3 text-center\" style=\"height: 300px\">\n                        <span style=\"top: 50%; position: relative\">Bild wird geladen</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </form>\n</sb-standard-modal>\n");
 
 /***/ }),
 
@@ -136,10 +136,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let StandardModalComponent = class StandardModalComponent {
-    //@Input() form!: FormGroup
+    // @Input() form!: FormGroup
     constructor(ngbActiveModal) {
         this.ngbActiveModal = ngbActiveModal;
-        this.onClose = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.closeFunction = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.closeText = 'Schließen';
         this.buttonDisabled = false;
         this.type = 'primary';
@@ -149,7 +149,7 @@ let StandardModalComponent = class StandardModalComponent {
     ngOnInit() {
     }
     close() {
-        this.onClose.emit();
+        this.closeFunction.emit();
         if (this.dismissOnClose)
             this.ngbActiveModal.close(true);
     }
@@ -164,7 +164,7 @@ Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
-], StandardModalComponent.prototype, "onClose", void 0);
+], StandardModalComponent.prototype, "closeFunction", void 0);
 Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
@@ -207,7 +207,7 @@ StandardModalComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".content-card {\n  min-height: 60%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL215Y2xhcHAtbWFuYWdlci9teWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL3BhZ2UtbGF5b3V0L2xheW91dHMvdmlldy1jb250ZW50LWNhcmQvdmlldy1jb250ZW50LWNhcmQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGVBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250ZW50LWNhcmR7XG4gICAgbWluLWhlaWdodDogNjAlO1xufVxuIiwiLmNvbnRlbnQtY2FyZCB7XG4gIG1pbi1oZWlnaHQ6IDYwJTtcbn0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".content-card {\n  min-height: 60%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL215Y2xhcHAtbWFuYWdlci9teWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL3BhZ2UtbGF5b3V0L2xheW91dHMvdmlldy1jb250ZW50LWNhcmQvdmlldy1jb250ZW50LWNhcmQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGVBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250ZW50LWNhcmQge1xuICAgIG1pbi1oZWlnaHQ6IDYwJTtcbn1cbiIsIi5jb250ZW50LWNhcmQge1xuICBtaW4taGVpZ2h0OiA2MCU7XG59Il19 */");
 
 /***/ }),
 
@@ -226,7 +226,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ViewContentCardComponent = class ViewContentCardComponent {
-    constructor() { }
+    constructor() {
+    }
     ngOnInit() {
     }
 };
@@ -254,13 +255,13 @@ ViewContentCardComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageLayoutsModule", function() { return PageLayoutsModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @app/modules/app-common/app-common.module */ "./src/app/modules/app-common/app-common.module.ts");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
-/* harmony import */ var _layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./layouts/view-content-card/view-content-card.component */ "./src/app/modules/page-layout/layouts/view-content-card/view-content-card.component.ts");
-/* harmony import */ var _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./layouts/standard-modal/standard-modal.component */ "./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.ts");
+/* harmony import */ var _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./layouts/standard-modal/standard-modal.component */ "./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.ts");
+/* harmony import */ var _layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./layouts/view-content-card/view-content-card.component */ "./src/app/modules/page-layout/layouts/view-content-card/view-content-card.component.ts");
 
 
 
@@ -272,16 +273,16 @@ __webpack_require__.r(__webpack_exports__);
 let PageLayoutsModule = class PageLayoutsModule {
 };
 PageLayoutsModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_4__["AppCommonModule"]],
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_4__["AppCommonModule"]],
         exports: [
-            _layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__["ViewContentCardComponent"],
-            _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__["StandardModalComponent"]
+            _layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_7__["ViewContentCardComponent"],
+            _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_6__["StandardModalComponent"]
         ],
         providers: [
             _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbActiveModal"],
         ],
-        declarations: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__["StandardModalComponent"]]
+        declarations: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_7__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_6__["StandardModalComponent"]]
     })
 ], PageLayoutsModule);
 
@@ -337,8 +338,7 @@ let AddProductModalComponent = class AddProductModalComponent {
         this.loadingPictureOptions$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"]({ status: 'idle' });
     }
     pictureSelected(item) {
-        console.log(item.item);
-        if (item.item.id == 'custom') {
+        if (item.item.id === 'custom') {
             this.selectedCustom = true;
             this.previewURL = null;
         }
@@ -352,10 +352,11 @@ let AddProductModalComponent = class AddProductModalComponent {
             name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             description: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             price: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            picture: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+            picture: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            category: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
         });
-        this.controls['name'].valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["debounceTime"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(term => {
-            if (term != '' && typeof term === 'string') {
+        this.controls.name.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["debounceTime"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(term => {
+            if (term !== '' && typeof term === 'string') {
                 if (term.length >= 3) {
                     this.loadingPictureOptions$.next({ status: 'pending' });
                     this.productsService.getPictureForTerm(term).subscribe(model => {
@@ -365,17 +366,15 @@ let AddProductModalComponent = class AddProductModalComponent {
                 }
             }
         })).subscribe();
-        this.controls['picture'].valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(id => {
-            console.log('picture');
-            console.log(id);
+        this.controls.picture.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(id => {
             if (id === 'custom') {
                 this.selectedCustom = true;
                 this.previewURL = null;
             }
             else {
                 this.selectedCustom = false;
-                for (let picture of this.pictureOptions) {
-                    if (picture.id == id) {
+                for (const picture of this.pictureOptions) {
+                    if (picture.id === id) {
                         this.previewURL = 'data:image/gif;base64,' + picture.data;
                     }
                 }
@@ -394,8 +393,8 @@ let AddProductModalComponent = class AddProductModalComponent {
     addPicture(event) {
         if (event.target.files && event.target.files[0]) {
             const reader = new FileReader();
-            reader.onload = (event) => {
-                this.previewURL = event.target.result;
+            reader.onload = (onLoadEvent) => {
+                this.previewURL = onLoadEvent.target.result;
             };
             reader.readAsDataURL(event.target.files[0]);
         }
@@ -465,7 +464,7 @@ let DeleteProductModalComponent = class DeleteProductModalComponent {
     }
     deleteProduct() {
         this.status.next({ status: 'pending' });
-        this.productsService.deleteProduct(this.product_id).subscribe(() => {
+        this.productsService.deleteProduct(this.productId).subscribe(() => {
             this.status.next({ status: 'success' });
             setTimeout(() => {
                 this.ngbActiveModal.close(true);
@@ -480,7 +479,7 @@ DeleteProductModalComponent.ctorParameters = () => [
 Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)
-], DeleteProductModalComponent.prototype, "product_id", void 0);
+], DeleteProductModalComponent.prototype, "productId", void 0);
 DeleteProductModalComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'sb-delete-product-modal',
@@ -537,56 +536,56 @@ let EditProductModalComponent = class EditProductModalComponent {
         this.fb = fb;
         this.ngbActiveModal = ngbActiveModal;
         this.productForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({});
-        this.product_id = -1;
+        this.productId = -1;
         this.loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"]({ status: 'idle' });
         this.submit$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"]({ status: 'idle' });
         this.pictureOptions = [];
         this.loadingPictureOptions$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"]({ status: 'idle' });
     }
     ngOnInit() {
-        if (this.product_id != -1) {
+        if (this.productId !== -1) {
             this.loading$.next({ status: 'pending' });
             this.productForm = this.fb.group({
                 name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
                 description: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
                 price: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-                picture: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+                picture: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+                category: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
             });
-            this.productsService.getProduct(this.product_id).subscribe(model => {
+            this.productsService.getProduct(this.productId).subscribe(model => {
                 this.productForm = this.fb.group({
                     id: [model.id, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
                     name: [model.name, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
                     description: [model.description, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
                     price: [model.price, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-                    picture: [model.picture, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+                    picture: [model.picture, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+                    category: [model.category, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
                 });
-                if (model.picture != undefined) {
-                    this.productsService.getPictureById(model.picture).subscribe(model => {
-                        this.previewURL = 'data:image/gif;base64,' + model.data;
+                if (model.picture !== undefined) {
+                    this.productsService.getPictureById(model.picture).subscribe(pictureModel => {
+                        this.previewURL = 'data:image/gif;base64,' + pictureModel.data;
                     });
                 }
                 this.loadPictureOptions(model.name);
                 this.loading$.next({ status: 'idle' });
             });
         }
-        this.controls['name'].valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["debounceTime"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(term => {
-            if (term != '' && typeof term === 'string') {
+        this.controls.name.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["debounceTime"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(term => {
+            if (term !== '' && typeof term === 'string') {
                 if (term.length >= 3) {
                     this.loadPictureOptions(term);
                 }
             }
         })).subscribe();
-        this.controls['picture'].valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(id => {
-            console.log('picture');
-            console.log(id);
+        this.controls.picture.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(id => {
             if (id === 'custom') {
-                //this.selectedCustom = true;
+                // this.selectedCustom = true;
                 this.previewURL = null;
             }
             else {
-                //this.selectedCustom = false;
-                for (let picture of this.pictureOptions) {
-                    if (picture.id == id) {
+                // this.selectedCustom = false;
+                for (const picture of this.pictureOptions) {
+                    if (picture.id === id) {
                         this.previewURL = 'data:image/gif;base64,' + picture.data;
                     }
                 }
@@ -627,7 +626,7 @@ Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)
-], EditProductModalComponent.prototype, "product_id", void 0);
+], EditProductModalComponent.prototype, "productId", void 0);
 EditProductModalComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'sb-edit-product-modal',
@@ -736,7 +735,7 @@ let NgBootstrapTableComponent = class NgBootstrapTableComponent {
             size: 'lg',
             centered: true
         });
-        modalRef.componentInstance.product_id = id;
+        modalRef.componentInstance.productId = id;
     }
     deleteProduct(id) {
         const modalRef = this.modalService.open(_app_modules_products_components_delete_product_modal_delete_product_modal_component__WEBPACK_IMPORTED_MODULE_2__["DeleteProductModalComponent"], {
@@ -744,7 +743,7 @@ let NgBootstrapTableComponent = class NgBootstrapTableComponent {
             size: 'lg',
             centered: true,
         });
-        modalRef.componentInstance.product_id = id;
+        modalRef.componentInstance.productId = id;
     }
     refreshTable() {
         this.productsService.pageSize = this.pageSize;

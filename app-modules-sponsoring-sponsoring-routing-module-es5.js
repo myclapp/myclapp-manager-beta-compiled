@@ -6,19 +6,11 @@ function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.it
 
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 
-function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -166,12 +158,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     "./node_modules/rxjs/_esm2015/index.js");
 
     var StandardModalComponent = /*#__PURE__*/function () {
-      //@Input() form!: FormGroup
+      // @Input() form!: FormGroup
       function StandardModalComponent(ngbActiveModal) {
         _classCallCheck(this, StandardModalComponent);
 
         this.ngbActiveModal = ngbActiveModal;
-        this.onClose = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.closeFunction = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.closeText = 'Schließen';
         this.buttonDisabled = false;
         this.type = 'primary';
@@ -187,7 +179,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "close",
         value: function close() {
-          this.onClose.emit();
+          this.closeFunction.emit();
           if (this.dismissOnClose) this.ngbActiveModal.close(true);
         }
       }]);
@@ -202,7 +194,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     };
 
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], StandardModalComponent.prototype, "title", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], StandardModalComponent.prototype, "onClose", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], StandardModalComponent.prototype, "closeFunction", void 0);
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], StandardModalComponent.prototype, "closeText", void 0);
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], StandardModalComponent.prototype, "buttonDisabled", void 0);
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], StandardModalComponent.prototype, "type", void 0);
@@ -236,7 +228,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".content-card {\n  min-height: 60%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL215Y2xhcHAtbWFuYWdlci9teWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL3BhZ2UtbGF5b3V0L2xheW91dHMvdmlldy1jb250ZW50LWNhcmQvdmlldy1jb250ZW50LWNhcmQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGVBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250ZW50LWNhcmR7XG4gICAgbWluLWhlaWdodDogNjAlO1xufVxuIiwiLmNvbnRlbnQtY2FyZCB7XG4gIG1pbi1oZWlnaHQ6IDYwJTtcbn0iXX0= */";
+    __webpack_exports__["default"] = ".content-card {\n  min-height: 60%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL215Y2xhcHAtbWFuYWdlci9teWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9tb2R1bGVzL3BhZ2UtbGF5b3V0L2xheW91dHMvdmlldy1jb250ZW50LWNhcmQvdmlldy1jb250ZW50LWNhcmQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGVBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcGFnZS1sYXlvdXQvbGF5b3V0cy92aWV3LWNvbnRlbnQtY2FyZC92aWV3LWNvbnRlbnQtY2FyZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250ZW50LWNhcmQge1xuICAgIG1pbi1oZWlnaHQ6IDYwJTtcbn1cbiIsIi5jb250ZW50LWNhcmQge1xuICBtaW4taGVpZ2h0OiA2MCU7XG59Il19 */";
     /***/
   },
 
@@ -325,15 +317,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/fesm2015/common.js");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
 
 
@@ -355,25 +347,25 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! ./layouts/view-content-card/view-content-card.component */
-    "./src/app/modules/page-layout/layouts/view-content-card/view-content-card.component.ts");
+    var _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./layouts/standard-modal/standard-modal.component */
+    "./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.ts");
     /* harmony import */
 
 
-    var _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! ./layouts/standard-modal/standard-modal.component */
-    "./src/app/modules/page-layout/layouts/standard-modal/standard-modal.component.ts");
+    var _layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./layouts/view-content-card/view-content-card.component */
+    "./src/app/modules/page-layout/layouts/view-content-card/view-content-card.component.ts");
 
     var PageLayoutsModule = function PageLayoutsModule() {
       _classCallCheck(this, PageLayoutsModule);
     };
 
-    PageLayoutsModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_4__["AppCommonModule"]],
-      exports: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__["StandardModalComponent"]],
+    PageLayoutsModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_4__["AppCommonModule"]],
+      exports: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_7__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_6__["StandardModalComponent"]],
       providers: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbActiveModal"]],
-      declarations: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_6__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_7__["StandardModalComponent"]]
+      declarations: [_layouts_view_content_card_view_content_card_component__WEBPACK_IMPORTED_MODULE_7__["ViewContentCardComponent"], _layouts_standard_modal_standard_modal_component__WEBPACK_IMPORTED_MODULE_6__["StandardModalComponent"]]
     })], PageLayoutsModule);
     /***/
   },
@@ -436,7 +428,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "@charset \"UTF-8\";\n.custom-list > .list-style.active {\n  color: var(--primary);\n  text-shadow: 0px -1px 1px #000000;\n}\n.custom-list > .list-style {\n  color: #858377;\n  font-size: 2rem;\n  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);\n}\n.custom-list > .text {\n  font-size: 1.5rem;\n  letter-spacing: 1px;\n  font-weight: bold;\n}\n.add-entry {\n  font-size: 3rem !important;\n}\n.custom-list > .list-style::after {\n  content: \"   \";\n}\nli > .card > .card-body {\n  padding: 0.4rem 0.4rem 0.4rem 1.25rem;\n}\n.form-control {\n  border-radius: 0.5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zcG9uc29yaW5nL2NvbnRhaW5lcnMvc3BvbnNvcmluZy9zcG9uc29yaW5nLmNvbXBvbmVudC5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbXljbGFwcC1tYW5hZ2VyL215Y2xhcHAtbWFuYWdlci9zcmMvYXBwL21vZHVsZXMvc3BvbnNvcmluZy9jb250YWluZXJzL3Nwb25zb3Jpbmcvc3BvbnNvcmluZy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnQkFBZ0I7QUNBaEI7RUFDSSxxQkFBQTtFQUNBLGlDQUFBO0FERUo7QUNBQTtFQUNJLGNBQUE7RUFDQSxlQUFBO0VBQ0EseUNBQUE7QURHSjtBQ0RBO0VBQ0ksaUJBQUE7RUFDQSxtQkFBQTtFQUNBLGlCQUFBO0FESUo7QUNGQTtFQUNJLDBCQUFBO0FES0o7QUNIQTtFQUNJLGNBQUE7QURNSjtBQ0pBO0VBQ0kscUNBQUE7QURPSjtBQ0xBO0VBQ0kscUJBQUE7QURRSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvc3BvbnNvcmluZy9jb250YWluZXJzL3Nwb25zb3Jpbmcvc3BvbnNvcmluZy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBjaGFyc2V0IFwiVVRGLThcIjtcbi5jdXN0b20tbGlzdCA+IC5saXN0LXN0eWxlLmFjdGl2ZSB7XG4gIGNvbG9yOiB2YXIoLS1wcmltYXJ5KTtcbiAgdGV4dC1zaGFkb3c6IDBweCAtMXB4IDFweCAjMDAwMDAwO1xufVxuXG4uY3VzdG9tLWxpc3QgPiAubGlzdC1zdHlsZSB7XG4gIGNvbG9yOiAjODU4Mzc3O1xuICBmb250LXNpemU6IDJyZW07XG4gIHRleHQtc2hhZG93OiAwIDNweCAzcHggcmdiYSgwLCAwLCAwLCAwLjUpO1xufVxuXG4uY3VzdG9tLWxpc3QgPiAudGV4dCB7XG4gIGZvbnQtc2l6ZTogMS41cmVtO1xuICBsZXR0ZXItc3BhY2luZzogMXB4O1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuLmFkZC1lbnRyeSB7XG4gIGZvbnQtc2l6ZTogM3JlbSAhaW1wb3J0YW50O1xufVxuXG4uY3VzdG9tLWxpc3QgPiAubGlzdC1zdHlsZTo6YWZ0ZXIge1xuICBjb250ZW50OiBcIsKgwqDCoFwiO1xufVxuXG5saSA+IC5jYXJkID4gLmNhcmQtYm9keSB7XG4gIHBhZGRpbmc6IDAuNHJlbSAwLjRyZW0gMC40cmVtIDEuMjVyZW07XG59XG5cbi5mb3JtLWNvbnRyb2wge1xuICBib3JkZXItcmFkaXVzOiAwLjVyZW07XG59IiwiLmN1c3RvbS1saXN0ID4gLmxpc3Qtc3R5bGUuYWN0aXZle1xuICAgIGNvbG9yOiB2YXIoLS1wcmltYXJ5KTtcbiAgICB0ZXh0LXNoYWRvdzogMHB4IC0xcHggMXB4ICMwMDAwMDA7XG59XG4uY3VzdG9tLWxpc3QgPiAubGlzdC1zdHlsZXtcbiAgICBjb2xvcjogIzg1ODM3NztcbiAgICBmb250LXNpemU6IDJyZW07XG4gICAgdGV4dC1zaGFkb3c6IDAgM3B4IDNweCByZ2JhKDAsIDAsIDAsIDAuNSk7XG59XG4uY3VzdG9tLWxpc3QgPiAudGV4dHtcbiAgICBmb250LXNpemU6IDEuNXJlbTtcbiAgICBsZXR0ZXItc3BhY2luZzogMXB4O1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuLmFkZC1lbnRyeXtcbiAgICBmb250LXNpemU6IDNyZW0haW1wb3J0YW50O1xufVxuLmN1c3RvbS1saXN0ID4gLmxpc3Qtc3R5bGU6OmFmdGVye1xuICAgIGNvbnRlbnQ6ICdcXDAwYTBcXDAwYTBcXDAwYTAnO1xufVxubGkgPiAuY2FyZCA+IC5jYXJkLWJvZHkge1xuICAgIHBhZGRpbmc6IDAuNHJlbSAwLjRyZW0gMC40cmVtIDEuMjVyZW07XG59XG4uZm9ybS1jb250cm9se1xuICAgIGJvcmRlci1yYWRpdXM6IDAuNXJlbTtcbn1cbiJdfQ== */";
+    __webpack_exports__["default"] = "@charset \"UTF-8\";\n.custom-list > .list-style.active {\n  color: var(--primary);\n  text-shadow: 0px -1px 1px #000000;\n}\n.custom-list > .list-style {\n  color: #858377;\n  font-size: 2rem;\n  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);\n}\n.custom-list > .text {\n  font-size: 1.5rem;\n  letter-spacing: 1px;\n  font-weight: bold;\n}\n.add-entry {\n  font-size: 3rem !important;\n}\n.custom-list > .list-style::after {\n  content: \"   \";\n}\nli > .card > .card-body {\n  padding: 0.4rem 0.4rem 0.4rem 1.25rem;\n}\n.form-control {\n  border-radius: 0.5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9zcG9uc29yaW5nL2NvbnRhaW5lcnMvc3BvbnNvcmluZy9zcG9uc29yaW5nLmNvbXBvbmVudC5zY3NzIiwiL2hvbWUvcnVubmVyL3dvcmsvbXljbGFwcC1tYW5hZ2VyL215Y2xhcHAtbWFuYWdlci9zcmMvYXBwL21vZHVsZXMvc3BvbnNvcmluZy9jb250YWluZXJzL3Nwb25zb3Jpbmcvc3BvbnNvcmluZy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnQkFBZ0I7QUNBaEI7RUFDSSxxQkFBQTtFQUNBLGlDQUFBO0FERUo7QUNDQTtFQUNJLGNBQUE7RUFDQSxlQUFBO0VBQ0EseUNBQUE7QURFSjtBQ0NBO0VBQ0ksaUJBQUE7RUFDQSxtQkFBQTtFQUNBLGlCQUFBO0FERUo7QUNDQTtFQUNJLDBCQUFBO0FERUo7QUNDQTtFQUNJLGNBQUE7QURFSjtBQ0NBO0VBQ0kscUNBQUE7QURFSjtBQ0NBO0VBQ0kscUJBQUE7QURFSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvc3BvbnNvcmluZy9jb250YWluZXJzL3Nwb25zb3Jpbmcvc3BvbnNvcmluZy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBjaGFyc2V0IFwiVVRGLThcIjtcbi5jdXN0b20tbGlzdCA+IC5saXN0LXN0eWxlLmFjdGl2ZSB7XG4gIGNvbG9yOiB2YXIoLS1wcmltYXJ5KTtcbiAgdGV4dC1zaGFkb3c6IDBweCAtMXB4IDFweCAjMDAwMDAwO1xufVxuXG4uY3VzdG9tLWxpc3QgPiAubGlzdC1zdHlsZSB7XG4gIGNvbG9yOiAjODU4Mzc3O1xuICBmb250LXNpemU6IDJyZW07XG4gIHRleHQtc2hhZG93OiAwIDNweCAzcHggcmdiYSgwLCAwLCAwLCAwLjUpO1xufVxuXG4uY3VzdG9tLWxpc3QgPiAudGV4dCB7XG4gIGZvbnQtc2l6ZTogMS41cmVtO1xuICBsZXR0ZXItc3BhY2luZzogMXB4O1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuLmFkZC1lbnRyeSB7XG4gIGZvbnQtc2l6ZTogM3JlbSAhaW1wb3J0YW50O1xufVxuXG4uY3VzdG9tLWxpc3QgPiAubGlzdC1zdHlsZTo6YWZ0ZXIge1xuICBjb250ZW50OiBcIsKgwqDCoFwiO1xufVxuXG5saSA+IC5jYXJkID4gLmNhcmQtYm9keSB7XG4gIHBhZGRpbmc6IDAuNHJlbSAwLjRyZW0gMC40cmVtIDEuMjVyZW07XG59XG5cbi5mb3JtLWNvbnRyb2wge1xuICBib3JkZXItcmFkaXVzOiAwLjVyZW07XG59IiwiLmN1c3RvbS1saXN0ID4gLmxpc3Qtc3R5bGUuYWN0aXZlIHtcbiAgICBjb2xvcjogdmFyKC0tcHJpbWFyeSk7XG4gICAgdGV4dC1zaGFkb3c6IDBweCAtMXB4IDFweCAjMDAwMDAwO1xufVxuXG4uY3VzdG9tLWxpc3QgPiAubGlzdC1zdHlsZSB7XG4gICAgY29sb3I6ICM4NTgzNzc7XG4gICAgZm9udC1zaXplOiAycmVtO1xuICAgIHRleHQtc2hhZG93OiAwIDNweCAzcHggcmdiYSgwLCAwLCAwLCAwLjUpO1xufVxuXG4uY3VzdG9tLWxpc3QgPiAudGV4dCB7XG4gICAgZm9udC1zaXplOiAxLjVyZW07XG4gICAgbGV0dGVyLXNwYWNpbmc6IDFweDtcbiAgICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuLmFkZC1lbnRyeSB7XG4gICAgZm9udC1zaXplOiAzcmVtICFpbXBvcnRhbnQ7XG59XG5cbi5jdXN0b20tbGlzdCA+IC5saXN0LXN0eWxlOjphZnRlciB7XG4gICAgY29udGVudDogJ1xcMDBhMFxcMDBhMFxcMDBhMCc7XG59XG5cbmxpID4gLmNhcmQgPiAuY2FyZC1ib2R5IHtcbiAgICBwYWRkaW5nOiAwLjRyZW0gMC40cmVtIDAuNHJlbSAxLjI1cmVtO1xufVxuXG4uZm9ybS1jb250cm9sIHtcbiAgICBib3JkZXItcmFkaXVzOiAwLjVyZW07XG59XG4iXX0= */";
     /***/
   },
 
@@ -542,27 +534,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         });
 
         _this._mappedModel$.subscribe(function (data) {
-          var _a;
+          _this._logger.debug('_mappedModel updated', data); // TODO FILL _Form patch values
 
-          _this._logger.debug('_mappedModel updated', data);
-
-          try {
-            for (var _i = 0, _Object$entries = Object.entries(data); _i < _Object$entries.length; _i++) {
-              var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
-                  key = _Object$entries$_i[0],
-                  value = _Object$entries$_i[1];
-
-              (_a = _this._form.controls[key]) === null || _a === void 0 ? void 0 : _a.setValue(value);
-            }
-          } catch (e) {
-            _this._logger.error('Failed initializing of component data', e);
-
-            _this._initialStatus$.next({
-              status: 'error'
-            });
-
-            throw e;
-          }
         });
 
         return _this;
@@ -595,7 +568,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               for (_iterator.s(); !(_step = _iterator.n()).done;) {
                 var sponsor = _step.value;
 
-                if (res.id == sponsor.id) {
+                if (res.id === sponsor.id) {
                   _this2._logger.debug('Affected sponsor before assign', sponsor);
 
                   Object.assign(sponsor, res);
@@ -753,27 +726,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-    /* harmony import */
-
-
-    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/fesm2015/common.js");
     /* harmony import */
 
 
-    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
 
 
-    var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
     /* harmony import */
 
 
@@ -789,24 +762,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _containers__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! ./containers */
-    "./src/app/modules/sponsoring/containers/index.ts");
+    var _app_modules_page_layout_page_layouts_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! @app/modules/page-layout/page-layouts.module */
+    "./src/app/modules/page-layout/page-layouts.module.ts");
     /* harmony import */
 
 
-    var _app_modules_page_layout_page_layouts_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-    /*! @app/modules/page-layout/page-layouts.module */
-    "./src/app/modules/page-layout/page-layouts.module.ts");
+    var _containers__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! ./containers */
+    "./src/app/modules/sponsoring/containers/index.ts");
 
     var SponsoringModule = function SponsoringModule() {
       _classCallCheck(this, SponsoringModule);
     };
 
-    SponsoringModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_5__["AppCommonModule"], _app_modules_navigation_navigation_module__WEBPACK_IMPORTED_MODULE_6__["NavigationModule"], _app_modules_page_layout_page_layouts_module__WEBPACK_IMPORTED_MODULE_8__["PageLayoutsModule"]],
-      declarations: _toConsumableArray(_containers__WEBPACK_IMPORTED_MODULE_7__["containers"]),
-      exports: _toConsumableArray(_containers__WEBPACK_IMPORTED_MODULE_7__["containers"])
+    SponsoringModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _app_modules_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_5__["AppCommonModule"], _app_modules_navigation_navigation_module__WEBPACK_IMPORTED_MODULE_6__["NavigationModule"], _app_modules_page_layout_page_layouts_module__WEBPACK_IMPORTED_MODULE_7__["PageLayoutsModule"]],
+      declarations: _toConsumableArray(_containers__WEBPACK_IMPORTED_MODULE_8__["containers"]),
+      exports: _toConsumableArray(_containers__WEBPACK_IMPORTED_MODULE_8__["containers"])
     })], SponsoringModule);
     /***/
   },
@@ -845,21 +818,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @myclapp/myclapp-server */
+    "./node_modules/@myclapp/myclapp-server/fesm2015/myclapp-myclapp-server.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! rxjs */
     "./node_modules/rxjs/_esm2015/index.js");
     /* harmony import */
 
 
-    var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! rxjs/operators */
     "./node_modules/rxjs/_esm2015/operators/index.js");
-    /* harmony import */
-
-
-    var _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! @myclapp/myclapp-server */
-    "./node_modules/@myclapp/myclapp-server/fesm2015/myclapp-myclapp-server.js");
     /* harmony import */
 
 
@@ -906,7 +879,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           return this.apiClient.getSponsors({
             clubId: this.userService.club_id
-          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
             _this4._logger.debug('Received SponsorListModel', res);
 
             var returnList = [];
@@ -936,12 +909,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function get(refresh) {
           if (this._cachedConfig == null || refresh) return this._refresh(); // @ts-ignore null check above
 
-          return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(this._getCachedConfig());
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(this._getCachedConfig());
         }
       }, {
         key: "submit",
         value: function submit(data) {
-          if (data.id == -1) return this._createSponsor(data);
+          if (data.id === -1) return this._createSponsor(data);
           return this.apiClient.updateSponsor({
             clubId: this.userService.club_id,
             body: data,
@@ -963,7 +936,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     SponsoringService.ctorParameters = function () {
       return [{
-        type: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_4__["MyClappService"]
+        type: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"]
       }, {
         type: _user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"]
       }];
@@ -971,7 +944,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     SponsoringService = SponsoringService_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
       providedIn: 'root'
-    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_4__["MyClappService"], _user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"]])], SponsoringService);
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"], _user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"]])], SponsoringService);
     /***/
   }
 }]);

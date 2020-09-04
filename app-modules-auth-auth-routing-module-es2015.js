@@ -287,9 +287,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../services */ "./src/services/index.ts");
-/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @upe/logger */ "./node_modules/@upe/logger/index.js");
-/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @upe/logger */ "./node_modules/@upe/logger/index.js");
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../services */ "./src/services/index.ts");
 var LoginComponent_1;
 
 
@@ -298,7 +298,7 @@ var LoginComponent_1;
 let LoginComponent = LoginComponent_1 = class LoginComponent {
     constructor(authenticationService) {
         this.authenticationService = authenticationService;
-        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_3__["Logger"]({ name: LoginComponent_1.name, flags: ["component"] });
+        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_2__["Logger"]({ name: LoginComponent_1.name, flags: ['component'] });
         this.model = {
             username: '',
             password: '',
@@ -308,18 +308,18 @@ let LoginComponent = LoginComponent_1 = class LoginComponent {
     }
     login() {
         this.authenticationService.login(this.model.username, this.model.password).subscribe((user) => {
-            this.logger.info("Successfully authenticated");
+            this.logger.info('Successfully authenticated');
             if (user.token) {
                 location.replace('/dashboard');
             }
         }, (e) => {
-            this.logger.error("Authenitcation failed");
+            this.logger.error('Authenitcation failed');
             console.log(e);
         });
     }
 };
 LoginComponent.ctorParameters = () => [
-    { type: _services__WEBPACK_IMPORTED_MODULE_2__["UserService"] }
+    { type: _services__WEBPACK_IMPORTED_MODULE_3__["UserService"] }
 ];
 LoginComponent = LoginComponent_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -328,7 +328,7 @@ LoginComponent = LoginComponent_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["_
         template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./login.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/auth/containers/login/login.component.html")).default,
         styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./login.component.scss */ "./src/app/modules/auth/containers/login/login.component.scss")).default]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_services__WEBPACK_IMPORTED_MODULE_2__["UserService"]])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_services__WEBPACK_IMPORTED_MODULE_3__["UserService"]])
 ], LoginComponent);
 
 

@@ -410,7 +410,7 @@ AppRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".form-control {\n  border-radius: 0.5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL215Y2xhcHAtbWFuYWdlci9teWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHFCQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZm9ybS1jb250cm9se1xuICAgIGJvcmRlci1yYWRpdXM6IDAuNXJlbTtcblxufVxuIiwiLmZvcm0tY29udHJvbCB7XG4gIGJvcmRlci1yYWRpdXM6IDAuNXJlbTtcbn0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".form-control {\n  border-radius: 0.5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL215Y2xhcHAtbWFuYWdlci9teWNsYXBwLW1hbmFnZXIvc3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHFCQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZm9ybS1jb250cm9sIHtcbiAgICBib3JkZXItcmFkaXVzOiAwLjVyZW07XG5cbn1cbiIsIi5mb3JtLWNvbnRyb2wge1xuICBib3JkZXItcmFkaXVzOiAwLjVyZW07XG59Il19 */");
 
 /***/ }),
 
@@ -618,11 +618,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../services */ "./src/services/index.ts");
-/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @upe/logger */ "./node_modules/@upe/logger/index.js");
-/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @upe/logger */ "./node_modules/@upe/logger/index.js");
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../services */ "./src/services/index.ts");
 var AuthGuard_1;
 
 
@@ -635,26 +635,26 @@ let AuthGuard = AuthGuard_1 = class AuthGuard {
     constructor(router, userService) {
         this.router = router;
         this.userService = userService;
-        this._logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_6__["Logger"]({ name: AuthGuard_1.name, flags: ['component'] });
+        this._logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_3__["Logger"]({ name: AuthGuard_1.name, flags: ['component'] });
     }
     canActivate() {
         if (!this.userService.isAuthenticated()) {
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(false).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(() => {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(false).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(() => {
                 this._logger.error('User not authenticated -> redirect to login');
                 this.router.navigate(['/account/login']);
                 return false;
             }));
         }
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(true);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(true);
     }
 };
 AuthGuard.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
-    { type: _services__WEBPACK_IMPORTED_MODULE_5__["UserService"] }
+    { type: _services__WEBPACK_IMPORTED_MODULE_6__["UserService"] }
 ];
 AuthGuard = AuthGuard_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _services__WEBPACK_IMPORTED_MODULE_5__["UserService"]])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _services__WEBPACK_IMPORTED_MODULE_6__["UserService"]])
 ], AuthGuard);
 
 
@@ -911,7 +911,7 @@ var JwtInterceptor_1;
 let JwtInterceptor = JwtInterceptor_1 = class JwtInterceptor {
     constructor(authenticationService) {
         this.authenticationService = authenticationService;
-        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_2__["Logger"]({ name: JwtInterceptor_1.name, flags: ["service"] });
+        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_2__["Logger"]({ name: JwtInterceptor_1.name, flags: ['service'] });
     }
     intercept(request, next) {
         const currentUser = this.authenticationService.user;
@@ -979,9 +979,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AlertService", function() { return AlertService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @upe/logger */ "./node_modules/@upe/logger/index.js");
-/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @upe/logger */ "./node_modules/@upe/logger/index.js");
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 var AlertService_1;
 
 
@@ -989,18 +989,20 @@ var AlertService_1;
 
 let AlertService = AlertService_1 = class AlertService {
     constructor() {
-        this._alerts = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
-        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_3__["Logger"]({ name: AlertService_1.name, flags: ["service"] });
+        this._alerts = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"]([]);
+        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_2__["Logger"]({ name: AlertService_1.name, flags: ['service'] });
     }
     show(alert) {
-        var _a, _b;
-        this.logger.debug('Display new alert', alert);
-        (_a = this._alerts) === null || _a === void 0 ? void 0 : _a.value.push((alert));
-        this._alerts.next((_b = this._alerts) === null || _b === void 0 ? void 0 : _b.value);
+        var _a;
+        if (this.alerts$()) {
+            this.logger.debug('Display new alert', alert);
+            (_a = this._alerts) === null || _a === void 0 ? void 0 : _a.value.push((alert));
+            this._alerts.next(this._alerts.value);
+        }
     }
     remove(alert) {
-        var _a;
-        this._alerts.next((_a = this._alerts) === null || _a === void 0 ? void 0 : _a.value.filter(a => a !== alert));
+        if (this.alerts$())
+            this._alerts.next(this._alerts.value.filter(a => a !== alert));
     }
     alerts$() {
         return this._alerts.asObservable();
@@ -1051,7 +1053,7 @@ __webpack_require__.r(__webpack_exports__);
 
 let BaseConfigService = class BaseConfigService {
     constructor(name) {
-        this._logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_2__["Logger"]({ name: name, flags: ['service'] });
+        this._logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_2__["Logger"]({ name, flags: ['service'] });
     }
 };
 BaseConfigService.ctorParameters = () => [
@@ -1484,9 +1486,15 @@ let ProductsService = ProductsService_1 = class ProductsService extends _base_se
         this.searchPropertyName = 'name';
         this.refreshRequired$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"](false);
     }
+    /**
+     * Fetches the products of every category and removes
+     * every ticket
+     * @return List of ProductModels excluding products of category 'Tickets'
+     */
     getResults() {
         return this.apiClient.getProducts({
             clubId: this.userService.club_id,
+            category: ['Catering', 'Fanartikel']
         }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(res => {
             this.logger.debug('Received Results', res);
             return res.items;
@@ -1501,7 +1509,8 @@ let ProductsService = ProductsService_1 = class ProductsService extends _base_se
                 description: product.description,
                 name: product.name,
                 price: product.price,
-                picture: product.picture
+                picture: product.picture,
+                category: product.category
             },
         }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(model => {
             this.logger.info('Added new Product', model);
@@ -1519,7 +1528,8 @@ let ProductsService = ProductsService_1 = class ProductsService extends _base_se
                 description: product.description,
                 name: product.name,
                 price: product.price,
-                picture: product.picture
+                picture: product.picture,
+                category: product.category
             }
         }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(model => {
             this.logger.debug('Product updated', model);
@@ -1558,8 +1568,6 @@ let ProductsService = ProductsService_1 = class ProductsService extends _base_se
             pictureId: id
         });
     }
-    uploadCustomPicture() {
-    }
 };
 ProductsService.ctorParameters = () => [
     { type: _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__["MyClappService"] },
@@ -1587,9 +1595,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @myclapp/myclapp-server */ "./node_modules/@myclapp/myclapp-server/fesm2015/myclapp-myclapp-server.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @upe/logger */ "./node_modules/@upe/logger/index.js");
-/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @upe/logger */ "./node_modules/@upe/logger/index.js");
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 /* harmony import */ var _base_search_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.search.service */ "./src/services/base.search.service.ts");
 /* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./user.service */ "./src/services/user.service.ts");
 var PushService_1;
@@ -1606,13 +1614,13 @@ let PushService = PushService_1 = class PushService extends _base_search_service
         this.apiClient = apiClient;
         this.userService = userService;
         this.searchPropertyName = 'title';
-        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_4__["Logger"]({ name: PushService_1.name, flags: ["service"] });
+        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_3__["Logger"]({ name: PushService_1.name, flags: ['service'] });
     }
     getResults() {
         this.logger.debug('Query PushMessages');
         return this.apiClient.getPushMessages({
             clubId: this.userService.club_id,
-        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(res => {
             this.logger.debug('Received PushMessages', res);
             return res.items;
         }));
@@ -1657,10 +1665,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _myclapp_myclapp_server__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @myclapp/myclapp-server */ "./node_modules/@myclapp/myclapp-server/fesm2015/myclapp-myclapp-server.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @upe/logger */ "./node_modules/@upe/logger/index.js");
-/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @upe/logger */ "./node_modules/@upe/logger/index.js");
+/* harmony import */ var _upe_logger__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 var UserService_1;
 
 
@@ -1673,12 +1681,11 @@ let UserService = UserService_1 = class UserService {
     constructor(myClappService, router) {
         this.myClappService = myClappService;
         this.router = router;
-        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_6__["Logger"]({ name: UserService_1.name, flags: ['service'] });
-        this.currentUserSubject = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"](JSON.parse(localStorage.getItem('currentUser') || '{}'));
+        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_4__["Logger"]({ name: UserService_1.name, flags: ['service'] });
+        this.currentUserSubject = new rxjs__WEBPACK_IMPORTED_MODULE_5__["BehaviorSubject"](JSON.parse(localStorage.getItem('currentUser') || '{}'));
     }
     get user() {
-        var _a;
-        return (_a = this.currentUserSubject) === null || _a === void 0 ? void 0 : _a.value;
+        return this.currentUserSubject.value;
     }
     set user(user) {
         this.currentUserSubject.next(user);
@@ -1696,7 +1703,7 @@ let UserService = UserService_1 = class UserService {
     }
     login(email, password) {
         this.logger.debug('Attempting login');
-        return this.myClappService.login({ body: { email, password } }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(user => {
+        return this.myClappService.login({ body: { email, password } }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(user => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
             this.logger.debug('Successful login', user);
             localStorage.setItem('currentUser', JSON.stringify(user));
@@ -1711,7 +1718,7 @@ let UserService = UserService_1 = class UserService {
         this.router.navigate(['/account/login']);
     }
     isAuthenticated() {
-        return !(this.currentUserSubject.value.token == undefined || this.currentUserSubject.value.token == '');
+        return !(this.currentUserSubject.value.token === undefined || this.currentUserSubject.value.token === '');
     }
 };
 UserService.ctorParameters = () => [

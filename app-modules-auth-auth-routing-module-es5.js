@@ -512,19 +512,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _services__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ../../../../../services */
-    "./src/services/index.ts");
-    /* harmony import */
-
-
-    var _upe_logger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @upe/logger */
     "./node_modules/@upe/logger/index.js");
     /* harmony import */
 
 
-    var _upe_logger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_3__);
+    var _upe_logger__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_upe_logger__WEBPACK_IMPORTED_MODULE_2__);
+    /* harmony import */
+
+
+    var _services__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../../../../../services */
+    "./src/services/index.ts");
 
     var LoginComponent_1;
 
@@ -533,9 +533,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, LoginComponent);
 
         this.authenticationService = authenticationService;
-        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_3__["Logger"]({
+        this.logger = new _upe_logger__WEBPACK_IMPORTED_MODULE_2__["Logger"]({
           name: LoginComponent_1.name,
-          flags: ["component"]
+          flags: ['component']
         });
         this.model = {
           username: '',
@@ -552,13 +552,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this = this;
 
           this.authenticationService.login(this.model.username, this.model.password).subscribe(function (user) {
-            _this.logger.info("Successfully authenticated");
+            _this.logger.info('Successfully authenticated');
 
             if (user.token) {
               location.replace('/dashboard');
             }
           }, function (e) {
-            _this.logger.error("Authenitcation failed");
+            _this.logger.error('Authenitcation failed');
 
             console.log(e);
           });
@@ -570,7 +570,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     LoginComponent.ctorParameters = function () {
       return [{
-        type: _services__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+        type: _services__WEBPACK_IMPORTED_MODULE_3__["UserService"]
       }];
     };
 
@@ -583,7 +583,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
       /*! ./login.component.scss */
       "./src/app/modules/auth/containers/login/login.component.scss"))["default"]]
-    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_services__WEBPACK_IMPORTED_MODULE_2__["UserService"]])], LoginComponent);
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_services__WEBPACK_IMPORTED_MODULE_3__["UserService"]])], LoginComponent);
     /***/
   },
 
